@@ -3,6 +3,10 @@
         "api/**/*.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        { "src": "/(.*)", "dest": "/api/index.php" },
+        { "src": "/(.*)", "dest": "/api/default.css" },
+        { "src": "/(.*)", "dest": "/api/src/controllers/home_controller.php" },
+        { "src": "/(.*)", "dest": "/api/src/templates/home_template/home.php" },
+        { "src": "/(.*)", "dest": "/api/src/templates/home_template/home.module.css" }
     ]
 }
