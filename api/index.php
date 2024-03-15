@@ -1,6 +1,6 @@
 <?php 
 
-require_once './src/controllers/home_controller.php';
+require_once '../src/controllers/home_controller.php';
 
 $page = $_GET['page'] ?? null;
 
