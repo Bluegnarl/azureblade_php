@@ -1,6 +1,9 @@
-<?php 
+<?php
 
-require_once '../src/controllers/home_controller.php';
+$prod = false;
+$dir = $prod ? '/var/task/user/api' : '.';
+
+require_once "$dir/src/controllers/home_controller.php";
 
 $page = $_GET['page'] ?? null;
 
