@@ -1,6 +1,6 @@
 <?php
 
-$prod = true;
+$prod = false;
 $dir = $prod ? '/var/task/user/api' : '.';
 
 require_once "$dir/src/controllers/home_controller.php";
