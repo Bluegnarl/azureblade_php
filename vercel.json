@@ -6,7 +6,7 @@
   },
   "routes": [
     { "src": "/(.*)",  "dest": "/api/index.php" },
-    { "src": "/default.css", "dest": "/default.css" },
+    { "src": "/api/style.css", "dest": "/api/style.css" },
     { "src": "/api/src/templates/home_template/home.module.css", "dest": "/api/src/templates/home_template/home.module.css"},
     { "src": "/api/src/templates/error_template/error.module.css", "dest": "/api/src/templates/error_template/error.module.css" }
   ]
