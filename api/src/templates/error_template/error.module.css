@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables.css';
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-1);
+}
+body h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 9rem;
+  color: var(--on-surface);
+}
+body a {
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: var(--on-surface);
+}
+
+@media screen and (max-width: 1250px) {
+  body h3 {
+    font-size: 4rem;
+  }
+  body a {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  body h3 {
+    font-size: 2rem;
+  }
+  body a {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=error.module.css.map */

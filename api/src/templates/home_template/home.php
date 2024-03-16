@@ -8,6 +8,15 @@
     <title>Azureblade</title>
 </head>
 <body>
-    <p class="prout">prout</p>
+    <h1>AZUREBLADE</h1>
+    <div>
+        <a href="/?page=home">Continue</a>
+        <div></div>
+        <a href="/?page=home">New Game</a>
+        <div></div>
+        <a href="/?page=home">Endings</a>
+        <div></div>
+        <a href="/?page=home">Help</a>
+    </div>
 </body>
 </html>
