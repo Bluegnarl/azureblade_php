@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="parallax_container">
-        <div class="parallax"></div>
+        <div class="parallax" draggable="false"></div>
     </div>
     <h1>AZUREBLADE</h1>
     <div>
