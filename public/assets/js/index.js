@@ -1,5 +1,11 @@
 const parallax = document.querySelector(".parallax");
 const a = document.querySelector("a");
+const pingnoob = new Audio("/assets/audio/pingnoob.wav");
+
+document.addEventListener("click", () => {
+  /* the audio is now playable; play it if permissions allow */
+  pingnoob.play();
+});
 
 let width = window.innerWidth / 2;
 let height = window.innerHeight / 2;
