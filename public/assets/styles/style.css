@@ -1,11 +1,14 @@
-@import '../../assets/styles/variables.css';
+@import "../../assets/styles/variables.css";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 @font-face {
   font-family: "mv_naadhu_filaregular";
-  src: url("./src/assets/fonts/fila-webfont.woff2") format("woff2"), url("./src/assets/fonts/fila-webfont.woff") format("woff");
+  src: url("../fonts/fila-webfont.woff2") format("woff2"),
+    url("../fila-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,4 +17,4 @@
 
 div {
   background-color: red;
-}/*# sourceMappingURL=style.css.map */
+}

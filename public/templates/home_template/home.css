@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables.css';
+@import "../../assets/styles/variables.css";
 body {
   width: 100vw;
   height: 100vh;
@@ -66,4 +66,4 @@ body div div {
   body div a {
     font-size: 1.8rem;
   }
-}/*# sourceMappingURL=home.module.css.map */
+} /*# sourceMappingURL=home.module.css.map */

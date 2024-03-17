@@ -1,0 +1,19 @@
+:root {
+  --on-surface: #ffffff;
+  --on-surface-1: #e1e1e1;
+
+  --surface-0: #272727;
+  --surface-1: #18191b;
+  --surface-2: #1b1d1f;
+
+  --primary: #69339f;
+
+  --drop-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+
+  --linear-home: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

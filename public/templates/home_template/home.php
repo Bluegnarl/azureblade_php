@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= $dir ?>/style.css">
-    <link rel="stylesheet" href="<?= $dir ?>/src/templates/home_template/home.module.css">
+    <link rel="stylesheet" href="/../../assets/styles/style.css">
+    <link rel="stylesheet" href="/templates/home_template/home.css">
     <title>Azureblade</title>
 </head>
 <body>
