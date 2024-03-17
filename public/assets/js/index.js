@@ -1,5 +1,28 @@
-const parallax = document.querySelector('.parallax');
+const parallax = document.querySelector(".parallax");
+const a = document.querySelector("a");
 
-parallax.addEventListener('click', () => {
-    parallax.style.background = 'blue';
-})
+let width = window.innerWidth / 2;
+let height = window.innerHeight / 2;
+
+window.addEventListener("resize", () => {
+  width = window.innerWidth / 2;
+  height = window.innerHeight / 2;
+});
+
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  const posX = ((x - width) * -1) / 10;
+  const posY = ((y - height) * -1) / 5;
+
+  //   parallax.style.transform = `translate(${posX}px, ${posY}px)`;
+
+  parallax.animate(
+    { transform: `translate(${posX}px, ${posY}px)` },
+    {
+      duration: 7000,
+      fill: "forwards",
+    }
+  );
+});

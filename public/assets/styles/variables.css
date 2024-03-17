@@ -6,10 +6,10 @@
   --surface-1: #18191b;
   --surface-2: #1b1d1f;
 
-  --primary: #69339f;
+  --primary: #5a4667;
 
   --drop-shadow: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5));
-  --bloom: drop-shadow(0px 0px 12px rgb(0, 162, 255));
+  --bloom: drop-shadow(0px 0px 12px #7e00d3);
 
   --linear-home: linear-gradient(
     270deg,
