@@ -7,7 +7,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background: url(../../assets/img/background.png);
+  background: url(../../assets/img/background1.png) no-repeat;
+  background-size: cover;
 }
 body h1 {
   font-family: "mv_naadhu_filaregular";
