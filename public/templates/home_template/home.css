@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background: url(../../assets/img/background1.png) no-repeat;
+  background: url(../../assets/img/background.png) no-repeat;
   background-size: cover;
 }
 body h1 {
@@ -29,6 +29,10 @@ body div a {
   font-size: 2.5rem;
   text-decoration: none;
   cursor: pointer;
+  transition: filter 0.2s;
+}
+body div a:hover {
+  filter: var(--bloom);
 }
 body div div {
   background: var(--linear-home);
@@ -65,6 +69,6 @@ body div div {
     font-size: 2.2rem;
   }
   body div a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 } /*# sourceMappingURL=home.module.css.map */

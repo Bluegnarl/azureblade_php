@@ -21,6 +21,9 @@ body a {
   font-size: 2.5rem;
   color: var(--on-surface);
 }
+body a:hover{
+  opacity: .8;
+}
 
 @media screen and (max-width: 1250px) {
   body h3 {
