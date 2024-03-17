@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= $dir ?>/style.css">
-    <link rel="stylesheet" href="<?= $dir ?>/src/templates/error_template/error.module.css">
+    <link rel="stylesheet" href="/../../assets/styles/style.css">
+    <link rel="stylesheet" href="/templates/error_template/error.css">
     <title>Azureblade</title>
 </head>
 <body>
-    <h3 href="/?page=home">Page Not Found</h3>
+    <h3>Page Not Found</h3>
     <a href="/">BACK TO MENU</a>
 </body>
 </html>
