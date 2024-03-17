@@ -10,12 +10,8 @@
     { "src": "/assets/img/(.*)", "dest": "/public/assets/img/$1"},
     { "src": "/assets/styles/(.*)", "dest": "/public/assets/styles/$1" },
     {
-      "src": "/templates/home_template/(.*).css",
-      "dest": "/public/templates/home_template/(.*).css"
-    },
-    {
-      "src": "/templates/error_template/(.*).css",
-      "dest": "/public/templates/error_template/(.*).css"
+      "src": "/templates/(.+)_template/(.+).css",
+      "dest": "/public/templates/$1_template/$2.css"
     },
     { "src": "/assets/fonts/(.*)", "dest": "/public/assets/fonts/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
