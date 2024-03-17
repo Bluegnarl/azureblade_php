@@ -5,10 +5,10 @@
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" },
-    { "src": "/build/assets/(.*)", "dest": "/public/" },
-    { "src": "/assets/styles/(.*)", "dest": "/public/assets/styles/" },
-    { "src": "/assets/img/(.*)", "dest": "/public/assets/img/" },
-    { "src": "/assets/fonts/(.*)", "dest": "/public/assets/fonts/" }
+    { "src": "/api/index.php", "dest": "/api/index.php" },
+    { "src": "/build/assets/(.*)", "dest": "/public/$1" },
+    { "src": "/assets/styles/(.*)", "dest": "/public/assets/styles/$1" },
+    { "src": "/assets/fonts/(.*)", "dest": "/public/assets/fonts/$1" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
