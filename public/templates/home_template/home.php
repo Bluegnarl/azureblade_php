@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/assets/styles/style.css">
     <link rel="stylesheet" href="/templates/home_template/home.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
+    
     <title>Azureblade</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <div class="parallax" draggable="false"></div>
     </div>
     <h1>AZUREBLADE</h1>
-    <div>
+    <nav>
         <a href="/?page=home">Continue</a>
         <div></div>
         <a href="/?page=home">New Game</a>
@@ -21,11 +22,8 @@
         <a href="/?page=home">Endings</a>
         <div></div>
         <a href="/?page=home">Help</a>
-    </div>
+    </nav>
 </body>
-<script src="/assets/js/index.js" >
-    // function loadPage() {
-    //     document.body.style.opacity = 1;
-    // }
-</script>
+<script src="/assets/js/index.js"></script>
+<script src="/templates/home_template/home.js"></script>
 </html>
