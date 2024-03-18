@@ -15,6 +15,10 @@
       "src": "/templates/(.+)_template/(.+).css",
       "dest": "/public/templates/$1_template/$2.css"
     },
+    {
+      "src": "/templates/(.+)_template/(.+).js",
+      "dest": "/public/templates/$1_template/$2.js"
+    },
     { "src": "/assets/fonts/(.*)", "dest": "/public/assets/fonts/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
