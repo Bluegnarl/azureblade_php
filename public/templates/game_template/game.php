@@ -27,7 +27,9 @@ $location = 'Dark Wood Forest';
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
     <div class="button-test">
-        <div class="label">Bluegnarl</div>
+        <div>
+            <p class="label">Bluegnarl</p>
+        </div>
     </div>
 </body>
 <script src="/assets/js/index.js"></script>
