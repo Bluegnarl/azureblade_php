@@ -1,5 +1,5 @@
-const parallax = document.querySelector(".parallax");
 const a = document.querySelector("a");
+const parallax = document.querySelector(".parallax");
 
 // Sound Effect on Click
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = 1;
 });
 
-// Parallax Effect for Home Page
+// Parallax Effect for Home and Game Page
 
 let width = window.innerWidth / 2;
 let height = window.innerHeight / 2;

@@ -30,17 +30,72 @@ a {
   text-decoration: none;
 }
 
-.buttons{
+.parallax {
+  display: flex;
+  width: 110%;
+  height: 120vh;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.buttons {
   width: 320px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   background: var(--linear-blue);
   padding: 8px 24px;
-  gap: 8px;
-  border-radius: 28px 0 0 28px ;
+  gap: 12px;
+  border-radius: 28px 0 0 28px;
 }
 
-.buttons img{
+.buttons-inversed {
+  flex-direction: row-reverse;
+  background: var(--linear-blue-inversed);
+  border-radius: 0 28px 28px 0;
+}
+
+.buttons-clickable {
+  border-width: 2px 0 2px 2px;
+  border-style: solid;
+  border-color: var(--on-surface-1);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.buttons-clickable-inversed {
+  border-width: 2px 2px 2px 0;
+}
+
+.buttons div {
   width: 22px;
+  height: 22px;
+  filter: var(--drop-shadow);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1250px) {
+  body h1 {
+    font-size: 5rem;
+  }
+
+  .title-container img {
+    width: 150px;
+  }
+
+  .buttons {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttons {
+    width: 200px;
+    padding: 4px 16px;
+  }
+  .buttons div {
+    width: 16px;
+    height: 16px;
+    filter: var(--drop-shadow);
+  }
 }

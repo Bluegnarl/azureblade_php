@@ -64,24 +64,19 @@ body nav div {
   z-index: 0;
   overflow: hidden;
 }
-.parallax {
-  display: flex;
-  width: 110%;
-  height: 120vh;
-  flex-shrink: 0;
-  background: url(../../assets/img/background.png) no-repeat center/cover;
-  object-fit: cover;
+
+.main-menu-button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 48px;
 }
 
-.buttons-container {
+.saving-button{
   position: absolute;
   right: 0;
-  bottom: 0;
-  z-index: 50;
-  gap: 24px;
+  top: 0;
   margin: 48px;
-  display: flex;
-  flex-direction: column;
 }
 
 @media screen and (max-width: 1250px) {
@@ -93,9 +88,8 @@ body nav div {
     width: 150px;
   }
 
-  .buttons-container {
-    gap: 12px;
-    margin: 24px 0;
+  .main-menu-button, .saving-button{
+    margin: 24px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -118,10 +112,6 @@ body nav div {
 
   .title-container img {
     width: 100px;
-  }
-
-  .buttons-container {
-    gap: 12px;
   }
 }
 @media screen and (max-width: 375px) {
