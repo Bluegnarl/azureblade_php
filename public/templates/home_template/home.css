@@ -1,24 +1,37 @@
 @import "../../assets/styles/variables.css";
 body {
-  width: 100vw;
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 2rem;
   /* background: url(../../assets/img/background.png) no-repeat; */
   background-size: cover;
 }
-body h1 {
-  font-family: "mv_naadhu_filaregular";
-  font-weight: 100;
-  font-size: 9rem;
-  color: var(--on-surface-1);
+
+.title-container{
   z-index: 10;
+  position: relative;
   opacity: 0;
   transition: opacity ease-in-out 2s;
 }
+body h1 {
+  font-family: "mv_naadhu_filaregular";
+  position: relative;
+  font-weight: 100;
+  font-size: 9rem;
+  z-index: 15;
+  color: var(--on-surface-1);
+  transition: opacity ease-in-out 2s;
+  filter: var(--drop-shadow);
+}
+.title-container img{
+  display: flex;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: var(--drop-shadow);
+  width: 200px;
+}
+
 body nav {
   display: flex;
   flex-direction: column;
@@ -29,16 +42,11 @@ body nav {
   transition: opacity ease-in-out 2s;
 }
 body nav a {
-  color: var(--on-surface-1);
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 2.2rem;
-  text-decoration: none;
   cursor: pointer;
   transition: filter 0.2s;
 }
 body nav a:hover {
-  filter: var(--bloom);
+  filter: var(--bloom) !important;
 }
 body nav div {
   background: var(--linear-main-menu);
@@ -56,7 +64,6 @@ body nav div {
   z-index: 0;
   overflow: hidden;
 }
-
 .parallax {
   display: flex;
   width: 110%;
@@ -66,35 +73,54 @@ body nav div {
   object-fit: cover;
 }
 
+.buttons-container{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  gap: 24px;
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 1250px) {
   body h1 {
     font-size: 5rem;
   }
-  body div a {
-    font-size: 2rem;
+  
+  .title-container img{
+    width: 150px;
   }
 }
 @media screen and (max-width: 600px) {
+  body{
+    gap: 3rem;
+  }
+
   body h1 {
     font-size: 4rem;
   }
-  body div a {
-    font-size: 2rem;
+
+  .title-container img{
+    width: 120px;
   }
 }
 @media screen and (max-width: 500px) {
   body h1 {
     font-size: 3rem;
   }
-  body div a {
-    font-size: 1.8rem;
+
+  .title-container img{
+    width: 100px;
   }
 }
 @media screen and (max-width: 375px) {
   body h1 {
     font-size: 2.2rem;
   }
-  body div a {
-    font-size: 1.5rem;
+
+  .title-container img{
+    width: 80px;
   }
 } /*# sourceMappingURL=home.module.css.map */

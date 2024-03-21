@@ -13,16 +13,29 @@
     <div class="parallax_container">
         <div class="parallax" draggable="false"></div>
     </div>
-    <h1>AZUREBLADE</h1>
+    <div class="title-container">
+        <img src="/assets/img/logo-main-menu.svg">
+        <h1>AZUREBLADE</h1>
+    </div>
     <nav>
-        <a href="/?page=home">Continue</a>
+        <a class="main-menu" href="/?page=home">Continue</a>
         <div></div>
-        <a href="/?page=home">New Game</a>
+        <a class="main-menu" href="/?page=home">New Game</a>
         <div></div>
-        <a href="/?page=home">Endings</a>
+        <a class="main-menu" href="/?page=home">Endings</a>
         <div></div>
-        <a href="/?page=home">Help</a>
+        <a class="main-menu" href="/?page=home">Help</a>
     </nav>
+    <div class="buttons-container">
+        <div class="buttons">
+            <img src="/assets/img/account.svg">
+            <p class="label">Bluegnarl</p>
+        </div>
+        <div class="buttons">
+            <img src="/assets/img/account.svg">
+            <p class="label">Bluegnarl</p>
+        </div>
+    </div>
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/home_template/home.js"></script>

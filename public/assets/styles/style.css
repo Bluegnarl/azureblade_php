@@ -18,9 +18,29 @@
 }
 
 body {
-  background-color: var(--surface-0);
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
+}
+
+.buttons{
+  width: 320px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--linear-blue);
+  padding: 8px 24px;
+  gap: 8px;
+  border-radius: 28px 0 0 28px ;
+}
+
+.buttons img{
+  width: 22px;
 }
