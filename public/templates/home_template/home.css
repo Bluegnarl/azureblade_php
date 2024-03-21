@@ -99,7 +99,7 @@ body nav div {
 
   .buttons-container {
     gap: 12px;
-    margin: 36px 12px;
+    margin: 24px 12px;
   }
 }
 @media screen and (max-width: 600px) {
