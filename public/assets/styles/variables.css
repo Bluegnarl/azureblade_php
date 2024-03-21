@@ -8,19 +8,44 @@
   --drop-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
   --bloom: drop-shadow(0px 0px 12px #426b9d);
 
-  --linear-yellow: linear-gradient(90deg, #ecc988 0%, #ecc988 68%, rgba(236, 201, 136, 0) 100%);
+  --linear-yellow: linear-gradient(
+    90deg,
+    #ecc988 0%,
+    #ecc988 68%,
+    rgba(236, 201, 136, 0) 95%
+  );
 
-  --linear-yellow-inversed: linear-gradient(90deg, rgba(236, 201, 136, 0) 0%, #ecc988 32%, #ecc988 100%);
+  --linear-yellow-inversed: linear-gradient(
+    90deg,
+    rgba(236, 201, 136, 0) 5%,
+    #ecc988 32%,
+    #ecc988 100%
+  );
 
-  --linear-blue: linear-gradient(90deg, #47515d 0%, #47515d 75%, rgba(71, 81, 93, 0) 100%);
+  --linear-blue: linear-gradient(
+    90deg,
+    #47515d 0%,
+    #47515d 75%,
+    rgba(71, 81, 93, 0) 100%
+  );
 
-  --linear-blue-inversed: linear-gradient(90deg, rgba(71, 81, 93, 0) 0%, #47515d 24%, #47515d 100%);
+  --linear-blue-inversed: linear-gradient(
+    90deg,
+    rgba(71, 81, 93, 0) 0%,
+    #47515d 24%,
+    #47515d 100%
+  );
 
-  --linear-main-menu: linear-gradient(90deg, rgba(255, 240, 215, 0) 0%, #ffe1b0 49%, rgba(255, 240, 215, 0) 100%);
+  --linear-main-menu: linear-gradient(
+    90deg,
+    rgba(255, 240, 215, 0) 0%,
+    #ffe1b0 49%,
+    rgba(255, 240, 215, 0) 100%
+  );
 
   /* tokens */
 
-  --font-family: 'Manrope', sans-serif;
+  --font-family: "Manrope", sans-serif;
 
   --main-menu-large-fsz: 2.5rem;
   --title-large-fsz: 2rem;
@@ -82,17 +107,17 @@
     filter: var(--drop-shadow);
   }
 
-  .placeholder{
+  .placeholder {
     font-family: var(--font-family);
     font-size: var(--body-large-fsz);
     font-weight: 300;
     color: var(--on-surface-2);
-    opacity: .5;
+    opacity: 0.5;
     text-decoration: none;
     filter: var(--drop-shadow);
   }
 
-  .light{
+  .light {
     font-family: var(--font-family);
     font-size: var(--light-large-fsz);
     font-weight: 200;
@@ -101,15 +126,25 @@
     filter: var(--drop-shadow);
   }
 
+  /* ///////////////////////////////// */
+
+  .button-padding {
+    padding: 8px 24px;
+  }
+
+  .button-clickable-padding {
+    padding: 6px 24px;
+  }
+
   @media screen and (max-width: 1250px) {
     .main-menu {
       font-size: var(--main-menu-medium-fsz);
     }
-  
+
     .title {
       font-size: var(--title-medium-fsz);
     }
-  
+
     .label {
       font-size: var(--body-medium-fsz);
     }
@@ -117,17 +152,21 @@
     .label-higher {
       font-size: var(--body-medium-fsz);
     }
-  
+
     .body {
       font-size: var(--body-medium-fsz);
     }
-  
-    .placeholder{
+
+    .placeholder {
       font-size: var(--placeholder-medium-fsz);
     }
-  
-    .light{
+
+    .light {
       font-size: var(--light-medium-fsz);
+    }
+
+    .button-clickable-padding {
+      padding: 5px 20px;
     }
   }
 
@@ -135,11 +174,11 @@
     .main-menu {
       font-size: var(--main-menu-light-fsz);
     }
-  
+
     .title {
       font-size: var(--title-light-fsz);
     }
-  
+
     .label {
       font-size: var(--body-light-fsz);
     }
@@ -147,17 +186,25 @@
     .label-higher {
       font-size: var(--body-light-fsz);
     }
-  
+
     .body {
       font-size: var(--body-light-fsz);
     }
-  
-    .placeholder{
+
+    .placeholder {
       font-size: var(--placeholder-light-fsz);
     }
-  
-    .light{
+
+    .light {
       font-size: var(--light-light-fsz);
+    }
+
+    .button-padding {
+      padding: 6px 16px;
+    }
+
+    .button-clickable-padding {
+      padding: 5px 16px;
     }
   }
 }

@@ -84,6 +84,10 @@ body nav div {
   flex-direction: column;
 }
 
+.button-container{
+  margin: 0;
+}
+
 @media screen and (max-width: 1250px) {
   body h1 {
     font-size: 5rem;
@@ -122,6 +126,10 @@ body nav div {
 
   .buttons-container {
     gap: 12px;
+  }
+
+  .buttons p{
+    display: block;
   }
 }
 @media screen and (max-width: 375px) {

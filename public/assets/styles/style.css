@@ -38,6 +38,18 @@ a {
   object-fit: cover;
 }
 
+.button-container {
+  background: var(--linear-yellow);
+  padding: 2px;
+  border-radius: 28px 0 0 28px;
+  margin: 48px;
+}
+
+.button-container-inversed {
+  background: var(--linear-yellow-inversed);
+  border-radius: 0 28px 28px 0;
+}
+
 .buttons {
   width: 320px;
   display: flex;
@@ -48,6 +60,10 @@ a {
   border-radius: 28px 0 0 28px;
 }
 
+.button-without-container {
+  margin: 48px;
+}
+
 .buttons-inversed {
   flex-direction: row-reverse;
   background: var(--linear-blue-inversed);
@@ -55,16 +71,14 @@ a {
 }
 
 .buttons-clickable {
-  border-width: 2px 0 2px 2px;
-  border-style: solid;
-  border-color: var(--on-surface-1);
   cursor: pointer;
-  box-sizing: border-box;
+  padding: 4px 16px;
 }
 
-.buttons-clickable-inversed {
-  border-width: 2px 2px 2px 0;
-}
+/* .buttons-clickable-inversed {
+  cursor: pointer;
+  padding: 4px 16px;
+} */
 
 .buttons div {
   width: 22px;
@@ -84,18 +98,37 @@ a {
   }
 
   .buttons {
-    width: 300px;
+    width: 225px;
+  }
+
+  .button-without-container {
+    margin: 24px 0;
+  }
+
+  .button-container {
+    margin: 24px 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .buttons {
-    width: 200px;
+    width: auto;
     padding: 4px 16px;
   }
   .buttons div {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     filter: var(--drop-shadow);
+  }
+  .buttons p {
+    display: none;
+  }
+
+  .button-without-container {
+    margin: 24px 16px;
+  }
+
+  .button-container {
+    margin: 24px 16px;
   }
 }

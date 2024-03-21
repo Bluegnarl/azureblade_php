@@ -18,11 +18,13 @@ $location = 'Dark Wood Forest';
     <div class="parallax_container">
         <div class="parallax" style="background: url(../../assets/img/background-2.png) no-repeat center/cover;" draggable="false"></div>
     </div>
-    <a href="/" class="buttons buttons-inversed buttons-clickable buttons-clickable-inversed main-menu-button">
-        <div style="background-image: url(/assets/img/home.svg);"></div>
-        <p class="label">Main Menu</p>
-    </a>
-    <div class="buttons saving-button">
+    <div class="button-container button-container-inversed main-menu-button">
+        <a href="/" class="buttons buttons-inversed buttons-clickable button-clickable-padding">
+            <div style="background-image: url(/assets/img/home.svg);"></div>
+            <p class="label">Main Menu</p>
+        </a>
+    </div>
+    <div class="buttons button-without-container button-padding saving-button">
         <div style="background-image: url(/assets/img/saving.svg); color: red;"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
