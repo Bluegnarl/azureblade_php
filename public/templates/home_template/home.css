@@ -84,7 +84,7 @@ body nav div {
   flex-direction: column;
 }
 
-.button-container{
+.button-container {
   margin: 0;
 }
 
@@ -99,7 +99,7 @@ body nav div {
 
   .buttons-container {
     gap: 12px;
-    margin: 24px 0;
+    margin: 36px 12px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -128,7 +128,7 @@ body nav div {
     gap: 12px;
   }
 
-  .buttons p{
+  .buttons p {
     display: block;
   }
 }
