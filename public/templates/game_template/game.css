@@ -65,18 +65,38 @@ body nav div {
   overflow: hidden;
 }
 
-.main-menu-button{
+.main-menu-button {
   position: absolute;
   left: 0;
   top: 0;
   margin: 48px;
 }
 
-.saving-button{
+.saving-button {
   position: absolute;
   right: 0;
   top: 0;
   margin: 48px;
+}
+
+.button-test {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--linear-yellow);
+  padding: 2px;
+  border-radius: 28px 0 0 28px;
+}
+
+.button-test > div {
+  padding: 8px 24px;
+  background: var(--linear-blue);
+  border-radius: 28px 0 0 28px;
+}
+
+.button-test + .button-test {
+  border: 10px solid red;
 }
 
 @media screen and (max-width: 1250px) {
@@ -88,7 +108,8 @@ body nav div {
     width: 150px;
   }
 
-  .main-menu-button, .saving-button{
+  .main-menu-button,
+  .saving-button {
     margin: 24px;
   }
 }

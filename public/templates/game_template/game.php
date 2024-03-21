@@ -26,6 +26,9 @@ $location = 'Dark Wood Forest';
         <div style="background-image: url(/assets/img/saving.svg); color: red;"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
+    <div class="button-test">
+        <div class="label">Bluegnarl</div>
+    </div>
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/game_template/game.js"></script>

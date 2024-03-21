@@ -28,12 +28,12 @@
     </nav>
     <div class="buttons-container">
         <div class="buttons">
-        <div style="background: url(/assets/img/account.svg);"></div>
+        <div style="background-image: url(/assets/img/account.svg);"></div>
             <p class="label">Bluegnarl</p>
         </div>
         <div class="border-buttons">
             <div class="buttons buttons-clickable">
-                <div style="background: url(/assets/img/account-crossed.svg);"></div>
+                <div style="background-image: url(/assets/img/account-crossed.svg);"></div>
                 <p class="label">Disconnect</p>
             </div>
         </div>
