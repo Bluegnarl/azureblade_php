@@ -28,11 +28,52 @@ $location = 'Dark Wood Forest';
         <div style="background-image: url(/assets/img/saving.svg); color: red;"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
-    <div class="button-test">
-        <div>
-            <p class="label">Bluegnarl</p>
+    <main>
+    <div class="character-image">
+            <img src="/assets/img/chara1.png" alt="">
         </div>
-    </div>
+        <div class="dialogue">
+        <div class="message message-left">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+            <div class="message message-right">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+            <div class="message message-left">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+            <div class="message message-right">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+            <div class="message message-left">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+            <div class="message message-right">
+                <div class="character-name">
+                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                </div>
+                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
+            </div>
+        </div>
+        <div class="character-image">
+            <img src="/assets/img/chara2.png" alt="">
+        </div>
+    </main>
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/game_template/game.js"></script>

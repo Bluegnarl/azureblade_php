@@ -12,12 +12,12 @@
     90deg,
     #ecc988 0%,
     #ecc988 68%,
-    rgba(236, 201, 136, 0) 95%
+    rgba(0, 0, 0, 0) 98%
   );
 
   --linear-yellow-inversed: linear-gradient(
     90deg,
-    rgba(236, 201, 136, 0) 5%,
+    rgba(0, 0, 0, 0) 2%,
     #ecc988 32%,
     #ecc988 100%
   );
@@ -29,11 +29,26 @@
     rgba(71, 81, 93, 0) 100%
   );
 
+  --linear-blue-transparent: linear-gradient(
+    90deg,
+    #47515d69 0%,
+    #47515d69 75%,
+    rgba(71, 81, 93, 0) 100%
+  );
+
+
   --linear-blue-inversed: linear-gradient(
     90deg,
     rgba(71, 81, 93, 0) 0%,
     #47515d 24%,
     #47515d 100%
+  );
+
+  --linear-blue-transparent-inversed: linear-gradient(
+    90deg,
+    rgba(71, 81, 93, 0) 0%,
+    #47515d69 24%,
+    #47515d69 100%
   );
 
   --linear-main-menu: linear-gradient(
