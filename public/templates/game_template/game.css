@@ -5,72 +5,83 @@ body {
   background-size: cover;
 }
 
-main{
+main {
   display: flex;
   width: 100%;
   height: 100%;
   gap: 8px;
   z-index: 10;
+  overflow: hidden;
 }
 
-.dialogue{
+.dialogue {
   height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 64px 0;
+  flex-direction: column-reverse;
+  padding: 48px 0;
   gap: 1.5rem;
-  justify-content: flex-end;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
-.message{
+.message {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.message-left{
+.message-left {
   padding-right: 96px;
 }
 
-.message-right{
+.message-right {
   padding-left: 96px;
   align-items: flex-end;
 }
 
-.character-name{
+.character-name {
   width: 320px;
   padding: 8px 24px;
   display: flex;
 }
 
-.message-left .character-name{
+.message-left .character-name {
   background: var(--linear-blue);
   border-radius: 24px 0 0 24px;
 }
 
-.message-right .character-name{
+.message-right .character-name {
   background: var(--linear-blue-inversed);
   border-radius: 0 24px 24px 0;
   justify-content: flex-end;
 }
 
-.character-text{
-  width: 475px;
+.character-text {
+  max-width: 475px;
   background: var(--linear-blue-transparent);
   padding: 24px;
 }
 
-.message-left .character-text{
+.message-left .character-text {
   background: var(--linear-blue-transparent);
   border-radius: 24px 0 0 24px;
 }
 
-.message-right .character-text{
+.message-right .character-text {
   background: var(--linear-blue-transparent-inversed);
   border-radius: 0 24px 24px 0;
 }
 
-.character-image{
+.character-images-mobile {
+  display: none;
+  width: 100%;
+  gap: 8px;
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.character-image {
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -78,7 +89,7 @@ main{
   align-items: flex-end;
 }
 
-.character-image img{
+.character-image img {
   width: 100%;
 }
 
@@ -151,9 +162,74 @@ body nav div {
   z-index: 15;
 }
 
+.controls {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 0 24px 0 24px;
+  max-width: 650px;
+  align-self: center;
+  display: none;
+}
 
+.secondary-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary-controls > div {
+  background: var(--primary);
+  border: solid 2px var(--on-surface-2);
+  height: 100%;
+  width: fit-content;
+  gap: 12px;
+  padding: 4px 16px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-controls > div > div {
+  display: flex;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.primary-control {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  gap: 12px;
+  padding: 4px 16px;
+  border-radius: 24px;
+  background: var(--primary);
+  border: solid 2px var(--on-surface-2);
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1600px) {
+  .message-left {
+    padding-right: 48px;
+  }
+
+  .message-right {
+    padding-left: 48px;
+  }
+}
 
 @media screen and (max-width: 1250px) {
+  main {
+    flex-direction: column;
+  }
+
   body h1 {
     font-size: 5rem;
   }
@@ -162,32 +238,49 @@ body nav div {
     width: 150px;
   }
 
-  .dialogue{
+  .dialogue {
     width: 100%;
     align-items: center;
     padding: 24px;
   }
 
-  .character-image{
+  .character-image {
+    width: auto;
+    height: 100%;
+  }
+
+  .character-image img {
+    max-height: 400px;
+  }
+
+  .character-image-desktop {
     display: none;
   }
 
-  .character-name{
+  .character-images-mobile {
+    display: flex;
+  }
+
+  .character-name {
     padding: 4px 16px;
     width: 80%;
   }
-  
-  .character-text{
-    width: 100%;  
+
+  .character-text {
+    width: 100%;
     padding: 8px 16px;
   }
 
-  .message-right{
+  .message-right {
     padding-left: 0;
   }
 
-  .message-left{
+  .message-left {
     padding-right: 0;
+  }
+
+  .controls {
+    display: flex;
   }
 }
 @media screen and (max-width: 600px) {
@@ -219,5 +312,17 @@ body nav div {
 
   .title-container img {
     width: 80px;
+  }
+
+  .primary-control {
+    width: fit-content;
+  }
+
+  .primary-control p {
+    display: none;
+  }
+
+  .secondary-control {
+    padding: 4px 8px !important;
   }
 }

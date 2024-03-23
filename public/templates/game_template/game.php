@@ -20,20 +20,20 @@ $location = 'Dark Wood Forest';
     </div>
     <div class="button-container button-container-inversed main-menu-button">
         <a href="/" class="buttons buttons-inversed buttons-clickable button-clickable-padding">
-            <div style="background-image: url(/assets/img/home.svg);"></div>
+            <div class="icon" style="background-image: url(/assets/img/home.svg);"></div>
             <p class="label">Main Menu</p>
         </a>
     </div>
     <div class="buttons button-without-container button-padding saving-button">
-        <div style="background-image: url(/assets/img/saving.svg); color: red;"></div>
+        <div class="icon" style="background-image: url(/assets/img/saving.svg); color: red;"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
     <main>
-    <div class="character-image">
+        <div class="character-image character-image-desktop">
             <img src="/assets/img/chara1.png" alt="">
         </div>
         <div class="dialogue">
-        <div class="message message-left">
+            <div class="message message-left">
                 <div class="character-name">
                     <p class="label" style="color: var(--on-surface-1);">Gareth</p>
                 </div>
@@ -70,8 +70,33 @@ $location = 'Dark Wood Forest';
                 <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
             </div>
         </div>
-        <div class="character-image">
+        <div class="character-image character-image-desktop">
             <img src="/assets/img/chara2.png" alt="">
+        </div>
+        <div class="controls">
+            <div class="secondary-controls">
+                <div class="secondary-control">
+                    <div style="background: url(/assets/img/infos.svg) no-repeat center/cover;"></div>
+                </div>
+                <div class="secondary-control">
+                    <div style="background: url(/assets/img/endings.svg) no-repeat center/cover;"></div>
+                </div>
+                <div class="secondary-control">
+                    <div style="background: url(/assets/img/help.svg) no-repeat center/cover;"></div>
+                </div>
+            </div>
+            <div class="primary-control">
+                <div class="icon" style="background-image: url(/assets/img/next.svg);"></div>
+                <p class="label">Next</p>
+            </div>
+        </div>
+        <div class="character-images-mobile">
+            <div class="character-image">
+                <img src="/assets/img/chara1.png">
+            </div>
+            <div class="character-image">
+                <img src="/assets/img/chara2.png">
+            </div>
         </div>
     </main>
 </body>

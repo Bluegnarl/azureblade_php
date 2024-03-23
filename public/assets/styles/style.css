@@ -80,7 +80,16 @@ a {
   padding: 4px 16px;
 } */
 
-.buttons div {
+.icon {
+  width: 22px;
+  height: 22px;
+  filter: var(--drop-shadow);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttons div,
+.secondary-controls div {
   width: 22px;
   height: 22px;
   filter: var(--drop-shadow);
