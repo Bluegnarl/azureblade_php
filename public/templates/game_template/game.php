@@ -32,44 +32,47 @@ $location = 'Dark Wood Forest';
         <div class="character-image character-image-desktop">
             <img src="/assets/img/chara1.png" alt="">
         </div>
-        <div class="dialogue">
-            <div class="message message-left">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+        <div class="dialogue-container">
+            <div class="dialogue">
+                <div class="message message-left">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-            </div>
-            <div class="message message-right">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                <div class="message message-right">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-            </div>
-            <div class="message message-left">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                <div class="message message-left">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-            </div>
-            <div class="message message-right">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                <div class="message message-right">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-            </div>
-            <div class="message message-left">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                <div class="message message-left">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-            </div>
-            <div class="message message-right">
-                <div class="character-name">
-                    <p class="label" style="color: var(--on-surface-1);">Kairus</p>
+                <div class="message message-right">
+                    <div class="character-name">
+                        <p class="label" style="color: var(--on-surface-1);">Last Gaming</p>
+                    </div>
+                    <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                 </div>
-                <div class="character-text body">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
             </div>
         </div>
+        
         <div class="character-image character-image-desktop">
             <img src="/assets/img/chara2.png" alt="">
         </div>

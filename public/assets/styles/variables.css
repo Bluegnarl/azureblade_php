@@ -77,6 +77,11 @@
   --body-light-fsz: 20px;
   --light-light-fsz: 20px;
 
+  --main-menu-extra-light-fsz: 1rem;
+  --title-extra-light-fsz: 10rem;
+  --body-extra-light-fsz: 12px;
+  --light-extra-light-fsz: 16px;
+
   .main-menu {
     font-family: var(--font-family);
     font-size: var(--main-menu-large-fsz);
@@ -221,5 +226,43 @@
     .button-clickable-padding {
       padding: 5px 16px;
     }
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .main-menu {
+    font-size: var(--main-menu-extra-light-fsz) !important;
+  }
+
+  .title {
+    font-size: var(--title-extra-light-fsz) !important;
+  }
+
+  .label {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .label-higher {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .body {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .placeholder {
+    font-size: var(--placeholder-extra-light-fsz) !important;
+  }
+
+  .light {
+    font-size: var(--light-extra-light-fsz) !important;
+  }
+
+  .button-padding {
+    padding: 4px 12px;
+  }
+
+  .button-clickable-padding {
+    padding: 4px 12px;
   }
 }

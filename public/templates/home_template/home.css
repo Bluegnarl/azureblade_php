@@ -140,4 +140,14 @@ body nav div {
   .title-container img {
     width: 80px;
   }
-} /*# sourceMappingURL=home.module.css.map */
+} 
+
+@media screen and (max-height: 400px) {
+  body h1 {
+    font-size: 1.5rem;
+  }
+
+  .title-container img {
+    width: 50px;
+  }
+} 
