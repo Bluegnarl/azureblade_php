@@ -97,6 +97,8 @@ main {
 
 .character-image img {
   width: 100%;
+  object-fit: contain;
+  max-height: 70%;
 }
 
 body h1 {
@@ -354,6 +356,9 @@ body nav div {
     gap: 0;
   }
   .character-image img {
-    max-height: none;
+    max-height: 70%;
+  }
+  .dialogue {
+    padding: 0;
   }
 }
