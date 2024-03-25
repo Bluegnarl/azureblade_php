@@ -141,3 +141,16 @@ a {
     margin: 24px 16px;
   }
 }
+
+@media screen and (max-height: 500px) {
+  .icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .buttons {
+    width: 150px;
+  }
+  .buttons p {
+    display: block;
+  }
+}

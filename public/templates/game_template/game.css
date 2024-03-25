@@ -14,7 +14,7 @@ main {
   overflow: hidden;
 }
 
-.dialogue-container{
+.dialogue-container {
   display: flex;
   flex-direction: column-reverse;
   height: 100%;
@@ -301,8 +301,8 @@ body nav div {
   .title-container img {
     width: 120px;
   }
-  
-  .controls{
+
+  .controls {
     padding: 0 24px 0 24px;
   }
 }
@@ -337,12 +337,23 @@ body nav div {
   }
 }
 
-
-@media screen and (max-height: 550px){
-  .character-images-mobile{
+@media screen and (max-height: 500px) {
+  .character-images-mobile {
     display: none;
   }
-  .controls{
+  .controls {
     margin-bottom: 24px;
+    display: none;
+  }
+  .character-image-desktop {
+    display: flex;
+    width: 100%;
+  }
+  main {
+    flex-direction: row;
+    gap: 0;
+  }
+  .character-image img {
+    max-height: none;
   }
 }
