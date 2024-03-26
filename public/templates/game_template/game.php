@@ -33,6 +33,7 @@ $location = 'Dark Wood Forest';
             <img src="/assets/img/chara1.png" alt="">
         </div>
         <div class="dialogue-container">
+        <div class="dialogue-content">
             <div class="dialogue">
                 <div class="message message-left">
                     <div class="character-name">
@@ -72,9 +73,6 @@ $location = 'Dark Wood Forest';
                 </div>
             </div>
         </div>
-        <div class="character-image character-image-desktop">
-            <img src="/assets/img/chara2.png" alt="">
-        </div>
         <div class="controls">
             <div class="secondary-controls">
                 <div class="secondary-control">
@@ -91,6 +89,11 @@ $location = 'Dark Wood Forest';
                 <div class="icon" style="background-image: url(/assets/img/next.svg);"></div>
                 <p class="label">Next</p>
             </div>
+        </div>
+        </div>
+    
+        <div class="character-image character-image-desktop">
+            <img src="/assets/img/chara2.png" alt="">
         </div>
         <div class="character-images-mobile">
             <div class="character-image">
