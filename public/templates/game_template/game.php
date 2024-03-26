@@ -24,7 +24,7 @@ $location = 'Dark Wood Forest';
             <p class="label">Main Menu</p>
         </a>
     </div>
-    <div class="buttons button-without-container button-padding saving-button">
+    <div class="buttons button-container button-padding saving-button">
         <div class="icon" style="background-image: url(/assets/img/saving.svg); color: red;"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
@@ -72,7 +72,6 @@ $location = 'Dark Wood Forest';
                 </div>
             </div>
         </div>
-        
         <div class="character-image character-image-desktop">
             <img src="/assets/img/chara2.png" alt="">
         </div>
