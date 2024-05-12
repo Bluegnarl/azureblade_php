@@ -98,6 +98,8 @@ a {
   width: 100%;
   margin: 24px;
   max-width: 500px;
+  height: fit-content;
+  align-self: center;
 }
 
 .modal-left {
@@ -131,9 +133,9 @@ a {
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   overflow-y: auto;
   width: 100%;
+  gap: 12px;
   border-radius: 24px;
 }
 
@@ -154,9 +156,8 @@ a {
 }
 
 .help-case {
-  height: 0;
   flex-direction: column;
-  display: flex;
+  display: none;
   gap: 8px;
   transition: scale 0.15s ease-out;
   scale: 0;
@@ -203,7 +204,7 @@ a {
   gap: 12px;
   border-radius: 24px;
   width: 100%;
-  max-height: 250px;
+  max-height: 300px;
 }
 
 .modal-infos .card .text-container,
@@ -272,12 +273,22 @@ a {
   padding: 4px 16px;
 }
 
+.icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  padding: 12px;
+  border-radius: 240px;
+}
+
 .icon {
   width: 26px;
   height: 26px;
   filter: var(--drop-shadow);
   background-size: cover;
   background-repeat: no-repeat;
+  flex-shrink: 0;
 }
 
 .arrow-icon {
@@ -312,6 +323,10 @@ a {
 
   .button-container {
     margin: 24px 0;
+  }
+
+  .text-container {
+    max-height: 200px !important;
   }
 }
 

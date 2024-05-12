@@ -94,13 +94,18 @@ $location = 'Dark Wood Forest';
             </div>
         </div>
         <div class="modal-left modal-endings">
-            <div class="labels-container">
-                <div class="label-container">
-                    <div class="icon" style="background-image: url(/assets/img/endings.svg);"></div>
-                    <p class="label-higher" style="color: var(--on-surface-1);">Endings</p>
+            <div class="labels-container" style="justify-content: space-between; width: 100%;">
+                <div class="labels-container">
+                    <div class="label-container">
+                            <div class="icon" style="background-image: url(/assets/img/endings.svg);"></div>
+                            <p class="label-higher" style="color: var(--on-surface-1);">Endings</p>
+                    </div>
+                    <div class="label-container">
+                        <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>
+                    </div>
                 </div>
-                <div class="label-container">
-                    <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>
+                <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+                    <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
                 </div>
             </div>
 
