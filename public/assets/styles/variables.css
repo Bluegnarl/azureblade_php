@@ -1,0 +1,267 @@
+:root {
+  --primary: #47515d;
+
+  --on-surface: #fff0d7;
+  --on-surface-1: #ffe1b0;
+  --on-surface-2: #ecc988;
+
+  --drop-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
+  --bloom: drop-shadow(0px 0px 12px #426b9d);
+
+  --linear-yellow: linear-gradient(
+    90deg,
+    #ecc988 0%,
+    #ecc988 68%,
+    rgba(0, 0, 0, 0) 98%
+  );
+
+  --linear-yellow-inversed: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 2%,
+    #ecc988 32%,
+    #ecc988 100%
+  );
+
+  --linear-blue: linear-gradient(
+    90deg,
+    #47515d 0%,
+    #47515d 75%,
+    rgba(71, 81, 93, 0) 100%
+  );
+
+  --linear-blue-transparent: linear-gradient(
+    90deg,
+    #47515d69 0%,
+    #47515d69 75%,
+    rgba(71, 81, 93, 0) 100%
+  );
+
+  --linear-blue-inversed: linear-gradient(
+    90deg,
+    rgba(71, 81, 93, 0) 0%,
+    #47515d 24%,
+    #47515d 100%
+  );
+
+  --linear-blue-transparent-inversed: linear-gradient(
+    90deg,
+    rgba(71, 81, 93, 0) 0%,
+    #47515d69 24%,
+    #47515d69 100%
+  );
+
+  --linear-main-menu: linear-gradient(
+    90deg,
+    rgba(255, 240, 215, 0) 0%,
+    #ffe1b0 49%,
+    rgba(255, 240, 215, 0) 100%
+  );
+
+  /* tokens */
+
+  --font-family: "Manrope", sans-serif;
+
+  --main-menu-large-fsz: 2.5rem;
+  --title-large-fsz: 2rem;
+  --body-large-fsz: 24px;
+  --light-large-fsz: 1.5rem;
+
+  --main-menu-medium-fsz: 2rem;
+  --title-medium-fsz: 1.8rem;
+  --body-medium-fsz: 24px;
+  --light-medium-fsz: 1.2rem;
+
+  --main-menu-light-fsz: 1.6rem;
+  --title-light-fsz: 1.5rem;
+  --body-light-fsz: 20px;
+  --light-light-fsz: 20px;
+
+  --main-menu-extra-light-fsz: 1rem;
+  --title-extra-light-fsz: 10rem;
+  --body-extra-light-fsz: 12px;
+  --light-extra-light-fsz: 16px;
+
+  .main-menu {
+    font-family: var(--font-family);
+    font-size: var(--main-menu-large-fsz);
+    font-weight: 400;
+    color: var(--on-surface);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .title {
+    font-family: var(--font-family);
+    font-size: var(--title-large-fsz);
+    font-weight: 600;
+    color: var(--on-surface-1);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .label {
+    font-family: var(--font-family);
+    font-size: var(--body-large-fsz);
+    font-weight: 500;
+    color: var(--on-surface);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .label-higher {
+    font-family: var(--font-family);
+    font-size: var(--body-large-fsz);
+    font-weight: 500;
+    color: var(--on-surface-1);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .body-text {
+    font-family: var(--font-family);
+    font-size: var(--body-large-fsz);
+    font-weight: 300;
+    color: var(--on-surface);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .placeholder {
+    font-family: var(--font-family);
+    font-size: var(--body-large-fsz);
+    font-weight: 300;
+    color: var(--on-surface-2);
+    opacity: 0.5;
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .light {
+    font-family: var(--font-family);
+    font-size: var(--light-large-fsz);
+    font-weight: 200;
+    color: var(--on-surface);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  /* ///////////////////////////////// */
+
+  .button-padding {
+    padding: 8px 24px;
+  }
+
+  .button-clickable-padding {
+    padding: 6px 24px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .main-menu {
+      font-size: var(--main-menu-medium-fsz);
+    }
+
+    .title {
+      font-size: var(--title-medium-fsz);
+    }
+
+    .label {
+      font-size: var(--body-medium-fsz);
+    }
+
+    .label-higher {
+      font-size: var(--body-medium-fsz);
+    }
+
+    .body-text {
+      font-size: var(--body-medium-fsz);
+    }
+
+    .placeholder {
+      font-size: var(--placeholder-medium-fsz);
+    }
+
+    .light {
+      font-size: var(--light-medium-fsz);
+    }
+
+    .button-clickable-padding {
+      padding: 5px 20px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .main-menu {
+      font-size: var(--main-menu-light-fsz);
+    }
+
+    .title {
+      font-size: var(--title-light-fsz);
+    }
+
+    .label {
+      font-size: var(--body-light-fsz);
+    }
+
+    .label-higher {
+      font-size: var(--body-light-fsz);
+    }
+
+    .body-text {
+      font-size: var(--body-light-fsz);
+    }
+
+    .placeholder {
+      font-size: var(--placeholder-light-fsz);
+    }
+
+    .light {
+      font-size: var(--light-light-fsz);
+    }
+
+    .button-padding {
+      padding: 6px 16px;
+    }
+
+    .button-clickable-padding {
+      padding: 5px 16px;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .main-menu {
+    font-size: var(--main-menu-extra-light-fsz) !important;
+  }
+
+  .title {
+    font-size: var(--title-extra-light-fsz) !important;
+  }
+
+  .label {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .label-higher {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .body-text {
+    font-size: var(--body-extra-light-fsz) !important;
+  }
+
+  .placeholder {
+    font-size: var(--placeholder-extra-light-fsz) !important;
+  }
+
+  .light {
+    font-size: var(--light-extra-light-fsz) !important;
+  }
+
+  .button-padding {
+    padding: 4px 12px !important;
+  }
+
+  .button-clickable-padding {
+    padding: 3px 12px !important;
+  }
+}

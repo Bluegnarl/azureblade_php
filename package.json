@@ -1,0 +1,22 @@
+{
+  "name": "azureblade_php",
+  "version": "1.0.0",
+  "description": "oui",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd public && php -S localhost:8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluegnarl/azureblade_php.git"
+  },
+  "keywords": [
+    "oui"
+  ],
+  "author": "Bluegnarl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluegnarl/azureblade_php/issues"
+  },
+  "homepage": "https://github.com/bluegnarl/azureblade_php#readme"
+}
