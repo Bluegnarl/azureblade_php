@@ -22,9 +22,14 @@
     <div class="modals-container">
         <div class="modal-background" onclick="closeOverlay()"></div>
         <div class="modal modal-help">
-            <div class="label-container label-title-container">
-                <div class="icon" style="background-image: url(/assets/img/help.svg);"></div>
-                <p class="label-higher" style="color: var(--on-surface-1);">Help</p>
+            <div class="labels-container">
+                <div class="label-container">
+                    <div class="icon" style="background-image: url(/assets/img/help.svg);"></div>
+                    <p class="label-higher" style="color: var(--on-surface-1);">Help</p>
+                </div>
+                <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+                    <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
+                </div>
             </div>
             <div class="cards">
                 <div class="card">
@@ -81,7 +86,7 @@
                             <div class="icon" style="background-image: url(/assets/img/endings.svg);"></div>
                             <p class="label-higher" style="color: var(--on-surface-1);">Endings</p>
                     </div>
-                    <div class="label-container">
+                    <div class="label-container endings-counter">
                         <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>
                     </div>
                 </div>
@@ -89,6 +94,7 @@
                     <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
                 </div>
             </div>
+
             <div class="endings scrollbar-width-none">
                 <div class="ending">
                     <div class="ending-title">

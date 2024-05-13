@@ -23,10 +23,16 @@ $location = 'Dark Wood Forest';
     <div class="modals-container">
         <div class="modal-background" onclick="closeOverlay()"></div>
         <div class="modal modal-infos">
-            <div class="label-container label-title-container">
-                <div class="icon" style="background-image: url(/assets/img/infos.svg);"></div>
-                <p class="label-higher" style="color: var(--on-surface-1);">Informations</p>
+            <div class="labels-container">
+                <div class="label-container label-title-container">
+                    <div class="icon" style="background-image: url(/assets/img/infos.svg);"></div>
+                    <p class="label-higher" style="color: var(--on-surface-1);">Informations</p>
+                </div>
+                <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+                    <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
+                </div>
             </div>
+            
             <div class="card">
                 <div class="label-container">
                     <div class="icon" style="background-image: url(/assets/img/location.svg);"></div>
@@ -41,9 +47,14 @@ $location = 'Dark Wood Forest';
             </div>
         </div>
         <div class="modal modal-help">
-            <div class="label-container label-title-container">
-                <div class="icon" style="background-image: url(/assets/img/help.svg);"></div>
-                <p class="label-higher" style="color: var(--on-surface-1);">Help</p>
+            <div class="labels-container">
+                <div class="label-container">
+                    <div class="icon" style="background-image: url(/assets/img/help.svg);"></div>
+                    <p class="label-higher" style="color: var(--on-surface-1);">Help</p>
+                </div>
+                <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+                    <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
+                </div>
             </div>
             <div class="cards">
                 <div class="card">
@@ -93,6 +104,7 @@ $location = 'Dark Wood Forest';
                 </div>
             </div>
         </div>
+
         <div class="modal-left modal-endings">
             <div class="labels-container" style="justify-content: space-between; width: 100%;">
                 <div class="labels-container">
@@ -100,7 +112,7 @@ $location = 'Dark Wood Forest';
                             <div class="icon" style="background-image: url(/assets/img/endings.svg);"></div>
                             <p class="label-higher" style="color: var(--on-surface-1);">Endings</p>
                     </div>
-                    <div class="label-container">
+                    <div class="label-container endings-counter">
                         <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>
                     </div>
                 </div>

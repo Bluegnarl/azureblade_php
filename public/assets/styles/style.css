@@ -98,8 +98,6 @@ a {
   width: 100%;
   margin: 24px;
   max-width: 500px;
-  height: fit-content;
-  align-self: center;
 }
 
 .modal-left {
@@ -209,7 +207,7 @@ a {
 
 .modal-infos .card .text-container,
 .modal-endings .card .text-container {
-  max-height: 300px;
+  max-height: 250px;
 }
 
 .text-container p {
@@ -361,6 +359,12 @@ a {
   .secondary-controls div {
     width: 22px;
     height: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .endings-counter{
+    display: none;
   }
 }
 

@@ -8,7 +8,8 @@ const a = document.querySelector("a"),
   helpCase1 = document.querySelector(".help-case-1"),
   helpCase2 = document.querySelector(".help-case-2"),
   helpCase3 = document.querySelector(".help-case-3"),
-  arrowIcon = document.querySelectorAll(".arrow-icon");
+  arrowIcon = document.querySelectorAll(".arrow-icon"),
+  endingsCounter = document.querySelector(".endings-counter");
 
 // On Load Opacity 0 to 1
 
@@ -68,7 +69,9 @@ function closeOverlay() {
 
   setTimeout(() => {
     modalsContainer.style.display = "none";
-    modalInfos.style.display = "none";
+    if (modalInfos) {
+      modalInfos.style.display = "none";
+    }
     modalHelp.style.display = "none";
     modalEndings.style.display = "none";
   }, 400);
@@ -80,7 +83,7 @@ let helpCaseBool3 = false;
 
 helpCase1.style.display = "flex";
 arrowIcon[0].style.rotate = "180deg";
-helpCase1.style.scale = "1"
+helpCase1.style.scale = "1";
 
 function helpCase(helpCase) {
   switch (helpCase) {
