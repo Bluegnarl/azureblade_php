@@ -88,7 +88,7 @@ a {
 .modal {
   opacity: 0;
   transform: translateY(-50%);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -107,7 +107,7 @@ a {
   padding: 24px;
   transform: translateX(-100%);
   opacity: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 24px;
@@ -118,10 +118,8 @@ a {
   max-height: 100%;
 }
 
-.modal-help,
-.modal-endings,
-.modal-infos {
-  display: none;
+.modal-newgame {
+  gap: 8px;
 }
 
 .modal-infos {
@@ -172,6 +170,8 @@ a {
 .labels-container {
   display: flex;
   gap: 8px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .label-container {
@@ -185,19 +185,19 @@ a {
   width: 100%;
 }
 
+.label-container-title{
+  width: fit-content;
+}
+
 .modal-help .cards .card .label-container {
   justify-content: space-between;
   cursor: pointer;
 }
 
-.label-title-container {
-  width: fit-content;
-}
-
 .text-container {
   display: flex;
   justify-content: center;
-  background: var(--primary);
+  background: var(--primary-transparent);
   padding: 24px;
   gap: 12px;
   border-radius: 24px;

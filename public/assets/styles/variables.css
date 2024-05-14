@@ -1,5 +1,6 @@
 :root {
   --primary: #47515d;
+  --primary-transparent: #47515D 75%;
 
   --on-surface: #fff0d7;
   --on-surface-1: #ffe1b0;

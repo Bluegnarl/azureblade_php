@@ -4,6 +4,7 @@ const a = document.querySelector("a"),
   modalInfos = document.querySelector(".modal-infos"),
   modalEndings = document.querySelector(".modal-endings"),
   modalHelp = document.querySelector(".modal-help"),
+  modalNewGame = document.querySelector(".modal-newgame"),
   modalBackground = document.querySelector(".modal-background"),
   helpCase1 = document.querySelector(".help-case-1"),
   helpCase2 = document.querySelector(".help-case-2"),
@@ -50,6 +51,16 @@ function modal(modal) {
         modalHelp.style.opacity = "1";
         modalBackground.style.opacity = "1";
       }, 1);
+      break
+      case "newgame":
+        modalsContainer.style.display = "flex";
+        modalNewGame.style.display = "flex";
+  
+        setTimeout(() => {
+          modalNewGame.style.transform = "translateY(0)";
+          modalNewGame.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 1);
       break;
     default:
       break;
@@ -65,6 +76,8 @@ function closeOverlay() {
   modalHelp.style.opacity = "0";
   modalEndings.style.transform = "translateX(-50%)";
   modalEndings.style.opacity = "0";
+  modalNewGame.style.transform = "translateX(-50%)";
+  modalNewGame.style.opacity = "0";
   modalBackground.style.opacity = "0";
 
   setTimeout(() => {
@@ -72,6 +85,7 @@ function closeOverlay() {
     if (modalInfos) {
       modalInfos.style.display = "none";
     }
+    modalNewGame.style.display = "none";
     modalHelp.style.display = "none";
     modalEndings.style.display = "none";
   }, 400);

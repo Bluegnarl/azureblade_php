@@ -10,6 +10,7 @@
     { "src": "/assets/img/(.*)", "dest": "/public/assets/img/$1"},
     { "src": "/assets/js/(.*)", "dest": "/public/assets/js/$1"},
     { "src": "/assets/audio/(.*)", "dest": "/public/assets/audio/$1"},
+    { "src": "/assets/partials/(.*)", "dest": "/public/assets/partials/$1"},
     { "src": "/assets/styles/(.*)", "dest": "/public/assets/styles/$1" },
     {
       "src": "/templates/(.+)_template/(.+).css",
