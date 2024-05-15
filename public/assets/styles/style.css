@@ -19,12 +19,13 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: rgb(0, 0, 0);
+  overflow: hidden;
 }
 
 a {
@@ -71,7 +72,6 @@ a {
   padding: 2px;
   border-radius: 28px 0 0 28px;
   margin: 48px;
-  max-width: 225px;
 }
 
 .button-container-inversed {
@@ -115,9 +115,6 @@ a {
 }
 
 .modal-left {
-  position: absolute;
-  left: 0;
-  top: 0;
   padding: 24px 24px 0 24px;
   transform: translateX(-100%);
   opacity: 0;
@@ -211,6 +208,7 @@ a {
   display: flex;
   justify-content: center;
   background: var(--primary-transparent);
+  backdrop-filter: blur(4px);
   padding: 24px;
   gap: 12px;
   border-radius: 28px;
@@ -261,6 +259,11 @@ a {
   padding: 8px 24px;
   display: flex;
   max-width: 400px;
+}
+
+.ending-text {
+  background: var(--linear-blue-transparent-inversed);
+  backdrop-filter: blur(4px);
 }
 
 .buttons {

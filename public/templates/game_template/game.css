@@ -105,6 +105,7 @@ main {
   transition: transform .5s ease-out, opacity .7s ease-out;
   opacity: 0;
   transform: translateY(70%);
+  filter: brightness(0.75);
 }
 
 .character-image img {

@@ -36,6 +36,7 @@ function modal(modal) {
       break;
     case "endings":
       modalsContainer.style.display = "flex";
+      modalsContainer.style.justifyContent = "flex-start";
       modalEndings.style.display = "flex";
 
       setTimeout(() => {
@@ -85,6 +86,7 @@ function closeOverlay() {
   modalBackground.style.opacity = "0";
 
   setTimeout(() => {
+    modalsContainer.style.justifyContent = "center";
     modalsContainer.style.display = "none";
     if (modalInfos) {
       modalInfos.style.display = "none";

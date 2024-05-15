@@ -1,7 +1,7 @@
 :root {
   --primary: #47515d;
-  --primary-transparent: #47515DBF;
-  --primary-lighter: #4a5e75;
+  --primary-transparent: #47515D99;
+  --primary-lighter: #4a5b6e;
   --primary-darker: #3b4753;
 
   --on-surface: #fff0d7;
@@ -9,7 +9,7 @@
   --on-surface-2: #ecc988;
 
   --drop-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
-  --bloom: drop-shadow(0px 0px 12px #0073ff);
+  --bloom: drop-shadow(0px 0px 4px var(--on-surface-2));
 
   --linear-yellow: linear-gradient(
     90deg,
@@ -34,8 +34,8 @@
 
   --linear-blue-transparent: linear-gradient(
     90deg,
-    #47515d69 0%,
-    #47515d69 75%,
+    #47515d99 0%,
+    #47515d99 75%,
     rgba(71, 81, 93, 0) 100%
   );
 
@@ -49,8 +49,8 @@
   --linear-blue-transparent-inversed: linear-gradient(
     90deg,
     rgba(71, 81, 93, 0) 0%,
-    #47515d69 24%,
-    #47515d69 100%
+    #47515d99 24%,
+    #47515d99 100%
   );
 
   --linear-main-menu: linear-gradient(

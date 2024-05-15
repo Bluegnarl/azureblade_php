@@ -1,3 +1,10 @@
+<?php
+
+$loggedin = false;
+$username = "Bluegnarl";
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -38,10 +45,11 @@
         <div></div>
         <a class="main-menu" onclick="modal('help')">Help</a>
     </nav>
+    <?php if ($loggedin) : ?>
     <div class="buttons-container">
         <div class="buttons button-padding">
             <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
-            <p class="label">Bluegnarl</p>
+            <p class="label"><?= $username ?></p>
         </div>
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding">
@@ -50,6 +58,23 @@
             </div>
         </div>
     </div>
+    <?php endif;
+    if (!$loggedin) : ?>
+    <div class="buttons-container">
+    <div class="button-container main-menu-button">
+            <div class="buttons buttons-clickable-exceptions button-clickable-padding">
+                <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
+                <p class="label">Log in</p>
+            </div>
+        </div>
+        <div class="button-container main-menu-button">
+            <div class="buttons buttons-clickable-exceptions button-clickable-padding">
+                <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
+                <p class="label">Sign up</p>
+            </div>
+        </div>
+    </div>
+    <?php endif ?>
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/home_template/home.js"></script>

@@ -89,7 +89,7 @@ body nav div {
 
   .buttons-container {
     gap: 12px;
-    margin: 24px 12px;
+    margin: 24px;
   }
 }
 
@@ -123,6 +123,10 @@ body nav div {
 
   .buttons p {
     display: block;
+  }
+
+  .buttons-container {
+    margin: 16px 12px;
   }
 }
 @media screen and (max-width: 375px) {
