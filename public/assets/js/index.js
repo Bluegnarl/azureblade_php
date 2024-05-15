@@ -1,5 +1,6 @@
 const a = document.querySelector("a"),
   parallax = document.querySelector(".parallax"),
+  parallaxContainer = document.querySelector(".parallax-container"),
   modalsContainer = document.querySelector(".modals-container"),
   modalInfos = document.querySelector(".modal-infos"),
   modalEndings = document.querySelector(".modal-endings"),
@@ -16,6 +17,7 @@ const a = document.querySelector("a"),
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = 1;
+  parallaxContainer.style.opacity = 1;
 });
 
 // Modal
@@ -40,7 +42,7 @@ function modal(modal) {
         modalEndings.style.transform = "translateX(0)";
         modalEndings.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      });
+      }, 1);
       break;
     case "help":
       modalsContainer.style.display = "flex";
@@ -72,12 +74,14 @@ function closeOverlay() {
     modalInfos.style.transform = "translateY(-50%)";
     modalInfos.style.opacity = "0";
   }
+  if (modalNewGame) {
+    modalNewGame.style.transform = "translateY(-50%)";
+    modalNewGame.style.opacity = "0";
+  }
   modalHelp.style.transform = "translateY(-50%)";
   modalHelp.style.opacity = "0";
   modalEndings.style.transform = "translateX(-50%)";
   modalEndings.style.opacity = "0";
-  modalNewGame.style.transform = "translateX(-50%)";
-  modalNewGame.style.opacity = "0";
   modalBackground.style.opacity = "0";
 
   setTimeout(() => {
@@ -85,7 +89,9 @@ function closeOverlay() {
     if (modalInfos) {
       modalInfos.style.display = "none";
     }
-    modalNewGame.style.display = "none";
+    if (modalNewGame) {
+      modalNewGame.style.display = "none";
+    }
     modalHelp.style.display = "none";
     modalEndings.style.display = "none";
   }, 400);
@@ -180,10 +186,10 @@ function helpCase(helpCase) {
 
 // Sound Effect on Click
 
-document.addEventListener("click", () => {
-  const pingnoob = new Audio("/assets/audio/pingnoob.wav");
-  pingnoob.play();
-});
+// document.addEventListener("click", () => {
+//   const pingnoob = new Audio("/assets/audio/pingnoob.wav");
+//   pingnoob.play();
+// });
 
 // Parallax Effect for Home and Game Page
 

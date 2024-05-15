@@ -26,6 +26,9 @@ main {
   width: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
+  transition: transform .8s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  transform: translateY(-70%);
 }
 
 .dialogue {
@@ -59,12 +62,12 @@ main {
 
 .message-left .character-name {
   background: var(--linear-blue);
-  border-radius: 24px 0 0 24px;
+  border-radius: 28px 0 0 28px;
 }
 
 .message-right .character-name {
   background: var(--linear-blue-inversed);
-  border-radius: 0 24px 24px 0;
+  border-radius: 0 28px 28px 0;
   justify-content: flex-end;
 }
 
@@ -76,12 +79,12 @@ main {
 
 .message-left .character-text {
   background: var(--linear-blue-transparent);
-  border-radius: 24px 0 0 24px;
+  border-radius: 28px 0 0 28px;
 }
 
 .message-right .character-text {
   background: var(--linear-blue-transparent-inversed);
-  border-radius: 0 24px 24px 0;
+  border-radius: 0 28px 28px 0;
 }
 
 .character-images-mobile {
@@ -99,6 +102,9 @@ main {
   height: 100%;
   display: flex;
   align-items: flex-end;
+  transition: transform .5s ease-out, opacity .7s ease-out;
+  opacity: 0;
+  transform: translateY(70%);
 }
 
 .character-image img {
@@ -150,17 +156,6 @@ body nav div {
   height: 2px;
 }
 
-.parallax_container {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  z-index: 0;
-  overflow: hidden;
-}
-
 .main-menu-button {
   position: absolute;
   left: 0;
@@ -184,7 +179,10 @@ body nav div {
   align-items: flex-end;
   max-width: 650px;
   align-self: center; 
-  margin: 24px 0;
+  margin: 24px 0 16px 0;
+  transition: scale .35s ease-out, opacity .6s ease-out;
+  opacity: 0;
+  scale: .3;
 }
 
 .secondary-controls {
@@ -203,7 +201,7 @@ body nav div {
   width: fit-content;
   gap: 12px;
   padding: 4px 16px;
-  border-radius: 24px;
+  border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,7 +221,7 @@ body nav div {
   width: 100%;
   gap: 12px;
   padding: 4px 16px;
-  border-radius: 24px;
+  border-radius: 28px;
   background: var(--primary);
   border: solid 2px var(--on-surface-2);
 }
@@ -295,7 +293,7 @@ body nav div {
 
   .controls {
     display: flex;
-    margin: 16px 0 0 0;
+    margin: 16px 0 16px 0;
     max-width: 475px;
   }
 }
@@ -331,16 +329,8 @@ body nav div {
     width: 80px;
   }
 
-  .primary-control {
-    width: fit-content;
-  }
-
-  .primary-control p {
-    display: none;
-  }
-
   .secondary-control {
-    padding: 4px 8px !important;
+    padding: 4px 12px !important;
   }
 }
 
@@ -349,7 +339,7 @@ body nav div {
     display: none;
   }
   .controls {
-    margin: 24px 0;
+    margin: 24px 0 16px 0;
   }
   .character-image-desktop {
     display: flex;

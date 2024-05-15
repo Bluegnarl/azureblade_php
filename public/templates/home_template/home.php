@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="parallax_container">
+    <div class="parallax-container">
         <div class="parallax" style="background: url(../../assets/img/background.png) no-repeat center/cover;" draggable="false"></div>
     </div>
     <div class="title-container">
@@ -44,7 +44,7 @@
             <p class="label">Bluegnarl</p>
         </div>
         <div class="button-container main-menu-button">
-            <div class="buttons buttons-clickable button-clickable-padding">
+            <div class="buttons buttons-clickable-exceptions button-clickable-padding">
                 <div class="icon" style="background-image: url(/assets/img/account-crossed.svg);"></div>
                 <p class="label">Disconnect</p>
             </div>

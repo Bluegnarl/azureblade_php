@@ -4,7 +4,7 @@
             <div class="icon" style="background-image: url(/assets/img/infos.svg);"></div>
             <p class="label-higher" style="color: var(--on-surface-1);">Informations</p>
         </div>
-        <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+        <div class="icon-container buttons-clickable" onclick="closeOverlay()">
             <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
         </div>
     </div>

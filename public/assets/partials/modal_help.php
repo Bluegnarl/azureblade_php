@@ -4,13 +4,13 @@
             <div class="icon" style="background-image: url(/assets/img/help.svg);"></div>
             <p class="label-higher" style="color: var(--on-surface-1);">Help</p>
         </div>
-        <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+        <div class="icon-container buttons-clickable" onclick="closeOverlay()">
             <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
         </div>
     </div>
     <div class="cards">
         <div class="card">
-            <div class="label-container" onclick="helpCase(1)">
+            <div class="label-container buttons-clickable-exceptions-second" onclick="helpCase(1)">
                 <div class="icon" style="background-image: url(/assets/img/location.svg);"></div>
                 <p class="label" style="color: var(--on-surface-1);">Dilemmas</p>
                 <div class="icon arrow-icon" style="background-image: url(/assets/img/arrow.svg);"></div>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="label-container" onclick="helpCase(2)">
+            <div class="label-container buttons-clickable-exceptions-second" onclick="helpCase(2)">
                 <div class="icon" style="background-image: url(/assets/img/location.svg);"></div>
                 <p class="label" style="color: var(--on-surface-1);">Choices</p>
                 <div class="icon arrow-icon" style="background-image: url(/assets/img/arrow.svg);"></div>
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="label-container" onclick="helpCase(3)">
+            <div class="label-container buttons-clickable-exceptions-second" onclick="helpCase(3)">
                 <div class="icon" style="background-image: url(/assets/img/location.svg);"></div>
                 <p class="label" style="color: var(--on-surface-1);">QTE</p>
                 <div class="icon arrow-icon" style="background-image: url(/assets/img/arrow.svg);"></div>

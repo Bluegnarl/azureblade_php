@@ -9,7 +9,7 @@
                         <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>
                     </div>
                 </div>
-                <div class="icon-container" style="cursor: pointer;" onclick="closeOverlay()">
+                <div class="icon-container buttons-clickable" onclick="closeOverlay()">
                     <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
                 </div>
             </div>

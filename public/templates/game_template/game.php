@@ -17,7 +17,7 @@ $location = 'Dark Wood Forest';
 </head>
 
 <body>
-    <div class="parallax_container">
+    <div class="parallax-container">
         <div class="parallax" style="background: url(../../assets/img/background-2.png) no-repeat center/cover;" draggable="false"></div>
     </div>
     <div class="modals-container">
@@ -30,7 +30,7 @@ $location = 'Dark Wood Forest';
         ?>
     </div>
     <div class="button-container button-container-inversed main-menu-button">
-        <a href="/" class="buttons buttons-inversed buttons-clickable button-clickable-padding">
+        <a href="/" class="buttons buttons-inversed buttons-clickable-exceptions button-clickable-padding">
             <div class="icon" style="background-image: url(/assets/img/home.svg);"></div>
             <p class="label">Main Menu</p>
         </a>
@@ -86,17 +86,17 @@ $location = 'Dark Wood Forest';
             </div>
             <div class="controls">
                 <div class="secondary-controls">
-                    <div onclick="modal('infos')" class="secondary-control">
+                    <div onclick="modal('infos')" class="secondary-control buttons-clickable buttons-clickable-w-border">
                         <div style="background: url(/assets/img/infos.svg) no-repeat center/cover;"></div>
                     </div>
-                    <div onclick="modal('endings')" class="secondary-control">
+                    <div onclick="modal('endings')" class="secondary-control buttons-clickable buttons-clickable-w-border">
                         <div style="background: url(/assets/img/endings.svg) no-repeat center/cover;"></div>
                     </div>
-                    <div onclick="modal('help')" class="secondary-control">
+                    <div onclick="modal('help')" class="secondary-control buttons-clickable buttons-clickable-w-border">
                         <div style="background: url(/assets/img/help.svg) no-repeat center/cover;"></div>
                     </div>
                 </div>
-                <div class="primary-control">
+                <div class="primary-control buttons-clickable buttons-clickable-w-border">
                     <div class="icon" style="background-image: url(/assets/img/next.svg);"></div>
                     <p class="label">Next</p>
                 </div>
