@@ -92,7 +92,6 @@ main {
   width: 100%;
   gap: 8px;
   padding: 0 8px;
-  margin-top: 24px;
   justify-content: space-evenly;
 }
 
@@ -263,7 +262,7 @@ body nav div {
   }
 
   .character-image img {
-    max-height: 200px;
+    max-height: 250px;
   }
 
   .character-image-desktop {
@@ -310,6 +309,10 @@ body nav div {
 
   .controls {
     padding: 0 24px 0 24px;
+  }
+
+  .character-image img {
+    max-height: 200px;
   }
 }
 @media screen and (max-width: 500px) {

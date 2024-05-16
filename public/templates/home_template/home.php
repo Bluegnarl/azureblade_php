@@ -34,6 +34,7 @@ $username = "Bluegnarl";
             require_once __DIR__ . '/../../assets/partials/modal_help.php';
             require_once __DIR__ . '/../../assets/partials/modal_endings.php';
             require_once __DIR__ . '/../../assets/partials/modal_newgame.php';
+            require_once __DIR__ . '/../../assets/partials/modal_login.php';
         ?>
     </div>
     <nav>
