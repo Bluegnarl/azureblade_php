@@ -109,6 +109,7 @@ button {
   display: none;
   overflow: hidden;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .modal-background {
