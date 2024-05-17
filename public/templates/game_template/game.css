@@ -181,7 +181,7 @@ body nav div {
   align-items: flex-end;
   max-width: 650px;
   align-self: center; 
-  margin: 24px 0 16px 0;
+  margin: 24px 0 24px 0;
   transition: scale .35s ease-out, opacity .6s ease-out;
   opacity: 0;
   scale: .3;
