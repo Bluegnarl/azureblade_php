@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 .scrollbar-width-none {
   scrollbar-width: none;
 }
@@ -339,6 +344,12 @@ a {
   border: solid 2px var(--on-surface-2);
 }
 
+/* Light Buttons */
+
+.light-buttons {
+  padding: 2px 12px 4px 12px;
+}
+
 /* Icons */
 
 .icon-container{
@@ -436,6 +447,10 @@ a {
     height: 20px;
   }
 
+  .light-buttons {
+    padding: 0px 10px 1px 10px;
+  }
+
   .endings {
     border-radius: 0;
   }
@@ -448,6 +463,10 @@ a {
 
   .icon-container{
     padding: 9px !important;
+  }
+
+  .label-container {
+    gap: 8px;
   }
 }
 

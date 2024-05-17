@@ -346,6 +346,16 @@ body nav div {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .primary-control {
+    justify-content: center;
+  }
+
+  .primary-control p {
+    display: none;
+  }
+}
+
 @media screen and (max-height: 500px) {
   .character-images-mobile {
     display: none;

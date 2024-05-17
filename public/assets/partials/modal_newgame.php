@@ -13,7 +13,7 @@
         </p>
     </div>
     <div class="labels-container">
-        <div class="label-container buttons-clickable buttons-clickable-w-border">
+        <div class="label-container buttons-clickable buttons-clickable-w-border" onclick="modal('login')">
             <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
             <p class="label">Log in</p>
         </div>

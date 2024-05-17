@@ -129,7 +129,7 @@
     filter: var(--drop-shadow);
   }
 
-  .placeholder {
+  .placeholder::placeholder {
     font-family: var(--font-family);
     font-size: var(--body-large-fsz);
     font-weight: 300;

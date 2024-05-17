@@ -6,6 +6,8 @@ const a = document.querySelector("a"),
   modalEndings = document.querySelector(".modal-endings"),
   modalHelp = document.querySelector(".modal-help"),
   modalNewGame = document.querySelector(".modal-newgame"),
+  modalLogin = document.querySelector(".modal-login"),
+  modalSignup = document.querySelector(".modal-signup"),
   modalBackground = document.querySelector(".modal-background"),
   helpCase1 = document.querySelector(".help-case-1"),
   helpCase2 = document.querySelector(".help-case-2"),
@@ -63,7 +65,27 @@ function modal(modal) {
           modalNewGame.style.transform = "translateY(0)";
           modalNewGame.style.opacity = "1";
           modalBackground.style.opacity = "1";
-        }, 1);
+        }, 100);
+      break;
+      case "login":
+        modalsContainer.style.display = "flex";
+        modalLogin.style.display = "flex";
+  
+        setTimeout(() => {
+          modalLogin.style.transform = "translateY(0)";
+          modalLogin.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 100);
+      break;
+      case "signup":
+        modalsContainer.style.display = "flex";
+        modalSignup.style.display = "flex";
+  
+        setTimeout(() => {
+          modalSignup.style.transform = "translateY(0)";
+          modalSignup.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 100);
       break;
     default:
       break;
@@ -79,6 +101,14 @@ function closeOverlay() {
     modalNewGame.style.transform = "translateY(-50%)";
     modalNewGame.style.opacity = "0";
   }
+  if (modalLogin) {
+    modalLogin.style.transform = "translateY(-50%)";
+    modalLogin.style.opacity = "0";
+  }
+  if (modalSignup) {
+    modalSignup.style.transform = "translateY(-50%)";
+    modalSignup.style.opacity = "0";
+  }
   modalHelp.style.transform = "translateY(-50%)";
   modalHelp.style.opacity = "0";
   modalEndings.style.transform = "translateX(-50%)";
@@ -93,6 +123,12 @@ function closeOverlay() {
     }
     if (modalNewGame) {
       modalNewGame.style.display = "none";
+    }
+    if (modalLogin) {
+      modalLogin.style.display = "none";
+    }
+    if (modalSignup) {
+      modalSignup.style.display = "none";
     }
     modalHelp.style.display = "none";
     modalEndings.style.display = "none";
