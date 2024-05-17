@@ -34,7 +34,7 @@ function modal(modal) {
         modalInfos.style.transform = "translateY(0)";
         modalInfos.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
+      }, 100);
       break;
     case "endings":
       modalsContainer.style.display = "flex";
@@ -45,7 +45,7 @@ function modal(modal) {
         modalEndings.style.transform = "translateX(0)";
         modalEndings.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
+      }, 100);
       break;
     case "help":
       modalsContainer.style.display = "flex";
@@ -55,7 +55,7 @@ function modal(modal) {
         modalHelp.style.transform = "translateY(0)";
         modalHelp.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
+      }, 100);
       break
       case "newgame":
         modalsContainer.style.display = "flex";
