@@ -78,7 +78,7 @@ $location = 'Dark Wood Forest';
                     </div>
                     <div class="message message-right">
                         <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Last Gaming</p>
+                            <p class="label" style="color: var(--on-surface-1);">Kairus</p>
                         </div>
                         <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
                     </div>
