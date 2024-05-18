@@ -35,6 +35,7 @@ $username = "Bluegnarl";
             require_once __DIR__ . '/../../assets/partials/modal_endings.php';
             require_once __DIR__ . '/../../assets/partials/modal_newgame.php';
             require_once __DIR__ . '/../../assets/partials/modal_login.php';
+            require_once __DIR__ . '/../../assets/partials/modal_signup.php';
         ?>
     </div>
     <nav>
@@ -62,14 +63,14 @@ $username = "Bluegnarl";
     <?php endif;
     if (!$loggedin) : ?>
     <div class="buttons-container">
-    <div class="button-container main-menu-button">
-            <div class="buttons buttons-clickable-exceptions button-clickable-padding">
+        <div class="button-container main-menu-button">
+            <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('login')">
                 <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
                 <p class="label">Log in</p>
             </div>
         </div>
         <div class="button-container main-menu-button">
-            <div class="buttons buttons-clickable-exceptions button-clickable-padding">
+            <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('signup')">
                 <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
                 <p class="label">Sign up</p>
             </div>

@@ -162,6 +162,7 @@ body nav div {
   top: 0;
   display: flex;
   z-index: 15;
+  max-width: 250px;
 }
 
 .saving-button {
@@ -169,6 +170,7 @@ body nav div {
   right: 0;
   top: 0;
   z-index: 15;
+  max-width: 250px; 
 }
 
 .controls {
@@ -179,7 +181,7 @@ body nav div {
   align-items: flex-end;
   max-width: 650px;
   align-self: center; 
-  margin: 24px 0 16px 0;
+  margin: 24px 0 24px 0;
   transition: scale .35s ease-out, opacity .6s ease-out;
   opacity: 0;
   scale: .3;
@@ -253,7 +255,7 @@ body nav div {
   .dialogue {
     width: 100%;
     align-items: center;
-    padding: 24px;
+    padding: 24px 24px 12px 24px;
   }
 
   .dialogue .message:first-child {
@@ -343,6 +345,16 @@ body nav div {
 
   .secondary-control {
     padding: 4px 12px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .primary-control {
+    justify-content: center;
+  }
+
+  .primary-control p {
+    display: none;
   }
 }
 

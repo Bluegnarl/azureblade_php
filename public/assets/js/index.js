@@ -6,6 +6,8 @@ const a = document.querySelector("a"),
   modalEndings = document.querySelector(".modal-endings"),
   modalHelp = document.querySelector(".modal-help"),
   modalNewGame = document.querySelector(".modal-newgame"),
+  modalLogin = document.querySelector(".modal-login"),
+  modalSignup = document.querySelector(".modal-signup"),
   modalBackground = document.querySelector(".modal-background"),
   helpCase1 = document.querySelector(".help-case-1"),
   helpCase2 = document.querySelector(".help-case-2"),
@@ -16,13 +18,15 @@ const a = document.querySelector("a"),
 // On Load Opacity 0 to 1
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.style.opacity = 1;
-  parallaxContainer.style.opacity = 1;
+  setTimeout(() => {
+    document.body.style.opacity = 1;
+    parallaxContainer.style.opacity = 1;
+  }, 100);
 });
 
 // Modal
 
-function modal(modal) {
+function modal(modal) { 
   switch (modal) {
     case "infos":
       modalsContainer.style.display = "flex";
@@ -32,7 +36,7 @@ function modal(modal) {
         modalInfos.style.transform = "translateY(0)";
         modalInfos.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
+      }, 100);
       break;
     case "endings":
       modalsContainer.style.display = "flex";
@@ -43,7 +47,7 @@ function modal(modal) {
         modalEndings.style.transform = "translateX(0)";
         modalEndings.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
+      }, 100);
       break;
     case "help":
       modalsContainer.style.display = "flex";
@@ -53,17 +57,79 @@ function modal(modal) {
         modalHelp.style.transform = "translateY(0)";
         modalHelp.style.opacity = "1";
         modalBackground.style.opacity = "1";
-      }, 1);
-      break
-      case "newgame":
-        modalsContainer.style.display = "flex";
-        modalNewGame.style.display = "flex";
-  
+      }, 100);
+      break;
+    case "newgame":
+      modalsContainer.style.display = "flex";
+      modalNewGame.style.display = "flex";
+
+      setTimeout(() => {
+        modalNewGame.style.transform = "translateY(0)";
+        modalNewGame.style.opacity = "1";
+        modalBackground.style.opacity = "1";
+      }, 100);
+      break;
+    case "signup":
+      modalsContainer.style.display = "flex";
+      if (modalNewGame.style.display == "flex" || modalLogin.style.display == "flex") {
+          modalNewGame.style.transform = "translateY(-50%)";
+          modalNewGame.style.opacity = "0";
+          modalLogin.style.transform = "translateY(-50%)";
+          modalLogin.style.opacity = "0";
         setTimeout(() => {
-          modalNewGame.style.transform = "translateY(0)";
-          modalNewGame.style.opacity = "1";
+          modalNewGame.style.display = "none";
+          modalLogin.style.display = "none";
+        }, 400);
+        setTimeout(() => {
+          modalSignup.style.display = "flex";
+        }, 450);
+        setTimeout(() => {
+          modalSignup.style.transform = "translateY(0)";
+          modalSignup.style.opacity = "1";
           modalBackground.style.opacity = "1";
-        }, 1);
+        }, 500);
+      }
+      else{
+        setTimeout(() => {
+          modalSignup.style.display = "flex";
+        }, 50);
+        setTimeout(() => {
+          modalSignup.style.transform = "translateY(0)";
+          modalSignup.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 100);
+      }
+      break;
+    case "login":
+      modalsContainer.style.display = "flex";
+      if (modalNewGame.style.display == "flex" || modalSignup.style.display == "flex") {
+          modalNewGame.style.transform = "translateY(-50%)";
+          modalNewGame.style.opacity = "0";
+          modalSignup.style.transform = "translateY(-50%)";
+          modalSignup.style.opacity = "0";
+        setTimeout(() => {
+          modalNewGame.style.display = "none";
+          modalSignup.style.display = "none";
+        }, 400);
+        setTimeout(() => {
+          modalLogin.style.display = "flex";
+        }, 450);
+        setTimeout(() => {
+          modalLogin.style.transform = "translateY(0)";
+          modalLogin.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 500);
+      }
+      else{
+        setTimeout(() => {
+          modalLogin.style.display = "flex";
+        }, 50);
+        setTimeout(() => {
+          modalLogin.style.transform = "translateY(0)";
+          modalLogin.style.opacity = "1";
+          modalBackground.style.opacity = "1";
+        }, 100);
+      }
       break;
     default:
       break;
@@ -79,6 +145,14 @@ function closeOverlay() {
     modalNewGame.style.transform = "translateY(-50%)";
     modalNewGame.style.opacity = "0";
   }
+  if (modalLogin) {
+    modalLogin.style.transform = "translateY(-50%)";
+    modalLogin.style.opacity = "0";
+  }
+  if (modalSignup) {
+    modalSignup.style.transform = "translateY(-50%)";
+    modalSignup.style.opacity = "0";
+  }
   modalHelp.style.transform = "translateY(-50%)";
   modalHelp.style.opacity = "0";
   modalEndings.style.transform = "translateX(-50%)";
@@ -93,6 +167,12 @@ function closeOverlay() {
     }
     if (modalNewGame) {
       modalNewGame.style.display = "none";
+    }
+    if (modalLogin) {
+      modalLogin.style.display = "none";
+    }
+    if (modalSignup) {
+      modalSignup.style.display = "none";
     }
     modalHelp.style.display = "none";
     modalEndings.style.display = "none";

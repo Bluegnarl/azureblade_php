@@ -133,6 +133,16 @@
     font-family: var(--font-family);
     font-size: var(--body-large-fsz);
     font-weight: 300;
+    color: var(--on-surface);
+    opacity: 1;
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
+  .placeholder::placeholder {
+    font-family: var(--font-family);
+    font-size: var(--body-large-fsz);
+    font-weight: 300;
     color: var(--on-surface-2);
     opacity: 0.5;
     text-decoration: none;
@@ -178,8 +188,8 @@
     .body-text {
       font-size: var(--body-medium-fsz);
     }
-
-    .placeholder {
+    
+    .placeholder::placeholder {
       font-size: var(--placeholder-medium-fsz);
     }
 
@@ -214,7 +224,11 @@
     }
 
     .placeholder {
-      font-size: var(--placeholder-light-fsz);
+      font-size: var(--body-light-fsz);
+    }
+    
+    .placeholder::placeholder {
+      font-size: var(--body-light-fsz);
     }
 
     .light {
@@ -252,6 +266,10 @@
     }
 
     .placeholder {
+      font-size: var(--placeholder-extra-light-fsz);
+    }
+
+    .placeholder::placeholder {
       font-size: var(--placeholder-extra-light-fsz);
     }
 
