@@ -118,7 +118,7 @@ body nav div {
   }
 
   .title-container img {
-    width: 100px;
+    width: 80px;
   }
 
   .buttons p {
@@ -148,3 +148,15 @@ body nav div {
     width: 50px;
   }
 } 
+
+@media screen and (min-width: 1250px) {
+  @media screen and (max-height: 700px) {
+    body h1 {
+      font-size: 4rem;
+    }
+  
+    .title-container img {
+      width: 100px;
+    }
+  }
+}

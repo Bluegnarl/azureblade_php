@@ -502,3 +502,23 @@ button {
     height: 16px;
   }
 }
+
+@media screen and (min-width: 1250px) {
+  @media screen and (max-height: 700px) {
+    .icon {
+      width: 16px !important;
+      height: 16px !important;
+    }
+    .buttons {
+      width: 170px;
+    }
+    .buttons p {
+      display: block;
+    }
+    .buttons div,
+    .secondary-controls div {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
