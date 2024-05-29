@@ -79,6 +79,11 @@
   --body-light-fsz: 20px;
   --light-light-fsz: 20px;
 
+  --main-menu-lighter-fsz: 1.5rem;
+  --title-lighter-fsz: 1.5rem;
+  --body-lighter-fsz: 18px;
+  --light-lighter-fsz: 16px;
+
   --main-menu-extra-light-fsz: 1.3rem;
   --title-extra-light-fsz: 1.2rem;
   --body-extra-light-fsz: 16px;
@@ -322,7 +327,49 @@
 }
 
 @media screen and (min-width: 1250px) {
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 750px) {
+    .main-menu {
+      font-size: var(--main-menu-lighter-fsz) !important;
+    }
+  
+    .title {
+      font-size: var(--title-lighter-fsz) !important;
+    }
+  
+    .label {
+      font-size: var(--body-lighter-fsz) !important;
+    }
+  
+    .label-higher {
+      font-size: var(--body-lighter-fsz) !important;
+    }
+  
+    .body-text {
+      font-size: var(--body-lighter-fsz) !important;
+    }
+  
+    .placeholder {
+      font-size: var(--placeholder-lighter-fsz) !important;
+    }
+
+    .placeholder::placeholder {
+      font-size: var(--placeholder-lighter-fsz) !important;
+    }
+  
+    .light {
+      font-size: var(--light-lighter-fsz) !important;
+    }
+  
+    .button-padding {
+      padding: 6px 16px !important;
+    }
+  
+    .button-clickable-padding {
+      padding: 5px 16px !important;
+    }
+  }
+
+  @media screen and (max-height: 500px) {
     .main-menu {
       font-size: var(--main-menu-extra-light-fsz) !important;
     }

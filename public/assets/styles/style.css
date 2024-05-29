@@ -504,7 +504,25 @@ button {
 }
 
 @media screen and (min-width: 1250px) {
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 750px) {
+    .icon {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    .buttons {
+      width: 170px;
+    }
+    .buttons p {
+      display: block;
+    }
+    .buttons div,
+    .secondary-controls div {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media screen and (max-height: 500px) {
     .icon {
       width: 16px !important;
       height: 16px !important;

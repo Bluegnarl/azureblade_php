@@ -114,7 +114,7 @@ body nav div {
 }
 @media screen and (max-width: 500px) {
   body h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .title-container img {
@@ -149,10 +149,42 @@ body nav div {
   }
 } 
 
+@media screen and (max-height: 500px) {
+  body h1 {
+    font-size: 3rem;
+  }
+
+  .title-container img {
+    width: 80px;
+  }
+
+  .buttons p {
+    display: block;
+  }
+
+  .buttons-container {
+    margin: 16px 12px;
+  }
+}
+
 @media screen and (min-width: 1250px) {
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 750px) {
     body h1 {
-      font-size: 4rem;
+      font-size: 4.5rem;
+    }
+  
+    .title-container img {
+      width: 100px;
+    }
+
+    .buttons-container {
+      gap: 16px;
+    }
+  }
+
+  @media screen and (max-height: 500px) {
+    body h1 {
+      font-size: 3.5rem;
     }
   
     .title-container img {
