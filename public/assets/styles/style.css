@@ -108,7 +108,7 @@ button {
   height: 100dvh;
   display: none;
   overflow: hidden;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .modal-background {
@@ -134,7 +134,45 @@ button {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   width: 100%;
   margin: 24px;
-  max-width: 500px;
+  max-width: 400px;
+  background: #47515dc9;
+  height: fit-content;
+  padding: 24px 0 0 0;
+  border-radius: 28px;
+}
+
+.modal-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+}
+
+.divider {
+  background: #d8deec40;
+  height: 1px;
+  width: 85%;
+}
+
+.modal-subject {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 36px 24px;
+  gap: 8px;
+}
+
+.modal-subject p {
+  padding-top: 12px;
+  filter: none !important;
+}
+
+.modal-img {
+  max-width: 100%;
+}
+
+.modal-img img {
+  width: 100%;
 }
 
 .modal-left {
@@ -400,14 +438,6 @@ button {
 }
 
 @media screen and (max-width: 1250px) {
-  body h1 {
-    font-size: 5rem;
-  }
-
-  .title-container img {
-    width: 150px;
-  }
-
   .buttons {
     width: 225px;
   }
@@ -506,19 +536,19 @@ button {
 @media screen and (min-width: 1250px) {
   @media screen and (max-height: 750px) {
     .icon {
-      width: 20px !important;
-      height: 20px !important;
+      width: 22px !important;
+      height: 22px !important;
     }
     .buttons {
-      width: 170px;
+      width: 220px;
     }
     .buttons p {
       display: block;
     }
     .buttons div,
     .secondary-controls div {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
   }
 
