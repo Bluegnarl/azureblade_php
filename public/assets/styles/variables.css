@@ -79,7 +79,7 @@
   --body-light-fsz: 20px;
   --light-light-fsz: 1rem;
 
-  --main-menu-extra-light-fsz: 1.6rem;
+  --main-menu-extra-light-fsz: 1.2rem;
   --title-extra-light-fsz: 1.2rem;
   --body-extra-light-fsz: 16px;
   --light-extra-light-fsz: 14px;
@@ -180,35 +180,35 @@
 
   @media screen and (max-width: 1250px) {
     .main-menu {
-      font-size: var(--main-menu-medium-fsz) !important;
+      font-size: var(--main-menu-medium-fsz);
     }
 
     .title {
-      font-size: var(--title-medium-fsz) !important;
+      font-size: var(--title-medium-fsz);
     }
 
     .label {
-      font-size: var(--body-medium-fsz) !important;
+      font-size: var(--body-medium-fsz);
     }
 
     .label-higher {
-      font-size: var(--body-medium-fsz) !important;
+      font-size: var(--body-medium-fsz);
     }
 
     .body-text {
-      font-size: var(--body-medium-fsz) !important;
+      font-size: var(--body-medium-fsz);
     }
     
     .placeholder::placeholder {
-      font-size: var(--placeholder-medium-fsz) !important;
+      font-size: var(--placeholder-medium-fsz);
     }
 
     .light {
-      font-size: var(--light-medium-fsz) !important;
+      font-size: var(--light-medium-fsz);
     }
 
     .lighter {
-      font-size: var(--light-medium-fsz) !important;
+      font-size: var(--light-medium-fsz);
     }
 
     .button-clickable-padding {
