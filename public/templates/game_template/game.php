@@ -87,13 +87,13 @@ $location = 'Dark Wood Forest';
             <div class="controls">
                 <div class="secondary-controls">
                     <div onclick="modal('infos')" class="secondary-control buttons-clickable buttons-clickable-w-border">
-                        <div style="background: url(/assets/img/infos.svg) no-repeat center/cover;"></div>
+                        <div class="icon" style="background: url(/assets/img/infos.svg) no-repeat center/cover;"></div>
                     </div>
                     <div onclick="modal('endings')" class="secondary-control buttons-clickable buttons-clickable-w-border">
-                        <div style="background: url(/assets/img/endings.svg) no-repeat center/cover;"></div>
+                        <div class="icon" style="background: url(/assets/img/endings.svg) no-repeat center/cover;"></div>
                     </div>
                     <div onclick="modal('help')" class="secondary-control buttons-clickable buttons-clickable-w-border">
-                        <div style="background: url(/assets/img/help.svg) no-repeat center/cover;"></div>
+                        <div class="icon" style="background: url(/assets/img/help.svg) no-repeat center/cover;"></div>
                     </div>
                 </div>
                 <div class="primary-control buttons-clickable buttons-clickable-w-border">

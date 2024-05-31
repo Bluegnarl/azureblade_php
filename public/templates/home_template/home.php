@@ -65,13 +65,13 @@ $username = "Bluegnarl";
     <div class="buttons-container">
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('login')">
-                <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
+                <div class="icon" style="background-image: url(/assets/img/login.svg);"></div>
                 <p class="label">Log in</p>
             </div>
         </div>
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('signup')">
-                <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
+                <div class="icon" style="background-image: url(/assets/img/signup.svg);"></div>
                 <p class="label">Sign up</p>
             </div>
         </div>

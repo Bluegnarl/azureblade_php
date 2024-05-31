@@ -2,7 +2,7 @@
   --primary: #47515d;
   --primary-transparent: #47515D99;
   --primary-lighter: #4a5b6e;
-  --primary-darker: #3b4753;
+  --primary-darker: #3c4b5b;
 
   --on-surface: #fff0d7;
   --on-surface-1: #ffe1b0;
@@ -67,17 +67,17 @@
   --main-menu-large-fsz: 2.5rem;
   --title-large-fsz: 2rem;
   --body-large-fsz: 24px;
-  --light-large-fsz: 1.1rem;
+  --light-large-fsz: 1.2rem;
 
   --main-menu-medium-fsz: 2rem;
   --title-medium-fsz: 1.8rem;
   --body-medium-fsz: 20px;
-  --light-medium-fsz: 1.1rem;
+  --light-medium-fsz: 1rem;
 
   --main-menu-light-fsz: 1.6rem;
   --title-light-fsz: 1.5rem;
   --body-light-fsz: 20px;
-  --light-light-fsz: 1.1rem;
+  --light-light-fsz: 1rem;
 
   --main-menu-extra-light-fsz: 1.6rem;
   --title-extra-light-fsz: 1.2rem;
@@ -180,31 +180,35 @@
 
   @media screen and (max-width: 1250px) {
     .main-menu {
-      font-size: var(--main-menu-medium-fsz);
+      font-size: var(--main-menu-medium-fsz) !important;
     }
 
     .title {
-      font-size: var(--title-medium-fsz);
+      font-size: var(--title-medium-fsz) !important;
     }
 
     .label {
-      font-size: var(--body-medium-fsz);
+      font-size: var(--body-medium-fsz) !important;
     }
 
     .label-higher {
-      font-size: var(--body-medium-fsz);
+      font-size: var(--body-medium-fsz) !important;
     }
 
     .body-text {
-      font-size: var(--body-medium-fsz);
+      font-size: var(--body-medium-fsz) !important;
     }
     
     .placeholder::placeholder {
-      font-size: var(--placeholder-medium-fsz);
+      font-size: var(--placeholder-medium-fsz) !important;
     }
 
     .light {
-      font-size: var(--light-medium-fsz);
+      font-size: var(--light-medium-fsz) !important;
+    }
+
+    .lighter {
+      font-size: var(--light-medium-fsz) !important;
     }
 
     .button-clickable-padding {
@@ -214,39 +218,39 @@
 
   @media screen and (max-width: 500px) {
     .main-menu {
-      font-size: var(--main-menu-light-fsz);
+      font-size: var(--main-menu-light-fsz) !important;
     }
 
     .title {
-      font-size: var(--title-light-fsz);
+      font-size: var(--title-light-fsz) !important;
     }
 
     .label {
-      font-size: var(--body-light-fsz);
+      font-size: var(--body-light-fsz) !important;
     }
 
     .label-higher {
-      font-size: var(--body-light-fsz);
+      font-size: var(--body-light-fsz) !important;
     }
 
     .body-text {
-      font-size: var(--body-light-fsz);
+      font-size: var(--body-light-fsz) !important;
     }
 
     .placeholder {
-      font-size: var(--body-light-fsz);
+      font-size: var(--body-light-fsz) !important;
     }
     
     .placeholder::placeholder {
-      font-size: var(--body-light-fsz);
+      font-size: var(--body-light-fsz) !important;
     }
 
     .light {
-      font-size: var(--light-light-fsz);
+      font-size: var(--light-light-fsz) !important;
     }
 
     .lighter {
-      font-size: var(--light-light-fsz);
+      font-size: var(--light-light-fsz) !important;
     }
 
     .button-padding {
@@ -260,39 +264,39 @@
 
   @media screen and (max-width: 350px) {
     .main-menu {
-      font-size: var(--main-menu-extra-light-fsz);
+      font-size: var(--main-menu-extra-light-fsz) !important;
     }
 
     .title {
-      font-size: var(--title-extra-light-fsz);
+      font-size: var(--title-extra-light-fsz) !important;
     }
 
     .label {
-      font-size: var(--body-extra-light-fsz);
+      font-size: var(--body-extra-light-fsz) !important;
     }
 
     .label-higher {
-      font-size: var(--body-extra-light-fsz);
+      font-size: var(--body-extra-light-fsz) !important;
     }
 
     .body-text {
-      font-size: var(--body-extra-light-fsz);
+      font-size: var(--body-extra-light-fsz) !important;
     }
 
     .placeholder {
-      font-size: var(--placeholder-extra-light-fsz);
+      font-size: var(--placeholder-extra-light-fsz) !important;
     }
 
     .placeholder::placeholder {
-      font-size: var(--placeholder-extra-light-fsz);
+      font-size: var(--placeholder-extra-light-fsz) !important;
     }
 
     .light {
-      font-size: var(--light-extra-light-fsz);
+      font-size: var(--light-extra-light-fsz) !important;
     }
 
     .lighter {
-      font-size: var(--light-light-fsz);
+      font-size: var(--light-extra-light-fsz) !important;
     }
   }
 }
@@ -331,7 +335,7 @@
   }
 
   .lighter {
-    font-size: var(--light-light-fsz);
+    font-size: var(--light-extra-light-fsz) !important;
   }
 
   .button-padding {
@@ -374,11 +378,11 @@
     }
   
     .light {
-      font-size: var(--light-medium-fsz) !important;
+      font-size: var(--light-light-fsz) !important;
     }
 
     .lighter {
-      font-size: var(--light-light-fsz);
+      font-size: var(--light-light-fsz) !important;
     }
   
     .button-padding {
@@ -424,7 +428,7 @@
     }
 
     .lighter {
-      font-size: var(--light-light-fsz);
+      font-size: var(--light-extra-light-fsz) !important;
     }
   
     .button-padding {

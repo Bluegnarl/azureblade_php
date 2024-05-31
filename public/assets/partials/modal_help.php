@@ -18,7 +18,7 @@
             <p class="light">QTE</p>
         </div>
     </div>
-    <div style="display: flex; flex-direction: column; overflow: hidden; border-radius: 28px">
+    <div style="display: flex; flex-direction: column; overflow: hidden;">
         <div class="modal-subject">
             <div class="modal-img">
                 <img src="/assets/img/card-image.png" alt="">

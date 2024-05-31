@@ -1,10 +1,10 @@
 <?php
 
-$username = $_POST['username'] ?? null;
-$password = $_POST['password'] ?? null;
-$confirm_password = $_POST['confirm-password'] ?? null;
+$new_username = $_POST['username'] ?? null;
+$new_password = $_POST['password'] ?? null;
+$new_confirm_password = $_POST['confirm-password'] ?? null;
 
-if($password === $confirm_password) {
+if($new_password === $new_confirm_password) {
     // It works, tested
 }
 

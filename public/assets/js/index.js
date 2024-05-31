@@ -14,6 +14,34 @@ const a = document.querySelector("a"),
   arrowIcon = document.querySelectorAll(".arrow-icon"),
   endingsCounter = document.querySelector(".endings-counter");
 
+// Parallax Effect for Background
+
+let width = window.innerWidth / 2;
+let height = window.innerHeight / 2;
+
+window.addEventListener("resize", () => {
+  width = window.innerWidth / 2;
+  height = window.innerHeight / 2;
+});
+
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  const posX = ((x - width) * -1) / 10;
+  const posY = ((y - height) * -1) / 5;
+
+  //   parallax.style.transform = `translate(${posX}px, ${posY}px)`;
+
+  parallax.animate(
+    { transform: `translate(${posX}px, ${posY}px)` },
+    {
+      duration: 7000,
+      fill: "forwards",
+    }
+  );
+});
+
 // On Load Opacity 0 to 1
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,11 +57,23 @@ function modal(modal) {
   switch (modal) {
     case "infos":
       modalsContainer.style.display = "flex";
+      modalsContainer.style.alignItems = "flex-start";
       modalInfos.style.display = "flex";
 
       setTimeout(() => {
         modalInfos.style.transform = "translateY(0)";
         modalInfos.style.opacity = "1";
+        modalBackground.style.opacity = "1";
+      }, 100);
+      break;
+    case "help":
+      modalsContainer.style.display = "flex";
+      modalsContainer.style.alignItems = "flex-start";
+      modalHelp.style.display = "flex";
+
+      setTimeout(() => {
+        modalHelp.style.transform = "translateY(0)";
+        modalHelp.style.opacity = "1";
         modalBackground.style.opacity = "1";
       }, 100);
       break;
@@ -45,16 +85,6 @@ function modal(modal) {
       setTimeout(() => {
         modalEndings.style.transform = "translateX(0)";
         modalEndings.style.opacity = "1";
-        modalBackground.style.opacity = "1";
-      }, 100);
-      break;
-    case "help":
-      modalsContainer.style.display = "flex";
-      modalHelp.style.display = "flex";
-
-      setTimeout(() => {
-        modalHelp.style.transform = "translateY(0)";
-        modalHelp.style.opacity = "1";
         modalBackground.style.opacity = "1";
       }, 100);
       break;
@@ -164,6 +194,7 @@ function closeOverlay() {
 
   setTimeout(() => {
     modalsContainer.style.justifyContent = "center";
+    modalsContainer.style.alignItems = "center";
     modalsContainer.style.display = "none";
     if (modalInfos) {
       modalInfos.style.display = "none";
@@ -222,31 +253,3 @@ function subjectCase(subjectCase) {
 //   const pingnoob = new Audio("/assets/audio/pingnoob.wav");
 //   pingnoob.play();
 // });
-
-// Parallax Effect for Home and Game Page
-
-let width = window.innerWidth / 2;
-let height = window.innerHeight / 2;
-
-window.addEventListener("resize", () => {
-  width = window.innerWidth / 2;
-  height = window.innerHeight / 2;
-});
-
-document.addEventListener("mousemove", (e) => {
-  let x = e.clientX;
-  let y = e.clientY;
-
-  const posX = ((x - width) * -1) / 10;
-  const posY = ((y - height) * -1) / 5;
-
-  //   parallax.style.transform = `translate(${posX}px, ${posY}px)`;
-
-  parallax.animate(
-    { transform: `translate(${posX}px, ${posY}px)` },
-    {
-      duration: 7000,
-      fill: "forwards",
-    }
-  );
-});
