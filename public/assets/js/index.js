@@ -9,9 +9,7 @@ const a = document.querySelector("a"),
   modalLogin = document.querySelector(".modal-login"),
   modalSignup = document.querySelector(".modal-signup"),
   modalBackground = document.querySelector(".modal-background"),
-  helpCase1 = document.querySelector(".help-case-1"),
-  helpCase2 = document.querySelector(".help-case-2"),
-  helpCase3 = document.querySelector(".help-case-3"),
+  modalSubject = document.querySelectorAll(".modal-subject"),
   arrowIcon = document.querySelectorAll(".arrow-icon"),
   endingsCounter = document.querySelector(".endings-counter");
 
@@ -26,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Modal
 
-function modal(modal) { 
+function modal(modal) {
   switch (modal) {
     case "infos":
       modalsContainer.style.display = "flex";
@@ -71,11 +69,14 @@ function modal(modal) {
       break;
     case "signup":
       modalsContainer.style.display = "flex";
-      if (modalNewGame.style.display == "flex" || modalLogin.style.display == "flex") {
-          modalNewGame.style.transform = "translateY(-50%)";
-          modalNewGame.style.opacity = "0";
-          modalLogin.style.transform = "translateY(-50%)";
-          modalLogin.style.opacity = "0";
+      if (
+        modalNewGame.style.display == "flex" ||
+        modalLogin.style.display == "flex"
+      ) {
+        modalNewGame.style.transform = "translateY(-50%)";
+        modalNewGame.style.opacity = "0";
+        modalLogin.style.transform = "translateY(-50%)";
+        modalLogin.style.opacity = "0";
         setTimeout(() => {
           modalNewGame.style.display = "none";
           modalLogin.style.display = "none";
@@ -88,8 +89,7 @@ function modal(modal) {
           modalSignup.style.opacity = "1";
           modalBackground.style.opacity = "1";
         }, 500);
-      }
-      else{
+      } else {
         setTimeout(() => {
           modalSignup.style.display = "flex";
         }, 50);
@@ -102,11 +102,14 @@ function modal(modal) {
       break;
     case "login":
       modalsContainer.style.display = "flex";
-      if (modalNewGame.style.display == "flex" || modalSignup.style.display == "flex") {
-          modalNewGame.style.transform = "translateY(-50%)";
-          modalNewGame.style.opacity = "0";
-          modalSignup.style.transform = "translateY(-50%)";
-          modalSignup.style.opacity = "0";
+      if (
+        modalNewGame.style.display == "flex" ||
+        modalSignup.style.display == "flex"
+      ) {
+        modalNewGame.style.transform = "translateY(-50%)";
+        modalNewGame.style.opacity = "0";
+        modalSignup.style.transform = "translateY(-50%)";
+        modalSignup.style.opacity = "0";
         setTimeout(() => {
           modalNewGame.style.display = "none";
           modalSignup.style.display = "none";
@@ -119,8 +122,7 @@ function modal(modal) {
           modalLogin.style.opacity = "1";
           modalBackground.style.opacity = "1";
         }, 500);
-      }
-      else{
+      } else {
         setTimeout(() => {
           modalLogin.style.display = "flex";
         }, 50);
@@ -179,87 +181,25 @@ function closeOverlay() {
   }, 400);
 }
 
-let helpCaseBool1 = true;
-let helpCaseBool2 = false;
-let helpCaseBool3 = false;
+function subjectCase(subjectCase) {
+  switch (subjectCase) {
+    case 0:
+      modalSubject[0].style.display = "flex";
+      modalSubject[1].style.display = "none";
+      modalSubject[2].style.display = "none";
 
-helpCase1.style.display = "flex";
-arrowIcon[0].style.rotate = "180deg";
-helpCase1.style.scale = "1";
-
-function helpCase(helpCase) {
-  switch (helpCase) {
+      break;
     case 1:
-      helpCaseBool1 = !helpCaseBool1;
-      helpCaseBool2 = false;
-      helpCaseBool3 = false;
-      if (helpCaseBool1) {
-        helpCase1.style.display = "flex";
-        arrowIcon[0].style.rotate = "180deg";
-        setTimeout(() => {
-          helpCase1.style.scale = "1";
-        }, 1);
+      modalSubject[0].style.display = "none";
+      modalSubject[1].style.display = "flex";
+      modalSubject[2].style.display = "none";
 
-        helpCase2.style.scale = "0";
-        arrowIcon[1].style.rotate = "0deg";
-        helpCase2.style.display = "none";
-        helpCase2.style.scale = "0";
-        arrowIcon[1].style.rotate = "0deg";
-        helpCase2.style.display = "none";
-        helpCase3.style.scale = "0";
-        arrowIcon[2].style.rotate = "0deg";
-        helpCase3.style.display = "none";
-      } else {
-        helpCase1.style.scale = "0";
-        arrowIcon[0].style.rotate = "0deg";
-        helpCase1.style.display = "none";
-      }
       break;
     case 2:
-      helpCaseBool1 = false;
-      helpCaseBool2 = !helpCaseBool2;
-      helpCaseBool3 = false;
-      if (helpCaseBool2) {
-        helpCase2.style.display = "flex";
-        arrowIcon[1].style.rotate = "180deg";
-        setTimeout(() => {
-          helpCase2.style.scale = "1";
-        }, 1);
+      modalSubject[0].style.display = "none";
+      modalSubject[1].style.display = "none";
+      modalSubject[2].style.display = "flex";
 
-        helpCase1.style.scale = "0";
-        arrowIcon[0].style.rotate = "0deg";
-        helpCase1.style.display = "none";
-        helpCase3.style.scale = "0";
-        arrowIcon[2].style.rotate = "0deg";
-        helpCase3.style.display = "none";
-      } else {
-        helpCase2.style.scale = "0";
-        arrowIcon[1].style.rotate = "0deg";
-        helpCase2.style.display = "none";
-      }
-      break;
-    case 3:
-      helpCaseBool1 = false;
-      helpCaseBool2 = false;
-      helpCaseBool3 = !helpCaseBool3;
-      if (helpCaseBool3) {
-        helpCase3.style.display = "flex";
-        arrowIcon[2].style.rotate = "180deg";
-        setTimeout(() => {
-          helpCase3.style.scale = "1";
-        }, 1);
-
-        helpCase1.style.scale = "0";
-        arrowIcon[0].style.rotate = "0deg";
-        helpCase1.style.display = "none";
-        helpCase2.style.scale = "0";
-        arrowIcon[1].style.rotate = "0deg";
-        helpCase2.style.display = "none";
-      } else {
-        helpCase3.style.scale = "0";
-        arrowIcon[2].style.rotate = "0deg";
-        helpCase3.style.display = "none";
-      }
       break;
     default:
       break;

@@ -1,4 +1,4 @@
-<div class="modal modal-login">
+<div class="modal-account modal-login">
     <div class="labels-container">
         <div class="label-container label-container-title">
             <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>

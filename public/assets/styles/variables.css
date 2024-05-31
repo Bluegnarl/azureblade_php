@@ -67,17 +67,17 @@
   --main-menu-large-fsz: 2.5rem;
   --title-large-fsz: 2rem;
   --body-large-fsz: 24px;
-  --light-large-fsz: 1.5rem;
+  --light-large-fsz: 1.1rem;
 
   --main-menu-medium-fsz: 2rem;
   --title-medium-fsz: 1.8rem;
   --body-medium-fsz: 20px;
-  --light-medium-fsz: 1.2rem;
+  --light-medium-fsz: 1.1rem;
 
   --main-menu-light-fsz: 1.6rem;
   --title-light-fsz: 1.5rem;
   --body-light-fsz: 20px;
-  --light-light-fsz: 20px;
+  --light-light-fsz: 1.1rem;
 
   --main-menu-extra-light-fsz: 1.6rem;
   --title-extra-light-fsz: 1.2rem;
@@ -152,11 +152,21 @@
   .light {
     font-family: var(--font-family);
     font-size: var(--light-large-fsz);
-    font-weight: 200;
+    font-weight: 400;
     color: var(--on-surface);
     text-decoration: none;
     filter: var(--drop-shadow);
   }
+
+  .lighter {
+    font-family: var(--font-family);
+    font-size: var(--light-large-fsz);
+    font-weight: 300;
+    color: var(--on-surface);
+    text-decoration: none;
+    filter: var(--drop-shadow);
+  }
+
 
   /* ///////////////////////////////// */
 
@@ -235,6 +245,10 @@
       font-size: var(--light-light-fsz);
     }
 
+    .lighter {
+      font-size: var(--light-light-fsz);
+    }
+
     .button-padding {
       padding: 6px 16px;
     }
@@ -276,6 +290,10 @@
     .light {
       font-size: var(--light-extra-light-fsz);
     }
+
+    .lighter {
+      font-size: var(--light-light-fsz);
+    }
   }
 }
 
@@ -310,6 +328,10 @@
 
   .light {
     font-size: var(--light-extra-light-fsz) !important;
+  }
+
+  .lighter {
+    font-size: var(--light-light-fsz);
   }
 
   .button-padding {
@@ -354,6 +376,10 @@
     .light {
       font-size: var(--light-medium-fsz) !important;
     }
+
+    .lighter {
+      font-size: var(--light-light-fsz);
+    }
   
     .button-padding {
       padding: 6px 16px !important;
@@ -395,6 +421,10 @@
   
     .light {
       font-size: var(--light-extra-light-fsz) !important;
+    }
+
+    .lighter {
+      font-size: var(--light-light-fsz);
     }
   
     .button-padding {

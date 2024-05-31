@@ -10,7 +10,7 @@ if($password === $confirm_password) {
 
 ?>
 
-<div class="modal modal-signup">
+<div class="modal-account modal-signup">
     <div class="labels-container">
         <div class="label-container label-container-title">
             <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
