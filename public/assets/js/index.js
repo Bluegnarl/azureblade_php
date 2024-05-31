@@ -10,6 +10,7 @@ const a = document.querySelector("a"),
   modalSignup = document.querySelector(".modal-signup"),
   modalBackground = document.querySelector(".modal-background"),
   modalSubject = document.querySelectorAll(".modal-subject"),
+  modalNavButton = document.querySelectorAll(".modal-nav-button"),
   arrowIcon = document.querySelectorAll(".arrow-icon"),
   endingsCounter = document.querySelector(".endings-counter");
 
@@ -184,21 +185,30 @@ function closeOverlay() {
 function subjectCase(subjectCase) {
   switch (subjectCase) {
     case 0:
-      modalSubject[0].style.display = "flex";
       modalSubject[1].style.display = "none";
       modalSubject[2].style.display = "none";
+      modalSubject[0].style.display = "flex";
+      modalNavButton[0].classList.add("modal-nav-button-selected");
+      modalNavButton[1].classList.remove("modal-nav-button-selected");
+      modalNavButton[2].classList.remove("modal-nav-button-selected");
 
       break;
     case 1:
       modalSubject[0].style.display = "none";
-      modalSubject[1].style.display = "flex";
       modalSubject[2].style.display = "none";
+      modalSubject[1].style.display = "flex";
+      modalNavButton[0].classList.remove("modal-nav-button-selected");
+      modalNavButton[1].classList.add("modal-nav-button-selected");
+      modalNavButton[2].classList.remove("modal-nav-button-selected");
 
       break;
     case 2:
-      modalSubject[0].style.display = "none";
       modalSubject[1].style.display = "none";
+      modalSubject[0].style.display = "none";
       modalSubject[2].style.display = "flex";
+      modalNavButton[0].classList.remove("modal-nav-button-selected");
+      modalNavButton[1].classList.remove("modal-nav-button-selected");
+      modalNavButton[2].classList.add("modal-nav-button-selected");
 
       break;
     default:

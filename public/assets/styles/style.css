@@ -112,7 +112,7 @@ button {
   height: 100dvh;
   display: none;
   overflow: hidden;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .modal-background {
@@ -126,12 +126,13 @@ button {
   transition: opacity 0.4s ease-in-out;
 }
 
-.modal-account {
+.modal-alt {
   opacity: 0;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(-50%);
   gap: 16px;
   z-index: 20;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -150,7 +151,8 @@ button {
   justify-content: center;
   gap: 16px;
   z-index: 20;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   width: 100%;
   margin: 24px;
   max-width: 400px;
@@ -199,8 +201,20 @@ button {
   gap: 4px;
 }
 
+.modal-nav-button > div {
+  transition: background .2s ease;
+}
+
+.modal-nav-button:hover > div {
+  background: var(--primary-darker);
+}
+
 .modal-nav-button-selected > div {
   background: var(--primary-lighter);
+}
+
+.modal-nav-button-selected:hover > div {
+  background: var(--primary-lighter) !important;
 }
 
 .modal-nav-button-selected > div > div {
@@ -223,23 +237,36 @@ button {
   background: var(--primary);
 }
 
-/* .modal-nav-button:active > div {
+.modal-nav-button-selected > div {
   background: var(--primary-lighter);
 }
 
-.modal-nav-button:active > div > div {
-  background: var(--on-surface-1);
+.modal-nav-button-selected > div > div {
+  background: var(--on-surface-1) !important;
 }
 
-.modal-nav-button:active p {
-  color: var(--on-surface-1);
-} */
+.modal-nav-button-selected p {
+  color: var(--on-surface-1) !important;
+}
 
 .modal-nav-button > div > div {
   width: 24px;
   height: 24px;
+}
+
+.modal-nav-button:nth-child(1) > div > div {
   background-color: var(--on-surface);
-  mask : url(../img/close.svg) no-repeat center/cover;
+  mask : url(../img/dilemmas.svg) no-repeat center/cover;
+}
+
+.modal-nav-button:nth-child(2) > div > div {
+  background-color: var(--on-surface);
+  mask : url(../img/choice.svg) no-repeat center/cover;
+}
+
+.modal-nav-button:nth-child(3) > div > div {
+  background-color: var(--on-surface);
+  mask : url(../img/qte.svg) no-repeat center/cover;
 }
 
 .modal-nav-button p {
@@ -254,6 +281,8 @@ button {
 
 .modal-subject {
   display: none;
+  width: 100%;
+  overflow: hidden;
   flex-direction: column;
   padding: 12px 0;
   gap: 20px;

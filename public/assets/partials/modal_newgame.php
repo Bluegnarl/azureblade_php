@@ -1,4 +1,4 @@
-<div class="modal modal-newgame">
+<div class="modal-alt modal-newgame">
     <div class="labels-container">
         <div class="label-container label-container-title">
             <p class="label-higher">New Game</p>
