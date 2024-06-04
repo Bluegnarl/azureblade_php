@@ -19,7 +19,11 @@
         </div>
         <div class="label-container label-container-title buttons-clickable buttons-clickable-w-border">
             <div class="icon" style="background-image: url(/assets/img/account-crossed.svg);"></div>
-            <a class="label" href="/?page=game">Guest</a>
+            <?php if (!$cookies_save) { ?>
+                <a class="label" href="/?page=guest&guest=new">Guest</a>
+            <?php } else { ?>
+                <a class="label" href="/?page=guest&guest=delete">Guest</a>
+            <?php } ?>
         </div>
     </div>
 </div>

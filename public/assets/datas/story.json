@@ -70,65 +70,10 @@
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 2
+          "destination": 0
         }
       ],
       "title": "Que veux-tu faire ?"
-    }
-  ],
-  [
-    {
-      "type": "dialogue",
-      "location": "Forest",
-      "content": [
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Kairus ? Tu es enfin de retour !"
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Melina ! Que s'est-il passé ici ? Où sont père et mère ?"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Je n'ai rien pu faire... Père et mère... Je..."
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Qui ? Qui a pu faire ça ?"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Des monstres de la forêt. Les jeunes du village ont essayés de les repousser mais en vain..."
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Par quelle direction sont-ils repartis ?!"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Ne penses pas à te venger ! Tu ne peux rien contre eux !"
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Que veux-tu que je fasse d'autre ?!"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Il vaut mieux se préparer que d'y aller tête baissée. Reconstruisons le village ensemble !"
-        }
-      ],
-      "left": "melina",
-      "right": "kairus"
     }
   ],
   [
@@ -179,6 +124,23 @@
       ],
       "left": "melina",
       "right": "kairus"
+    },
+    {
+      "type": "choice",
+      "location": "Emberfall",
+      "content": [
+        {
+          "title": "Réparer le village",
+          "text": "Reconstruire le village pour mieux vous préparer au combat.",
+          "destination": 0
+        },
+        {
+          "title": "Venger le village",
+          "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
+          "destination": 1
+        }
+      ],
+      "title": "Que veux-tu faire ?"
     }
   ]
 ]

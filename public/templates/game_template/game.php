@@ -3,28 +3,26 @@
 $data = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/data.json'), true);
 $story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json'), true);
 
-$w = $data['way'];
-$i = $data['scene'];
+$w = $_COOKIE['way'];
+$i = $_COOKIE['scene'];
 
 $choice = $_GET['choice'] ?? null;
 
 if ($choice == 1) {
-    $data['way'] = $story[$w][$i]['content'][0]['destination'];
-    $data['scene'] = 0;
-    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    setcookie("way", $story[$w][$i]['content'][0]['destination'], time() + 360000);
+    setcookie("scene", 0, time() + 360000);
     header('Location: /?page=game');
 } elseif ($choice == 2) {
-    $data['way'] = $story[$w][$i]['content'][1]['destination'];
-    $data['scene'] = 0;
-    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    setcookie("way", $story[$w][$i]['content'][1]['destination'], time() + 360000);
+    setcookie("scene", 0, time() + 360000);
     header('Location: /?page=game');
 }
 
 $next = $_GET['next'] ?? null;
 
 if ($next) {
-    $data['scene'] += 1;
-    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    $_COOKIE['scene'] += 1;
+    setcookie('scene', $_COOKIE['scene'], time() + 360000);
     header('Location: /?page=game');
 } 
 

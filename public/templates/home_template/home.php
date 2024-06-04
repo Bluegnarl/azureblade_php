@@ -1,7 +1,12 @@
 <?php
 
-$loggedin = false;
 $username = "Bluegnarl";
+$loggedin = false;
+$cookies_save = false;
+$account_save = false;
+
+$cookie_way = $_COOKIE['way'] ?? null;
+$cookie_scene = $_COOKIE['scene'] ?? null;
 
 ?>
 
@@ -39,8 +44,10 @@ $username = "Bluegnarl";
         ?>
     </div>
     <nav>
-        <a class="main-menu" href="/?page=game" onclick="startAudio.play()">Continue</a>
+        <?php if($cookie_scene || $cookie_way || $account_save) : ?>
+            <a class="main-menu" href="/?page=game">Continue</a>
         <div></div>
+        <?php endif ?>
         <a class="main-menu" onclick="modal('newgame')">New Game</a>
         <div></div>
         <a class="main-menu" onclick="modal('endings')">Endings</a>
