@@ -1,6 +1,32 @@
 <?php
 
-$location = 'Dark Wood Forest';
+$data = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/data.json'), true);
+$story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json'), true);
+
+$w = $data['way'];
+$i = $data['scene'];
+
+$choice = $_GET['choice'] ?? null;
+
+if ($choice == 1) {
+    $data['way'] = $story[$w][$i]['content'][0]['destination'];
+    $data['scene'] = 0;
+    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    header('Location: /?page=game');
+} elseif ($choice == 2) {
+    $data['way'] = $story[$w][$i]['content'][1]['destination'];
+    $data['scene'] = 0;
+    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    header('Location: /?page=game');
+}
+
+$next = $_GET['next'] ?? null;
+
+if ($next) {
+    $data['scene'] += 1;
+    file_put_contents(__DIR__ . '/../../assets/datas/data.json', json_encode($data));
+    header('Location: /?page=game');
+} 
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +39,7 @@ $location = 'Dark Wood Forest';
     <link rel="stylesheet" href="/templates/game_template/game.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
 
-    <title>Azureblade - <?= $location ?></title>
+    <title>Azureblade - <?= $story[$w][$i]['location'] ?></title>
 </head>
 
 <body>
@@ -40,48 +66,21 @@ $location = 'Dark Wood Forest';
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
     </div>
     <main>
+        <?php if ($story[$w][$i]['type'] == "dialogue") { ?>
         <div class="character-image character-image-desktop">
-            <img src="/assets/img/chara1.png" alt="">
+            <img class="character-left" src="/assets/img/<?= $story[$w][$i]['left'] ?>.png" alt="">
         </div>
         <div class="dialogue-container">
             <div class="dialogue-content">
                 <div class="dialogue">
-                    <div class="message message-left">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Gareth</p>
+                    <?php foreach ($story[$w][$i]['content'] as $message) : ?>
+                        <div class="message <?= ($message['side'] == "right") ? "message-right" : "message-left" ?>" style="display: none; opacity: 0;">
+                            <div class="character-name">
+                                <p class="label" style="color: var(--on-surface-1);"><?= $message['character'] ?></p>
+                            </div>
+                            <div class="character-text body-text"><?= $message['text'] ?></div>
                         </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
-                    <div class="message message-right">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Kairus</p>
-                        </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
-                    <div class="message message-left">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Gareth</p>
-                        </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
-                    <div class="message message-right">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Kairus</p>
-                        </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
-                    <div class="message message-left">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Gareth</p>
-                        </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
-                    <div class="message message-right">
-                        <div class="character-name">
-                            <p class="label" style="color: var(--on-surface-1);">Kairus</p>
-                        </div>
-                        <div class="character-text body-text">Do you believe in the possibility of redemption for those who have caused so much suffering?</div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
             <div class="controls">
@@ -96,25 +95,43 @@ $location = 'Dark Wood Forest';
                         <div class="icon" style="background: url(/assets/img/help.svg) no-repeat center/cover;"></div>
                     </div>
                 </div>
-                <div class="primary-control buttons-clickable buttons-clickable-w-border">
+                <div class="primary-control buttons-clickable buttons-clickable-w-border" onclick="next()">
                     <div class="icon" style="background-image: url(/assets/img/next.svg);"></div>
                     <p class="label">Next</p>
                 </div>
             </div>
         </div>
-
+            <div>oui</div>
         <div class="character-image character-image-desktop">
-            <img src="/assets/img/chara2.png" alt="">
+            <img class="character-right" src="/assets/img/<?= $story[$w][$i]['right'] ?>.png" alt="">
         </div>
     </main>
     <div class="character-images-mobile">
         <div class="character-image">
-            <img src="/assets/img/chara1.png">
+            <img class="character-left" src="/assets/img/<?= $story[$w][$i]['left'] ?>.png">
         </div>
         <div class="character-image">
-            <img src="/assets/img/chara2.png">
+            <img class="character-right" src="/assets/img/<?= $story[$w][$i]['right'] ?>.png">
         </div>
     </div>
+    <?php } elseif ($story[$w][$i]['type'] == "choice") { ?>
+        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 48px">
+            <div class="label-container label-container-title">
+                <p class="label-higher"><?= $story[$w][$i]['title'] ?></p>
+            </div>
+            <div class="choices">
+            <?php foreach ($story[$w][$i]['content'] as $choice) : ?>
+            <div class="choice">
+                <a href="/?page=game&choice=1" class="label-container buttons-clickable buttons-clickable-w-border">
+                    <p class="label"><?= $choice['title'] ?></p>
+                </a>
+                <div class="text body-text"><?= $choice['text'] ?></div>
+            </div>
+            <?php endforeach ?>
+        </div>  
+        </div>
+    <?php } ?>
+    <input type="hidden" data-dialogue-length="<?= count($story[$w][$i]['content']); ?>">
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/game_template/game.js"></script>

@@ -39,7 +39,7 @@ $username = "Bluegnarl";
         ?>
     </div>
     <nav>
-        <a class="main-menu" href="/?page=game">Continue</a>
+        <a class="main-menu" href="/?page=game" onclick="startAudio.play()">Continue</a>
         <div></div>
         <a class="main-menu" onclick="modal('newgame')">New Game</a>
         <div></div>
