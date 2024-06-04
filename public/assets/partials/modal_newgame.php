@@ -17,13 +17,9 @@
             <div class="icon" style="background-image: url(/assets/img/account.svg);"></div>
             <p class="label">Log in</p>
         </div>
-        <div class="label-container label-container-title buttons-clickable buttons-clickable-w-border">
+        <a href="/?page=guest&guest=new" class="label-container label-container-title buttons-clickable buttons-clickable-w-border">
             <div class="icon" style="background-image: url(/assets/img/account-crossed.svg);"></div>
-            <?php if (!$cookies_save) { ?>
-                <a class="label" href="/?page=guest&guest=new">Guest</a>
-            <?php } else { ?>
-                <a class="label" href="/?page=guest&guest=delete">Guest</a>
-            <?php } ?>
-        </div>
+            <p class="label">Guest</p>
+        </a>
     </div>
 </div>
