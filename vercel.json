@@ -12,6 +12,7 @@
     { "src": "/assets/audio/(.*)", "dest": "/public/assets/audio/$1" },
     { "src": "/assets/datas/(.*)", "dest": "/public/assets/datas/$1" },
     { "src": "/assets/partials/(.*)", "dest": "/public/assets/partials/$1" },
+    { "src": "/assets/actions/(.*)", "dest": "/public/assets/actions/$1" },
     { "src": "/assets/styles/(.*)", "dest": "/public/assets/styles/$1" },
     {
       "src": "/templates/(.+)_template/(.+).css",
