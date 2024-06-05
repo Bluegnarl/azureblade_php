@@ -61,14 +61,14 @@ function next() {
     );
     newLink.href = "/?page=game&next=true";
 
-    function removeHref(event) {
-      setTimeout(() => {
-        event.preventDefault();
-        newLink.removeAttribute("href");
-      }, 10);
-    }
+    // function removeHref(event) {
+    //   setTimeout(() => {
+    //     event.preventDefault();
+    //     newLink.removeAttribute("href");
+    //   }, 10);
+    // }
 
-    newLink.addEventListener("click", removeHref);
+    // newLink.addEventListener("click", removeHref);
 
     while (primaryControl.firstChild) {
       newLink.appendChild(primaryControl.firstChild);
