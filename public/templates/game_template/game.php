@@ -21,7 +21,7 @@ if ($choice == 1) {
 $next = $_GET['next'] ?? null;
 
 if ($next) {
-    $_COOKIE['scene'] += 1;
+    if ($_COOKIE['scene'] < count($story[$w])) $_COOKIE['scene'] += 1;
     setcookie('scene', $_COOKIE['scene'], time() + 360000);
     header('Location: /?page=game');
 } 
