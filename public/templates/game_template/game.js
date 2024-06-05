@@ -62,13 +62,12 @@ function next() {
     newLink.href = "/?page=game&next=true";
 
     function removeHref(event) {
-      setTimeout(() => {
-        event.preventDefault();
-        newLink.removeAttribute("href"); 
-      }, 10);
+      event.preventDefault();
+      newLink.removeAttribute("href");
     }
 
-    newLink.addEventListener("click", removeHref);
+    newLink.addEventListener("onmouseup", removeHref);
+    newLink.addEventListener("touchend", removeHref);
 
     while (primaryControl.firstChild) {
       newLink.appendChild(primaryControl.firstChild);
