@@ -56,6 +56,10 @@ main {
   transform: translateX(-25%);
 }
 
+.message-center {
+  transform: translateY(50%);
+}
+
 .character-name {
   width: fit-content;
   display: flex;
@@ -81,8 +85,13 @@ main {
 }
 
 .character-text {
-  background: var(--linear-blue-transparent);
-  padding: 24px;
+  padding: 28px;
+  display: flex;
+  gap: 12px;
+}
+
+.character-text .icon {
+  margin-top: 6px;
 }
 
 .message-left .character-text {
@@ -93,6 +102,12 @@ main {
 .message-right .character-text {
   background: var(--linear-blue-transparent-inversed);
   border-radius: 0 28px 28px 0;
+}
+
+.message-center .character-text {
+  background: var(--primary-transparent);
+  padding: 8px 20px;
+  border-radius: 8px;
 }
 
 .character-images-mobile {
@@ -219,6 +234,12 @@ main {
 
   .message-right {
     padding-left: 48px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .character-text .icon {
+    margin-top: 2px;
   }
 }
 

@@ -35,7 +35,7 @@ function next() {
     } else {
       setTimeout(() => {
         messages[iMessage].style.opacity = "1";
-        messages[iMessage].style.transform = "translateX(0)";
+        messages[iMessage].style.transform = "translate(0, 0)";
       }, 100);
       const pingnoob = new Audio("/assets/audio/next.wav");
       pingnoob.play();
@@ -45,11 +45,16 @@ function next() {
       characterLeft[0].style.filter = "brightness(0.5)";
       characterRight[1].style.filter = "brightness(1)";
       characterLeft[1].style.filter = "brightness(0.5)";
-    } else {
+    } else if (messages[iMessage].classList.contains("message-left")) {
       characterRight[0].style.filter = "brightness(0.5)";
       characterLeft[0].style.filter = "brightness(1)";
       characterRight[1].style.filter = "brightness(0.5)";
       characterLeft[1].style.filter = "brightness(1)";
+    } else {
+      characterRight[0].style.filter = "brightness(0.5)";
+      characterLeft[0].style.filter = "brightness(0.5)";
+      characterRight[1].style.filter = "brightness(0.5)";
+      characterLeft[1].style.filter = "brightness(0.5)";
     }
   }
   if (iMessage == nbElements - 1) {

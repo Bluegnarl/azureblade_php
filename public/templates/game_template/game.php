@@ -72,11 +72,17 @@ if ($next) {
             <div class="dialogue-content">
                 <div class="dialogue">
                     <?php foreach ($story[$w][$i]['content'] as $message) : ?>
-                        <div class="message <?= ($message['side'] == "right") ? "message-right" : "message-left" ?>" style="display: none; opacity: 0;">
-                            <div class="character-name">
-                                <p class="label" style="color: var(--on-surface-1);"><?= $message['character'] ?></p>
-                            </div>
-                            <div class="character-text body-text"><?= $message['text'] ?></div>
+                        <div class="message <?php if($message['side'] == "right") { echo "message-right"; } elseif ($message['side'] == "left") {echo "message-left";} else {{echo "message-center";}} ?>" style="display: none; opacity: 0;">
+                            <?php if($message['side'] != "center") : ?> 
+                                <div class="character-name">
+                                    <p class="label" style="color: var(--on-surface-1);"><?= $message['character'] ?></p>
+                                </div>
+                            <?php endif ?>
+                            <div class="character-text body-text">
+                                <?php if($message['side'] == "center") : ?> 
+                                    <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
+                                <?php endif ?>
+                            <?= $message['text'] ?></div>
                         </div>
                     <?php endforeach ?>
                 </div>
