@@ -19,10 +19,10 @@ if ($choice == 1) {
 }
 
 $next = $_GET['next'] ?? null;
-$nextLevel = $_COOKIE['scene'] + 1;
 
 if ($next) {
-    setcookie('scene', $nextLevel, time() + 360000);
+    $_COOKIE['scene'] += 1;
+    setcookie('scene', $_COOKIE['scene'], time() + 360000);
     header('Location: /?page=game');
 } 
 
