@@ -59,10 +59,10 @@ if ($next) {
             <p class="label">Main Menu</p>
         </a>
     </div>
-    <div class="buttons button-container button-padding saving-button">
+    <!-- <div class="buttons button-container button-padding saving-button">
         <div class="icon" style="background-image: url(/assets/img/saving.svg);"></div>
         <p class="label" style="color: var(--on-surface-1);">Saving...</p>
-    </div>
+    </div> -->
     <main>
         <?php if ($story[$w][$i]['type'] == "dialogue") { ?>
         <div class="character-image character-image-desktop">
