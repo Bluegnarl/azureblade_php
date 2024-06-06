@@ -1,3 +1,18 @@
+<?php
+
+$username = $_POST['username'] ?? null;
+$password = $_POST['password'] ?? null;
+
+if ($username && $password == "") {
+//     $reference = $database->getReference('path/to/child/location');
+
+//     $snapshot = $reference->getSnapshot();
+
+//     $value = $snapshot->getValue();
+}
+
+?>
+
 <div class="modal-alt modal-login">
     <div class="labels-container">
         <div class="label-container label-container-title">
@@ -8,7 +23,7 @@
             <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
         </div>
     </div>
-    <form method="get" style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+    <form method="post" style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
         <input type="text" placeholder="Username" name="username" class="label-container placeholder" required>
         <input type="current-password" placeholder="Password" name="password" class="label-container placeholder" required>
         <button type="submit" class="label-container buttons-clickable buttons-clickable-w-border">

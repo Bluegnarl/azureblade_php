@@ -18,9 +18,9 @@ switch ($page) {
         guest();
         break;
     case null:
-            home();
+        home();
         break;
     default:
-            error();
+        error();
         break;
 }

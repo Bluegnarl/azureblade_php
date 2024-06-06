@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../assets/datas/database.php';
+
 $username = "Bluegnarl";
 $loggedin = false;
 $cookies_save = false;

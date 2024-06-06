@@ -4,8 +4,14 @@ $new_username = $_POST['username'] ?? null;
 $new_password = $_POST['password'] ?? null;
 $new_confirm_password = $_POST['confirm-password'] ?? null;
 
-if($new_password === $new_confirm_password) {
-    // It works, tested
+if ($username && $new_password == $new_confirm_password) {
+    $signupData = [
+        'username' => $new_username,
+        'password' => $new_password
+    ];
+
+    $ref_table = "users";
+    $getRef = $database->getReference($ref_table)->push($getData);
 }
 
 ?>
@@ -20,7 +26,7 @@ if($new_password === $new_confirm_password) {
             <div class="icon" style="background-image: url(/assets/img/close.svg);"></div>
         </div>
     </div>
-    <form method="post" style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+    <form action="/?page=signup" method="post" style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
         <input type="text" placeholder="Username" name="username" class="label-container placeholder" required>
         <input type="new-password" placeholder="Password" name="password" class="label-container body-text placeholder" required>
         <input type="new-password" placeholder="Confirm Password" name="confirm-password" class="label-container body-text placeholder" required>
