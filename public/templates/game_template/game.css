@@ -161,7 +161,10 @@ main {
   top: 0;
   display: flex;
   z-index: 15;
-  max-width: 250px;
+}
+
+.main-menu-button a {
+  width: fit-content !important;
 }
 
 .saving-button {
