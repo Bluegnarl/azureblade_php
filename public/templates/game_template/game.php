@@ -105,7 +105,7 @@ if ($next) {
                                             <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
                                             <?= $message['text'] ?>
                                         </div>
-                                        <div class="validate secondary-controls buttons-clickable buttons-clickable-w-border" style="background: var(--primary-transparent);padding: 8px 20px;border-radius: 28px;" onclick="next('dilemmas')">
+                                        <div class="validate secondary-controls buttons-clickable buttons-clickable-w-border" style="background: var(--primary);padding: 4px 16px;border-radius: 28px;" onclick="next('dilemmas')">
                                             <p class="label">OK</p>
                                         </div>
                                     </div>
@@ -137,10 +137,10 @@ if ($next) {
                                     </div>
                                 <?php endif ?>
                                 <?php if ($message['side'] == "next") : ?>
-                                    <div class="primary-control buttons-clickable buttons-clickable-w-border">
+                                    <a href="/?page=game&next=true" class="primary-control buttons-clickable buttons-clickable-w-border" style="width: fit-content;">
                                         <div class="icon" style="background-image: url(/assets/img/next.svg);"></div>
-                                        <a href="/?next=true" class="label">Next</a>
-                                    </div>
+                                        <p class="label">Next</p>
+                                    </a>
                                 <?php endif ?>
                             </div>
                         <?php endforeach ?>

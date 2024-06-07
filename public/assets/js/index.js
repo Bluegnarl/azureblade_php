@@ -12,9 +12,9 @@ const a = document.querySelector("a"),
   modalSubject = document.querySelectorAll(".modal-subject"),
   modalNavButton = document.querySelectorAll(".modal-nav-button"),
   arrowIcon = document.querySelectorAll(".arrow-icon"),
-  endingsCounter = document.querySelector(".endings-counter"),
-  menuAudio = new Audio("/assets/audio/next.wav"),
-  cancelAudio = new Audio("/assets/audio/cancel.wav");
+  endingsCounter = document.querySelector(".endings-counter");
+  // menuAudio = new Audio("/assets/audio/next.wav"),
+  // cancelAudio = new Audio("/assets/audio/cancel.wav");
 
 // Parallax Effect for Background
 
@@ -61,7 +61,7 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.alignItems = "flex-start";
       modalInfos.style.display = "flex";
-      menuAudio.play();
+      // menuAudio.play();
 
       setTimeout(() => {
         modalInfos.style.transform = "translateY(0)";
@@ -73,7 +73,7 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.alignItems = "flex-start";
       modalHelp.style.display = "flex";
-      menuAudio.play();
+      // menuAudio.play();
 
       setTimeout(() => {
         modalHelp.style.transform = "translateY(0)";
@@ -85,7 +85,7 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.justifyContent = "flex-start";
       modalEndings.style.display = "flex";
-      menuAudio.play();
+      // menuAudio.play();
 
       setTimeout(() => {
         modalEndings.style.transform = "translateX(0)";
@@ -107,7 +107,7 @@ function modal(modal) {
       break;
     case "signup":
       modalsContainer.style.display = "flex";
-      menuAudio.play();
+      // menuAudio.play();
       if (
         modalNewGame.style.display == "flex" ||
         modalLogin.style.display == "flex"
@@ -140,7 +140,7 @@ function modal(modal) {
       }
       break;
     case "login":
-      menuAudio.play();
+      // menuAudio.play();
       modalsContainer.style.display = "flex";
       if (
         modalNewGame.style.display == "flex" ||

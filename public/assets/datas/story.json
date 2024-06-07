@@ -148,12 +148,12 @@
         {
           "title": "Réparer le village",
           "text": "Reconstruire le village pour mieux vous préparer au combat.",
-          "destination": 3
+          "destination": 2
         },
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 3
+          "destination": 2
         }
       ],
       "title": "Que veux-tu faire ?"

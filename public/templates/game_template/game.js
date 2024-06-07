@@ -113,8 +113,8 @@ function next(type) {
           messages[iMessage + 1].style.transform = "translate(0, 0)";
         }
       }, 100);
-      const pingnoob = new Audio("/assets/audio/next.wav");
-      pingnoob.play();
+      // const pingnoob = new Audio("/assets/audio/next.wav");
+      // pingnoob.play();
     }
     if (messages[iMessage].classList.contains("message-right")) {
       characterRight[0].style.filter = "brightness(1)";
