@@ -9,7 +9,7 @@
             <img src="/assets/img/card-image.png" alt="">
         </div>
         <p class="lighter">
-            With the assistance of Aldric Ironforge, the master blacksmith renowned for his unparalleled craftsmanship, and Sylvia Suncrest, the revered herbalist and healer of the region, Kairus embarked on a journey to uncover the truth behind the village's devastation. He is facing Gareth to negociate with him.
+            <?= $story[$w][$i]['infos'] ?>
         </p>
     </div>
 </div>

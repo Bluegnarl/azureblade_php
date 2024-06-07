@@ -85,7 +85,7 @@ main {
 }
 
 .character-text {
-  padding: 28px;
+  padding: 24px;
   display: flex;
   gap: 12px;
 }
@@ -100,14 +100,32 @@ main {
 }
 
 .message-right .character-text {
-  background: var(--linear-blue-transparent-inversed);
-  border-radius: 0 28px 28px 0;
+  background: var(--linear-blue-transparent-inversed) !important;
+  padding: 24px !important;
+  border-radius: 0 28px 28px 0 !important;
 }
 
 .message-center .character-text {
   background: var(--primary-transparent);
   padding: 8px 20px;
   border-radius: 8px;
+}
+
+.dilemmas-choice {
+  display: flex;
+  gap: 8px;
+}
+
+.dilemmas-choice-1, .dilemmas-choice-2 {
+  opacity: 0;
+  display: none;
+}
+
+.dilemmas-choice .buttons-clickable {
+  width: 100%;
+  background: var(--primary-transparent);
+  padding: 8px 20px;
+  border-radius: 28px;
 }
 
 .character-images-mobile {

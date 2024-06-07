@@ -1,6 +1,7 @@
 [
   [
     {
+      "infos": "Vous êtes Kairus Azureblade, un soldat d'une ville lointaine qui est de retour à son village natal.",
       "type": "dialogue",
       "location": "Emberfall",
       "content": [
@@ -63,18 +64,19 @@
       "right": "kairus"
     },
     {
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "choice",
       "location": "Emberfall",
       "content": [
         {
           "title": "Réparer le village",
           "text": "Reconstruire le village pour mieux vous préparer au combat.",
-          "destination": 1
+          "destination": 2
         },
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 0
+          "destination": 2
         }
       ],
       "title": "Que veux-tu faire ?"
@@ -82,6 +84,7 @@
   ],
   [
     {
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "dialogue",
       "location": "Park",
       "content": [
@@ -138,18 +141,165 @@
       "right": "kairus"
     },
     {
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "choice",
-      "location": "Emberfall",
+      "location": "Park",
       "content": [
         {
           "title": "Réparer le village",
           "text": "Reconstruire le village pour mieux vous préparer au combat.",
-          "destination": 0
+          "destination": 3
         },
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
+          "destination": 3
+        }
+      ],
+      "title": "Que veux-tu faire ?"
+    }
+  ],
+  [
+    {
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "dialogue",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus décide d'aider le village à se reconstruire."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Melina ! Que s'est-il passé ici ? Où sont père et mère ?"
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Je n'ai rien pu faire... Père et mère... Je..."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Qui ? Qui a pu faire ça ?"
+        }
+      ],
+      "left": "melina",
+      "right": "kairus"
+    },
+    {
+      "infos": "Vous devez convaincre Melina pour pouvoir récupérer des armes.",
+      "type": "dilemmas",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "instruction",
+          "text": "Vous devez convaincre Melina."
+        },
+        {
+          "character": "Melina",
+          "side": "dilemmas",
+          "text": "Oui ou non ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Oui",
+              "longer-text": "Je suis d'accord.",
+              "no": "1"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Non",
+              "longer-text": "Je ne suis pas d'accord.",
+              "no": "2"
+            }
+          ]
+        },
+        {
+          "character": "Melina",
+          "side": "dilemmas",
+          "text": "Oui ou non ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Oui",
+              "longer-text": "Je suis d'accord.",
+              "no": "1"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Non",
+              "longer-text": "Je ne suis pas d'accord.",
+              "no": "2"
+            }
+          ]
+        },
+        {
+          "character": "Melina",
+          "side": "dilemmas",
+          "text": "Oui ou non ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Oui",
+              "longer-text": "Je suis d'accord.",
+              "no": "1"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Non",
+              "longer-text": "Je ne suis pas d'accord.",
+              "no": "2"
+            }
+          ]
+        },
+        {
+          "character": "Melina",
+          "side": "dilemmas",
+          "text": "Je suis convaincue."
+        },
+        {
+          "character": null,
+          "side": "next",
+          "text": "Next"
+        }
+      ],
+      "left": "melina",
+      "right": "kairus"
+    },
+    {
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "choice",
+      "location": "Emberfall",
+      "content": [
+        {
+          "title": "Retourner au Village",
+          "text": "Retourner au village pour mieux vous préparer au combat.",
           "destination": 1
+        },
+        {
+          "title": "Venger le village",
+          "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
+          "destination": 2
         }
       ],
       "title": "Que veux-tu faire ?"

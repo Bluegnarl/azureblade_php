@@ -5,7 +5,14 @@ const dialogueContent = document.querySelector(".dialogue-content"),
   nbElements = document.querySelector("input").dataset.dialogueLength,
   characterRight = document.querySelectorAll(".character-right"),
   characterLeft = document.querySelectorAll(".character-left"),
-  primaryControl = document.querySelector(".primary-control");
+  primaryControl = document.querySelector(".primary-control"),
+  validateButton = document.querySelector(".validate"),
+  dilemmasChoice = document.querySelectorAll(".dilemmas-choice"),
+  dilemmasChoice1 = document.querySelectorAll(".dilemmas-choice-1"),
+  dilemmasChoice2 = document.querySelectorAll(".dilemmas-choice-2"),
+  messageChoice = document.querySelectorAll(".message-choice"),
+  messageDilemmas = document.querySelectorAll(".message-dilemmas"),
+  nextMessage = document.querySelector(".next-message");
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -22,11 +29,76 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let iMessage = -1;
+let iChoice = 0;
 
-function next() {
+function dilemmasChoiceAction(choice) {
+  if (choice == 1) {
+    dilemmasChoice[iChoice].style.display = "none";
+    dilemmasChoice1[iChoice].style.display = "flex";
+    setTimeout(() => {
+      dilemmasChoice1[iChoice].style.opacity = "1";
+      dilemmasChoice1[iChoice].style.transform = "translate(0)";
+    }, 100);
+  } else if (choice == 2) {
+    dilemmasChoice[iChoice].style.display = "none";
+    dilemmasChoice2[iChoice].style.display = "flex";
+    setTimeout(() => {
+      dilemmasChoice2[iChoice].style.opacity = "1";
+      dilemmasChoice2[iChoice].style.transform = "translate(0)";
+    }, 100);
+  }
+  characterRight[0].style.filter = "brightness(1)";
+  characterLeft[0].style.filter = "brightness(0.5)";
+  characterRight[1].style.filter = "brightness(1)";
+  characterLeft[1].style.filter = "brightness(0.5)";
+
+  if (iChoice < 2) {
+    setTimeout(() => {
+      iChoice += 1;
+      dilemmasChoice[iChoice].style.display = "flex";
+      dilemmasChoice[iChoice].style.opacity = "1";
+      messageDilemmas[iChoice].style.display = "flex";
+      messageChoice[iChoice].style.display = "flex";
+      setTimeout(() => {
+        messageDilemmas[iChoice].style.opacity = "1";
+        messageDilemmas[iChoice].style.transform = "translate(0)";
+        messageChoice[iChoice].style.opacity = "1";
+        messageChoice[iChoice].style.transform = "translate(0)";
+      }, 100);
+      characterRight[0].style.filter = "brightness(0.5)";
+      characterLeft[0].style.filter = "brightness(1)";
+      characterRight[1].style.filter = "brightness(0.5)";
+      characterLeft[1].style.filter = "brightness(1)";
+    }, 1500);
+  } else {
+    setTimeout(() => {
+      messageDilemmas[iChoice + 1].style.display = "flex";
+      setTimeout(() => {
+        messageDilemmas[iChoice + 1].style.opacity = "1";
+        messageDilemmas[iChoice + 1].style.transform = "translate(0)";
+      }, 100);
+      setTimeout(() => {
+        nextMessage.style.display = "flex";
+        setTimeout(() => {
+          nextMessage.style.opacity = "1";
+          nextMessage.style.transform = "translate(0)";
+        }, 100);
+      }, 1500);
+    }, 1500);
+
+  }
+}
+
+function next(type) {
   if (iMessage <= nbElements - 2) {
+    if (type == "dilemmas") {
+      validateButton.style.display = "none";
+    }
     iMessage += 1;
     messages[iMessage].style.display = "flex";
+    if (type == "dilemmas") {
+      messages[iMessage + 1].style.display = "flex";
+    }
     if (iMessage === 0) {
       setTimeout(() => {
         messages[0].style.opacity = 1;
@@ -36,6 +108,10 @@ function next() {
       setTimeout(() => {
         messages[iMessage].style.opacity = "1";
         messages[iMessage].style.transform = "translate(0, 0)";
+        if (type == "dilemmas") {
+          messages[iMessage + 1].style.opacity = "1";
+          messages[iMessage + 1].style.transform = "translate(0, 0)";
+        }
       }, 100);
       const pingnoob = new Audio("/assets/audio/next.wav");
       pingnoob.play();
