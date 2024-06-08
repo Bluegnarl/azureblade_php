@@ -2,8 +2,10 @@
 
 $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.json'), true);
 
-$endings_cookie = json_decode($_COOKIE['endings'], true);
-asort($endings_cookie);
+if(isset($_COOKIE['endings'])) {
+    $endings_cookie = json_decode($_COOKIE['endings'], true);
+    asort($endings_cookie);
+}
 
 ?>
 

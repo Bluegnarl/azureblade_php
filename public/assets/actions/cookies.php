@@ -1,5 +1,8 @@
 <?php
 
+$w = null;
+$i = null;
+
 if (isset($_COOKIE['way']) && isset($_COOKIE['scene'])) {
     $w = $_COOKIE['way'];
     $i = $_COOKIE['scene'];
