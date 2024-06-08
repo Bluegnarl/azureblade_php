@@ -2,28 +2,8 @@
 
 $story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json'), true);
 
-$w = $_COOKIE['way'];
-$i = $_COOKIE['scene'];
-if (isset($_COOKIE['endings'])) {
-    $cookie_endings = json_decode($_COOKIE['endings']) ?? null;
-}
-
-$destination = $_GET['destination'] ?? null;
-$anger = $_GET['anger'] ?? null;
-
-if (isset($destination)) {
-    setcookie("way", $destination, time() + 360000);
-    setcookie("scene", 0, time() + 360000);
-    header('Location: /?page=game');
-}
-
-$next = $_GET['next'] ?? null;
-
-if ($next) {
-    if ($_COOKIE['scene'] < count($story[$w]) - 1) $_COOKIE['scene'] += 1;
-    setcookie('scene', $_COOKIE['scene'], time() + 360000);
-    header('Location: /?page=game');
-}
+require_once __DIR__ . '/../../assets/partials/cookies.php';
+require_once __DIR__ . '/../../assets/partials/navigation.php';
 
 ?>
 <!DOCTYPE html>

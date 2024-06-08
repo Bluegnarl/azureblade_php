@@ -1,30 +1,15 @@
 <?php
 
-require_once __DIR__ . '/../../assets/datas/database.php';
+// require_once __DIR__ . '/../../assets/datas/database.php';
 
-$ref_table = 'users';
-$fetchdata = $database->getReference($ref_table)->getSnapshot();
+// $ref_table = 'users';
+// $fetchdata = $database->getReference($ref_table)->getSnapshot();
 
 $username = "Bluegnarl";
 $loggedin = false;
 
-$cookie_way = $_COOKIE['way'] ?? null;
-$cookie_scene = $_COOKIE['scene'] ?? null;
-if (isset($_COOKIE['endings'])) {
-    $cookie_endings = json_decode($_COOKIE['endings']) ?? null;
-}
-
-
-$ending_get = $_GET['ending'] ?? null;
-
-if ($ending_get) {
-    if(!in_array($ending_get, $cookie_endings)) {
-        $cookie_endings = [...$cookie_endings, $ending_get];
-        setcookie("endings", json_encode($cookie_endings), time() + 360000);
-    }
-
-    header('Location: /');
-}
+require_once __DIR__ . '/../../assets/partials/cookies.php';
+require_once __DIR__ . '/../../assets/partials/navigation.php';
 
 ?>
 
