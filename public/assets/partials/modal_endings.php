@@ -12,7 +12,7 @@ $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.
                             <p class="label-higher" style="color: var(--on-surface-1);">Épilogues</p>
                     </div>
                     <div class="label-container label-container-title endings-counter">
-                        <p class="label-higher" style="color: var(--on-surface-1);"><?= count(json_decode($_COOKIE['endings']), true) ?>/10</p>
+                        <p class="label-higher" style="color: var(--on-surface-1);"><?php if(isset($_COOKIE['endings'])) {echo count(json_decode($_COOKIE['endings']), true);} else { echo 0;} ?>/10</p>
                     </div>
                 </div>
                 <div class="icon-container buttons-clickable" onclick="closeOverlay()">
@@ -21,7 +21,7 @@ $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.
             </div>
 
             <div class="endings scrollbar-width-none">
-                <?php foreach (json_decode($_COOKIE['endings'], true) as $ending_id) {
+                <?php if(isset($_COOKIE['endings'])) { foreach (json_decode($_COOKIE['endings'], true) as $ending_id) {
                     if (isset($endings[$ending_id])) {
                         $ending = $endings[$ending_id - 1];
                     }
@@ -34,6 +34,6 @@ $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.
                         <p class="body-text"><?= $ending['text'] ?></p>
                     </div>
                 </div>
-                <?php } ?>
+                <?php }} ?>
             </div>
         </div>
