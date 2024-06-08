@@ -2,6 +2,9 @@
 
 $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.json'), true);
 
+$endings_cookie = json_decode($_COOKIE['endings'], true);
+asort($endings_cookie);
+
 ?>
 
 <div class="modal-left modal-endings">
@@ -21,7 +24,7 @@ $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.
             </div>
 
             <div class="endings scrollbar-width-none">
-                <?php if(isset($_COOKIE['endings'])) { foreach (json_decode($_COOKIE['endings'], true) as $ending_id) {
+                <?php if(isset($_COOKIE['endings'])) { foreach ($endings_cookie as $ending_id) {
                     if (isset($endings[$ending_id])) {
                         $ending = $endings[$ending_id - 1];
                     }
