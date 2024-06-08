@@ -60,7 +60,7 @@ if ($next) {
     </div>
     <main>
         <?php if ($story[$w][$i]['type'] == "ending") : ?>
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px">
                     <div class="character-text body-text" style="width: 100%; background: var(--primary-transparent); border-radius: 8px">
                         <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
                         <?= $story[$w][$i]['text'] ?>
