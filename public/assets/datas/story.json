@@ -1,6 +1,7 @@
 [
   [
     {
+      "background": "village.png",
       "infos": "Vous êtes Kairus Azureblade, un soldat d'une ville lointaine qui est de retour à son village natal.",
       "type": "dialogue",
       "location": "Emberfall",
@@ -64,6 +65,7 @@
       "right": "kairus"
     },
     {
+      "background": "village.png",
       "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "choice",
       "location": "Emberfall",
@@ -76,7 +78,7 @@
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 1
+          "destination": 2
         }
       ],
       "title": "Que veux-tu faire ?"
@@ -84,9 +86,10 @@
   ],
   [
     {
+      "background": "village.png",
       "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "dialogue",
-      "location": "Forest",
+      "location": "Emberfall",
       "content": [
         {
           "side": "center",
@@ -95,30 +98,60 @@
         {
           "character": "Melina",
           "side": "left",
-          "text": "Je vais t'apprendre comment convaincre une personne."
+          "text": "Pour commencer, je te conseillerai d'aller voir le menuisier et bucheron de la forêt d'à côté."
         },
         {
           "character": "Kairus",
           "side": "right",
-          "text": "Ça me sera sûrement très utile."
+          "text": "Je me mets en route dès maintenant."
         }
       ],
       "left": "melina",
       "right": "kairus"
     },
     {
+      "background": "forest.png",
       "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "dialogue",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus se rend chez le menuisier et bucheron de la forêt."
+        },
+        {
+          "character": "Thorne",
+          "side": "left",
+          "text": "Bonjour, je m'appelle Thorne Oakwood, que puis-je faire pour vous ?"
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "J'ai besoin d'aide d'urgence, mon village a été complétement détruit."
+        },
+        {
+          "character": "Thorne",
+          "side": "left",
+          "text": "J'ai beaucoup de travail en ce moment. Il va falloir me convaincre."
+        }
+      ],
+      "left": "thorne",
+      "right": "kairus"
+    },
+    {
+      "background": "forest.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer. Vous cherchez donc un menuisier pour vous aider.",
       "type": "dilemmas",
       "location": "Forest",
       "content": [
         {
           "side": "instruction",
-          "text": "Vous devez convaincre Melina."
+          "text": "Vous devez convaincre Thorne de vous aider."
         },
         {
-          "character": "Melina",
+          "character": "Thorne",
           "side": "dilemmas",
-          "text": "Oui ou non ?"
+          "text": "Quel est votre budget ?"
         },
         {
           "character": null,
@@ -127,25 +160,25 @@
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Oui",
-              "longer-text": "Je suis d'accord.",
+              "text": "Main d'oeuvre",
+              "longer-text": "Nous avons de la main d'oeuvre pour vous assister.",
               "no": "1",
-              "response": "correct"
+              "response": "incorrect"
             },
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Non",
-              "longer-text": "Je ne suis pas d'accord.",
+              "text": "Bien payé",
+              "longer-text": "Nous vous payerons bien.",
               "no": "2",
-              "response": "incorrect"
+              "response": "correct"
             }
           ]
         },
         {
-          "character": "Melina",
+          "character": "Thorne",
           "side": "dilemmas",
-          "text": "Droite ou gauche ?"
+          "text": "Et où trouverez-vous les ressources ? Que ce soit le bois, le métal ou même les outils ?"
         },
         {
           "character": null,
@@ -154,25 +187,25 @@
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Droite",
-              "longer-text": "Je préfères la droite.",
+              "text": "Achat",
+              "longer-text": "Nous irons les acheter en ville.",
               "no": "1",
               "response": "correct"
             },
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Gauche",
-              "longer-text": "Je préfères la gauche.",
+              "text": "Récolte",
+              "longer-text": "Nous les chercherons par nous même. Le bois est à notre disposition.",
               "no": "2",
               "response": "incorrect"
             }
           ]
         },
         {
-          "character": "Melina",
+          "character": "Thorne",
           "side": "dilemmas",
-          "text": "Haut ou bas ?"
+          "text": "À quel niveau souhaitez-vous réparer le village ?"
         },
         {
           "character": null,
@@ -181,25 +214,24 @@
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Haut",
-              "longer-text": "Je préfères le haut.",
+              "text": "Entiérement",
+              "longer-text": "Nous la voulons comme avant.",
               "no": "1",
               "response": "incorrect"
             },
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Bas",
-              "longer-text": "Je préfères le bas.",
+              "text": "Temporaire",
+              "longer-text": "Ce serait des habitations temporaires.",
               "no": "2",
               "response": "correct"
             }
           ]
         },
         {
-          "character": "Melina",
-          "side": "dilemmas",
-          "text": "Je suis convaincue."
+          "character": "Thorne",
+          "side": "result"
         },
         {
           "character": null,
@@ -207,20 +239,151 @@
           "text": null
         }
       ],
-      "left": "melina",
+      "left": "thorne",
       "right": "kairus",
       "high-anger": {
-        "text": "Je ne suis pas convaincue.",
-        "destination": "1"
+        "text": "Je ne suis pas convaincu, débrouillez-vous.",
+        "destination": "3"
       },
       "low-anger": {
-        "text": "Je suis convaincue.",
-        "destination": "2"
+        "text": "Je suis convaincu, je travaillerai avec vous.",
+        "destination": "4"
       }
     }
   ],
   [
     {
+      "background": "village.png",
+      "infos": "Vous avez convaincu Thorne Oakwood de vous aider à reconstruire le village.",
+      "type": "dialogue",
+      "location": "Emberfall",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus se rend chez Melina."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "C'est tout bon !"
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Déjà ?"
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Si tu veux mon avis, tu devrais aller chercher de quoi t'équiper ou te soigner."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Et où est-ce que je peux trouver ça ? Ça fait un moment que je ne suis pas dans les parages."
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Tu pourrais aller voir dans la forêt dans l'autre côté du village. On dit qu'un forgeron de haut niveau et qu'une herboriste talentueuse s'y trouveraient."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Je vais aller voir ça."
+        }
+      ],
+      "left": "melina",
+      "right": "kairus"
+    },
+    {
+      "background": "village.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "choice",
+      "location": "Emberfall",
+      "content": [
+        {
+          "title": "Herboriste",
+          "text": "Aller voir l'herboriste pour vous préparer des potions utilisables en combat.",
+          "destination": 4
+        },
+        {
+          "title": "Forgeron",
+          "text": "Aller voir le forgeron et s'équiper au mieux.",
+          "destination": 4
+        }
+      ],
+      "title": "Que veux-tu faire ?"
+    }
+  ],
+  [
+    {
+      "background": "village.png",
+      "infos": "Vous n'avez pas réussir à convaincre Thorne Oakwood pour vous aider à reconstruire le village.",
+      "type": "dialogue",
+      "location": "Emberfall",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus se rend chez Melina."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Je n'y suis pas arrivé..."
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Ah c'est dommage."
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Si tu veux mon avis, tu devrais aller chercher de quoi t'équiper ou te soigner."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Et où est-ce que je peux trouver ça ? Ça fait un moment que je ne suis pas dans les parages."
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Tu pourrais aller voir dans la forêt dans l'autre côté du village. On dit qu'un forgeron de haut niveau et qu'une herboriste talentueuse s'y trouveraient."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Je vais aller voir ça."
+        }
+      ],
+      "left": "melina",
+      "right": "kairus"
+    },
+    {
+      "background": "village.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "choice",
+      "location": "Emberfall",
+      "content": [
+        {
+          "title": "Herboriste",
+          "text": "Aller voir l'herboriste pour vous préparer des potions utilisables en combat.",
+          "destination": 4
+        },
+        {
+          "title": "Forgeron",
+          "text": "Aller voir le forgeron et s'équiper au mieux.",
+          "destination": 4
+        }
+      ],
+      "title": "Que veux-tu faire ?"
+    }
+  ],
+  [
+    {
+      "background": "forest.png",
       "infos": "Vous vous êtes rendu dans la forêt pour vous venger.",
       "type": "dialogue",
       "location": "Forest",
@@ -249,20 +412,31 @@
       "right": "kairus"
     },
     {
+      "background": "forest.png",
       "infos": "Vous vous êtes rendu dans la forêt pour vous venger.",
       "type": "qte",
       "text": "Vous affrontez Morgana en duel. Appuyez sur les icônes flottantes pour lui infliger des dégats.",
       "location": "Forest",
       "win": {
         "text": "Vous avez battu Morgana Shadowcrest !",
-        "destination": "3"
+        "destination": "5"
       },
       "loose": {
         "text": "Morgana vous a battu...",
-        "destination": "2"
+        "destination": "0"
       },
       "left": "morgana",
       "right": "kairus"
+    }
+  ],
+  [
+    {
+      "background": "forest.png",
+      "infos": "Vous vous êtes rendu dans la forêt pour vous venger et y avez affronté Morgana Shadowcrest.",
+      "type": "ending",
+      "ending": "9",
+      "text": "Vous avez tué Morgana, elle n'est plus un danger pour vous et votre village",
+      "location": "Forest"
     }
   ]
 ]

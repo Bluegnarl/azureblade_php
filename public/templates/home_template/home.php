@@ -7,11 +7,21 @@ $fetchdata = $database->getReference($ref_table)->getSnapshot();
 
 $username = "Bluegnarl";
 $loggedin = false;
-$cookies_save = false;
-$account_save = false;
 
 $cookie_way = $_COOKIE['way'] ?? null;
 $cookie_scene = $_COOKIE['scene'] ?? null;
+$cookie_endings = json_decode($_COOKIE['endings']);
+
+$ending_get = $_GET['ending'] ?? null;
+
+if ($ending_get) {
+    if(!in_array($ending_get, $cookie_endings)) {
+        $cookie_endings = [...$cookie_endings, $ending_get];
+        setcookie("endings", json_encode($cookie_endings), time() + 360000);
+    }
+
+    header('Location: /');
+}
 
 ?>
 
@@ -49,12 +59,12 @@ $cookie_scene = $_COOKIE['scene'] ?? null;
         ?>
     </div>
     <nav>
-        <?php if($cookie_scene) : ?>
+        <?php if($cookie_scene || $cookie_way) : ?>
         <a class="main-menu" href="/?page=game">Continuer</a>
         <div></div>
         <a class="main-menu" onclick="modal('newgame')">Recommencer</a>
         <?php endif ?>
-        <?php if(!$cookie_scene) : ?>
+        <?php if(!$cookie_scene && !$cookie_way) : ?>
             <a class="main-menu" onclick="modal('newgame')">Commencer</a>
         <?php endif ?>
         <div></div>

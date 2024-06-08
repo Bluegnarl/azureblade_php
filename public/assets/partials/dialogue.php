@@ -12,8 +12,10 @@
                                         echo "message-center";
                                     } elseif ($message['side'] == "next") {
                                         echo "message-center next-message";
-                                    } else {
+                                    } elseif ($message['side'] == "choice") {
                                         echo "message-choice";
+                                    } elseif ($message['side'] == "result") {
+                                        echo "message-left message-result";
                                     }
                                     ?>" style="display: none; opacity: 0; <?= ($message['side'] == "choice") ? "gap: 1.5rem" : "" ?>">
                     <?php if ($message['side'] == "left" || $message['side'] == "right" || $message['side'] == "dilemmas") : ?>
@@ -30,6 +32,26 @@
                             <?= $message['text'] ?>
                         </div>
                     <?php endif ?>
+                    <?php if ($message['side'] == "result") { ?>
+                        <div class="low-anger" style="display: none;">
+                            <div class="character-name">
+                                <p class="label" style="color: var(--on-surface-1);"><?= $message['character'] ?></p>
+                            </div>
+                            <div class="character-text body-text">
+                                <?= $story[$w][$i]['low-anger']['text'] ?>
+                            </div>
+                        </div>
+                        
+                        <div class="high-anger" style="display: none;">
+                            <div class="character-name">
+                                <p class="label" style="color: var(--on-surface-1);"><?= $message['character'] ?></p>
+                            </div>
+                            <div class="character-text body-text">
+                                <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
+                                <?= $story[$w][$i]['high-anger']['text'] ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                     <?php if ($message['side'] == "instruction") : ?>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
                             <div class="character-text body-text" style="width: 100%;">
@@ -43,10 +65,10 @@
                     <?php endif ?>
                     <?php if ($message['side'] == "choice") : ?>
                         <div class="dilemmas-choice">
-                            <div onclick="dilemmasChoiceAction(1)<?= ($message['choice'][0]['response'] == 'incorrect') ? ',angerMeter()' : '' ?>" class="buttons-clickable buttons-clickable-w-border">
+                            <div onclick="dilemmasChoiceAction(1)<?= ($message['choice'][0]['response'] == 'incorrect') ? ',angerMeter()' : '' ?>" class="buttons-clickable buttons-clickable-w-border" style="display: flex; align-items: center;">
                                 <p class="label"><?= $message['choice'][0]['text'] ?></p>
                             </div>
-                            <div onclick="dilemmasChoiceAction(2)<?= ($message['choice'][1]['response'] == 'incorrect') ? ',angerMeter()' : '' ?>" class="buttons-clickable buttons-clickable-w-border">
+                            <div onclick="dilemmasChoiceAction(2)<?= ($message['choice'][1]['response'] == 'incorrect') ? ',angerMeter()' : '' ?>" class="buttons-clickable buttons-clickable-w-border" style="display: flex; align-items: center;">
                                 <p class="label"><?= $message['choice'][1]['text'] ?></p>
                             </div>
                         </div>

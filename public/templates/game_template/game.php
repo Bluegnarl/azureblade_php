@@ -4,11 +4,12 @@ $story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json
 
 $w = $_COOKIE['way'];
 $i = $_COOKIE['scene'];
+$cookie_endings = json_decode($_COOKIE['endings']);
 
 $destination = $_GET['destination'] ?? null;
 $anger = $_GET['anger'] ?? null;
 
-if ($destination) {
+if (isset($destination)) {
     setcookie("way", $destination, time() + 360000);
     setcookie("scene", 0, time() + 360000);
     header('Location: /?page=game');
@@ -38,7 +39,7 @@ if ($next) {
 
 <body>
     <div class="parallax-container">
-        <div class="parallax" style="background: url(../../assets/img/background-2.png) no-repeat center/cover;" draggable="false"></div>
+        <div class="parallax" style="background: url(../../assets/img/<?= $story[$w][$i]['background'] ?>) no-repeat center/cover;" draggable="false"></div>
     </div>
     <div class="modals-container">
         <div class="modal-background" onclick="closeOverlay()"></div>
@@ -56,6 +57,15 @@ if ($next) {
         </a>
     </div>
     <main>
+        <?php if ($story[$w][$i]['type'] == "ending") : ?>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                    <div class="character-text body-text" style="width: 100%; background: var(--primary-transparent); border-radius: 8px">
+                        <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
+                        <?= $story[$w][$i]['text'] ?>
+                    </div>
+                    <a class="ending-claim-button label buttons-clickable buttons-clickable-w-border" href="/?ending=<?= $story[$w][$i]['ending'] ?>">Fin numéro 9</a>
+                </div>
+        <?php endif ?>
         <?php if ($story[$w][$i]['type'] == "dialogue" || $story[$w][$i]['type'] == "dilemmas" || $story[$w][$i]['type'] == "qte") { ?>
             <div class="character-image character-image-desktop">
                 <img class="character-left" src="/assets/img/<?= $story[$w][$i]['left'] ?>.png" alt="">
@@ -96,7 +106,7 @@ if ($next) {
         </div>
     </div>
 <?php } ?>
-<input type="hidden" data-dialogue-length="<?php if($story[$w][$i]['type'] != "qte") echo count($story[$w][$i]['content']); ?>">
+<input type="hidden" data-dialogue-length="<?php if($story[$w][$i]['type'] != "qte" && $story[$w][$i]['type'] != "ending") {echo count($story[$w][$i]['content']);}; ?>">
 </body>
 <script src="/assets/js/index.js"></script>
 <script src="/templates/game_template/game.js"></script>

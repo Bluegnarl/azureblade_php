@@ -12,9 +12,8 @@ const a = document.querySelector("a"),
   modalSubject = document.querySelectorAll(".modal-subject"),
   modalNavButton = document.querySelectorAll(".modal-nav-button"),
   arrowIcon = document.querySelectorAll(".arrow-icon"),
-  endingsCounter = document.querySelector(".endings-counter");
-  // menuAudio = new Audio("/assets/audio/next.wav"),
-  // cancelAudio = new Audio("/assets/audio/cancel.wav");
+  endingsCounter = document.querySelector(".endings-counter"),
+  closeAudio = new Audio("./assets/audio/close.wav");
 
 // Parallax Effect for Background
 
@@ -61,7 +60,8 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.alignItems = "flex-start";
       modalInfos.style.display = "flex";
-      // menuAudio.play();
+      menuAudio = new Audio("./assets/audio/open.mp3");
+      menuAudio.play();
 
       setTimeout(() => {
         modalInfos.style.transform = "translateY(0)";
@@ -73,7 +73,8 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.alignItems = "flex-start";
       modalHelp.style.display = "flex";
-      // menuAudio.play();
+      menuAudio = new Audio("./assets/audio/open.mp3");
+      menuAudio.play();
 
       setTimeout(() => {
         modalHelp.style.transform = "translateY(0)";
@@ -85,7 +86,8 @@ function modal(modal) {
       modalsContainer.style.display = "flex";
       modalsContainer.style.justifyContent = "flex-start";
       modalEndings.style.display = "flex";
-      // menuAudio.play();
+      menuAudio = new Audio("./assets/audio/open.mp3");
+      menuAudio.play();
 
       setTimeout(() => {
         modalEndings.style.transform = "translateX(0)";
@@ -96,7 +98,7 @@ function modal(modal) {
     case "newgame":
       modalsContainer.style.display = "flex";
       modalNewGame.style.display = "flex";
-      startAudio = new Audio("/assets/audio/start.mp3");
+      startAudio = new Audio("/assets/audio/start.wav");
       startAudio.play();
 
       setTimeout(() => {
@@ -107,7 +109,8 @@ function modal(modal) {
       break;
     case "signup":
       modalsContainer.style.display = "flex";
-      // menuAudio.play();
+      menuAudio = new Audio("./assets/audio/open.mp3");
+      menuAudio.play();
       if (
         modalNewGame.style.display == "flex" ||
         modalLogin.style.display == "flex"
@@ -140,7 +143,8 @@ function modal(modal) {
       }
       break;
     case "login":
-      // menuAudio.play();
+      menuAudio = new Audio("./assets/audio/open.mp3");
+      menuAudio.play();
       modalsContainer.style.display = "flex";
       if (
         modalNewGame.style.display == "flex" ||
@@ -179,6 +183,7 @@ function modal(modal) {
 }
 
 function closeOverlay() {
+  closeAudio.play();
   if (modalInfos) {
     modalInfos.style.transform = "translateY(-50%)";
     modalInfos.style.opacity = "0";
@@ -225,6 +230,8 @@ function closeOverlay() {
 function subjectCase(subjectCase) {
   switch (subjectCase) {
     case 0:
+      const hoverAudio = new Audio("./assets/audio/hover.wav");
+      hoverAudio.play();
       modalSubject[1].style.display = "none";
       modalSubject[2].style.display = "none";
       modalSubject[0].style.display = "flex";
@@ -234,6 +241,8 @@ function subjectCase(subjectCase) {
 
       break;
     case 1:
+      const hoverAudio2 = new Audio("./assets/audio/hover.wav");
+      hoverAudio2.play();
       modalSubject[0].style.display = "none";
       modalSubject[2].style.display = "none";
       modalSubject[1].style.display = "flex";
@@ -243,6 +252,8 @@ function subjectCase(subjectCase) {
 
       break;
     case 2:
+      const hoverAudio3 = new Audio("./assets/audio/hover.wav");
+      hoverAudio3.play();
       modalSubject[1].style.display = "none";
       modalSubject[0].style.display = "none";
       modalSubject[2].style.display = "flex";

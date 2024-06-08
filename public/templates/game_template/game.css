@@ -10,6 +10,8 @@ main {
   gap: 8px;
   z-index: 10;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .dialogue-container {
@@ -179,18 +181,6 @@ main {
   gap: 12px;
 }
 
-.mute {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 24px;
-  padding: 8px;
-  background: var(--primary);
-  border-radius: 100px;
-  z-index: 999;
-  display: flex;
-}
-
 .main-menu-button {
   position: absolute;
   left: 0;
@@ -266,6 +256,24 @@ main {
   border: solid 2px var(--on-surface-2);
 }
 
+.ending-claim-button {
+  display: flex;
+  padding: 4px 16px;
+  border-radius: 28px;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  border: solid 2px var(--on-surface-2);
+}
+
+.low-anger, .high-anger {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
 .qte-container {
   width: 100%;
   height: 100%;
@@ -290,7 +298,7 @@ main {
   border-radius: 100px;
   cursor: pointer;
   background: var(--primary);
-  outline: 2px solid var(--on-surface);
+  outline: 2px solid var(--on-surface-2);
   outline-offset: 20px;
   animation: outline-animation 2s linear forwards;
 }

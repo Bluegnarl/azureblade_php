@@ -42,6 +42,8 @@ function angerMeter() {
 }
 
 function dilemmasChoiceAction(choice) {
+  const hoverAudio = new Audio("./assets/audio/hover.wav");
+  hoverAudio.play();
   if (choice == 1) {
     dilemmasChoice[iChoice].style.display = "none";
     dilemmasChoice1[iChoice].style.display = "flex";
@@ -82,35 +84,45 @@ function dilemmasChoiceAction(choice) {
     }, 1500);
   } else {
     setTimeout(() => {
-      messageDilemmas[iChoice + 1].style.display = "flex";
-      setTimeout(() => {
-        messageDilemmas[iChoice + 1].style.opacity = "1";
-        messageDilemmas[iChoice + 1].style.transform = "translate(0)";
-      }, 100);
-      setTimeout(() => {
-        if (anger == 3) {
-          console.log("highanger");
-          nextMessage.style.display = "flex";
-          angerNext[0].style.display = "flex";
-          setTimeout(() => {
-            nextMessage.style.opacity = "1";
-            nextMessage.style.transform = "translate(0)";
-          }, 100);
-        } else if (anger < 3) {
-          console.log("lowanger");
-          nextMessage.style.display = "flex";
-          angerNext[1].style.display = "flex";
-          setTimeout(() => {
-            nextMessage.style.opacity = "1";
-            nextMessage.style.transform = "translate(0)";
-          }, 100);
-        }
-      }, 1500);
+      if (anger == 3) {
+        console.log("highanger");
+        nextMessage.style.display = "flex";
+        angerNext[0].style.display = "flex";
+        document.querySelector(".message-result").style.display = "flex";
+        document.querySelector(".message-result").style.opacity = "1";
+        document.querySelector(".high-anger").style.display = "flex";
+        setTimeout(() => {
+          document.querySelector(".high-anger").style.transform =
+            "translate(0)";
+          document.querySelector(".message-result").style.transform =
+            "translate(0)";
+          document.querySelector(".high-anger").style.opacity = "1";
+          nextMessage.style.opacity = "1";
+          nextMessage.style.transform = "translate(0)";
+        }, 100);
+      } else if (anger < 3) {
+        console.log("lowanger");
+        nextMessage.style.display = "flex";
+        angerNext[1].style.display = "flex";
+        document.querySelector(".message-result").style.display = "flex";
+        document.querySelector(".message-result").style.opacity = "1";
+        document.querySelector(".low-anger").style.display = "flex";
+        setTimeout(() => {
+          document.querySelector(".low-anger").style.transform = "translate(0)";
+          document.querySelector(".low-anger").style.opacity = "1";
+          document.querySelector(".message-result").style.transform =
+            "translate(0)";
+          nextMessage.style.opacity = "1";
+          nextMessage.style.transform = "translate(0)";
+        }, 100);
+      }
     }, 1500);
   }
 }
 
 function next(type) {
+  const hoverAudio = new Audio("./assets/audio/hover.wav");
+  hoverAudio.play();
   if (iMessage <= nbElements - 2) {
     if (type == "dilemmas") {
       validateButton.style.display = "none";
@@ -208,6 +220,8 @@ function qte(action) {
     qtebutton.style.top = `${posY}px`;
 
     qtebutton.addEventListener("click", () => {
+      const damageAudio = new Audio("./assets/audio/damage.wav");
+      damageAudio.play();
       qteContainer.removeChild(qtebutton);
       enemyHealth -= 1;
       characterLeft[0].classList.add("damage");
@@ -216,7 +230,6 @@ function qte(action) {
         characterLeft[0].classList.remove("damage");
         characterLeft[1].classList.remove("damage");
       }, 200);
-      console.log(enemyHealth);
       qte("qte");
     });
 
@@ -224,6 +237,10 @@ function qte(action) {
 
     setTimeout(() => {
       if (qteContainer.contains(qtebutton)) {
+        const damageReceiveAudio = new Audio(
+          "./assets/audio/damage_receive.wav"
+        );
+        damageReceiveAudio.play();
         characterRight[0].classList.add("damage");
         characterRight[1].classList.add("damage");
         setTimeout(() => {
@@ -232,16 +249,16 @@ function qte(action) {
         }, 200);
         qteContainer.removeChild(qtebutton);
         kairusHealth -= 1;
-        console.log(kairusHealth);
         qte("qte");
       }
     }, 2000);
   } else if (enemyHealth <= 0) {
-    console.log("You won !");
     characterLeft[0].classList.add("dead");
     characterLeft[1].classList.add("dead");
     document.querySelector(".win-qte").style.display = "flex";
     setTimeout(() => {
+      const winAudio = new Audio("./assets/audio/win.wav");
+      winAudio.play();
       document.querySelector(".win-qte").style.opacity = "1";
       document.querySelector(".win-qte").style.transform = "translate(0)";
       document.querySelector(".next").style.display = "flex";
@@ -251,11 +268,12 @@ function qte(action) {
       }, 500);
     }, 500);
   } else if (kairusHealth <= 0) {
-    console.log("You loose !");
     characterRight[0].classList.add("dead");
     characterRight[1].classList.add("dead");
     document.querySelector(".loose-qte").style.display = "flex";
     setTimeout(() => {
+            const looseAudio = new Audio("./assets/audio/loose.wav");
+            looseAudio.play();
       document.querySelector(".loose-qte").style.opacity = "1";
       document.querySelector(".loose-qte").style.transform = "translate(0)";
       document.querySelectorAll(".next")[1].style.display = "flex";
@@ -265,4 +283,9 @@ function qte(action) {
       }, 500);
     }, 500);
   }
+}
+
+function hoverAudioFunction() {
+  const hoverAudio = new Audio("./assets/audio/hover.wav");
+  hoverAudio.play();
 }
