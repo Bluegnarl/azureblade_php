@@ -10,7 +10,10 @@ $loggedin = false;
 
 $cookie_way = $_COOKIE['way'] ?? null;
 $cookie_scene = $_COOKIE['scene'] ?? null;
-$cookie_endings = json_decode($_COOKIE['endings']) ?? null;
+if (isset($_COOKIE['endings'])) {
+    $cookie_endings = json_decode($_COOKIE['endings']) ?? null;
+}
+
 
 $ending_get = $_GET['ending'] ?? null;
 

@@ -4,7 +4,9 @@ $story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json
 
 $w = $_COOKIE['way'];
 $i = $_COOKIE['scene'];
-$cookie_endings = json_decode($_COOKIE['endings']) ?? null;
+if (isset($_COOKIE['endings'])) {
+    $cookie_endings = json_decode($_COOKIE['endings']) ?? null;
+}
 
 $destination = $_GET['destination'] ?? null;
 $anger = $_GET['anger'] ?? null;
