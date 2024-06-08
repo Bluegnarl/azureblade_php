@@ -65,7 +65,7 @@ if ($next) {
                         <div class="icon" style="background-image: url(/assets/img/story.svg);"></div>
                         <?= $story[$w][$i]['text'] ?>
                     </div>
-                    <a class="ending-claim-button label buttons-clickable buttons-clickable-w-border" href="/?ending=<?= $story[$w][$i]['ending'] ?>">Fin numéro 9</a>
+                    <a class="ending-claim-button label buttons-clickable buttons-clickable-w-border" href="/?ending=<?= $story[$w][$i]['ending'] ?>">Fin numéro <?= $story[$w][$i]['ending'] ?></a>
                 </div>
         <?php endif ?>
         <?php if ($story[$w][$i]['type'] == "dialogue" || $story[$w][$i]['type'] == "dilemmas" || $story[$w][$i]['type'] == "qte") { ?>

@@ -84,7 +84,7 @@ function dilemmasChoiceAction(choice) {
     }, 1500);
   } else {
     setTimeout(() => {
-      if (anger == 3) {
+      if (anger >= 2) {
         console.log("highanger");
         nextMessage.style.display = "flex";
         angerNext[0].style.display = "flex";
@@ -100,7 +100,7 @@ function dilemmasChoiceAction(choice) {
           nextMessage.style.opacity = "1";
           nextMessage.style.transform = "translate(0)";
         }, 100);
-      } else if (anger < 3) {
+      } else if (anger < 2) {
         console.log("lowanger");
         nextMessage.style.display = "flex";
         angerNext[1].style.display = "flex";

@@ -243,12 +243,77 @@
       "right": "kairus",
       "high-anger": {
         "text": "Je ne suis pas convaincu, débrouillez-vous.",
-        "destination": "3"
+        "destination": "6"
       },
       "low-anger": {
         "text": "Je suis convaincu, je travaillerai avec vous.",
-        "destination": "4"
+        "destination": "5"
       }
+    }
+  ],
+  [
+    {
+      "background": "village.png",
+      "infos": "Vous êtes Kairus Azureblade, un soldat d'une ville lointaine qui est de retour à son village natal.",
+      "type": "dialogue",
+      "location": "Emberfall",
+      "content": [
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Je ne peux pas les laisser s'échapper. J'y vais..."
+        },
+        {
+          "character": "Melina",
+          "side": "left",
+          "text": "Kairus, non !"
+        },
+        {
+          "side": "center",
+          "text": "Kairus se met en route vers l'extérieur du village."
+        }
+      ],
+      "left": "melina",
+      "right": "kairus"
+    },
+    {
+      "background": "village.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Vous allez venger votre village détruit par des monstres.",
+      "type": "choice",
+      "location": "Outside",
+      "content": [
+        {
+          "title": "Ouest",
+          "text": "Aller à l'Ouest au sommet des montagnes.",
+          "destination": 3
+        },
+        {
+          "title": "Est",
+          "text": "Aller à l'Est dans la forêt des monstres.",
+          "destination": 4
+        }
+      ],
+      "title": "Que veux-tu faire ?"
+    }
+  ],
+  [
+    {
+      "background": "hills.png",
+      "infos": "Vous vous êtes mis en route pour éliminer les assassins de vos parents.",
+      "type": "ending",
+      "ending": "1",
+      "text": "Vous êtes mort en chutant de la montagne.",
+      "location": "Moutaintops"
+    }
+  ],
+  [
+    {
+      "background": "river.png",
+      "infos": "Vous vous êtes rendu dans la forêt pour vous venger.",
+      "type": "ending",
+      "ending": "2",
+      "text": "Vous êtes mort en essayant de traverser la rivière.",
+      "location": "Einsel River"
     }
   ],
   [
@@ -305,12 +370,12 @@
         {
           "title": "Herboriste",
           "text": "Aller voir l'herboriste pour vous préparer des potions utilisables en combat.",
-          "destination": 4
+          "destination": 8
         },
         {
           "title": "Forgeron",
           "text": "Aller voir le forgeron et s'équiper au mieux.",
-          "destination": 4
+          "destination": 7
         }
       ],
       "title": "Que veux-tu faire ?"
@@ -370,15 +435,305 @@
         {
           "title": "Herboriste",
           "text": "Aller voir l'herboriste pour vous préparer des potions utilisables en combat.",
-          "destination": 4
+          "destination": 8
         },
         {
           "title": "Forgeron",
           "text": "Aller voir le forgeron et s'équiper au mieux.",
-          "destination": 4
+          "destination": 7
         }
       ],
       "title": "Que veux-tu faire ?"
+    }
+  ],
+  [
+    {
+      "background": "forest-2.png",
+      "infos": "Vous vous rendez chez le forgeron pour pouvoir vous équiper.",
+      "type": "dialogue",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus se rend chez le forgeron de la forêt."
+        },
+        {
+          "character": "Eldric",
+          "side": "left",
+          "text": "T'es qui toi ?"
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "J'ai besoin d'aide d'urgence, je suis à la recherche d'équipement de haute qualité !"
+        },
+        {
+          "character": "Eldric",
+          "side": "left",
+          "text": "Hmm... Ce sera sans moi !"
+        },
+        {
+          "side": "center",
+          "text": "Aldric semble être tétu, il va falloir le convaincre."
+        }
+      ],
+      "left": "eldric",
+      "right": "kairus"
+    },
+    {
+      "background": "forest-2.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer. Vous cherchez donc un menuisier pour vous aider.",
+      "type": "dilemmas",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "instruction",
+          "text": "Vous devez convaincre Eldric de vous aider."
+        },
+        {
+          "character": "Eldric",
+          "side": "dilemmas",
+          "text": "Quel est votre budget ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Main d'oeuvre",
+              "longer-text": "Nous avons de la main d'oeuvre pour vous assister.",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Bien payé",
+              "longer-text": "Nous vous payerons bien.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Eldric",
+          "side": "dilemmas",
+          "text": "Et où trouverez-vous les ressources ? Que ce soit les minéraux, le métal ou même les outils ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Inutile",
+              "longer-text": "Vous les avez déjà !",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Récolte",
+              "longer-text": "Nous les chercherons par nous même. Le bois est à notre disposition.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Eldric",
+          "side": "dilemmas",
+          "text": "Combien de temps ai-je pour te fabriquer ton équipement ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Aucun",
+              "longer-text": "Je la veux maintenant !",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Libre",
+              "longer-text": "Autant de temps dont vous avez besoin.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Eldric",
+          "side": "result"
+        },
+        {
+          "character": null,
+          "side": "next",
+          "text": null
+        }
+      ],
+      "left": "eldric",
+      "right": "kairus",
+      "high-anger": {
+        "text": "Je ne suis pas convaincu, débrouillez-vous.",
+        "destination": "9"
+      },
+      "low-anger": {
+        "text": "Je suis convaincu, je travaillerai avec vous.",
+        "destination": "9"
+      }
+    }
+  ],
+  [
+    {
+      "background": "forest-3.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
+      "type": "dialogue",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus se rend chez l'herboriste et soigneuse de la forêt."
+        },
+        {
+          "character": "Sylvia",
+          "side": "left",
+          "text": "Bonjour, je m'appelle Sylvia Suncrest, que puis-je faire pour vous ?"
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "J'ai besoin de mélanges me permettant de devenir plus fort !"
+        },
+        {
+          "character": "Sylvia",
+          "side": "left",
+          "text": "Ce genre de mélange est très rare..."
+        }
+      ],
+      "left": "Sylvia",
+      "right": "kairus"
+    },
+    {
+      "background": "forest-3.png",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer. Vous cherchez donc un menuisier pour vous aider.",
+      "type": "dilemmas",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "instruction",
+          "text": "Vous devez convaincre Sylvia de vous aider."
+        },
+        {
+          "character": "Sylvia",
+          "side": "dilemmas",
+          "text": "Quel est votre budget ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Main d'oeuvre",
+              "longer-text": "Nous avons de la main d'oeuvre pour vous assister.",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Bien payé",
+              "longer-text": "Nous vous payerons bien.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Sylvia",
+          "side": "dilemmas",
+          "text": "Et où trouverez-vous les ressources ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Achat",
+              "longer-text": "Nous irons les acheter en ville.",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Récolte",
+              "longer-text": "Je les chercherai par moi-même.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Sylvia",
+          "side": "dilemmas",
+          "text": "Quel niveau de mélange voulez-vous ?"
+        },
+        {
+          "character": null,
+          "side": "choice",
+          "choice": [
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "Le maximum",
+              "longer-text": "Le maximum de mélange possible.",
+              "no": "1",
+              "response": "incorrect"
+            },
+            {
+              "character": "Kairus",
+              "side": "right",
+              "text": "La dose modérée",
+              "longer-text": "La dose modérée me suffira. L'excès n'est pas bon.",
+              "no": "2",
+              "response": "correct"
+            }
+          ]
+        },
+        {
+          "character": "Sylvia",
+          "side": "result"
+        },
+        {
+          "character": null,
+          "side": "next",
+          "text": null
+        }
+      ],
+      "left": "sylvia",
+      "right": "kairus",
+      "high-anger": {
+        "text": "Je ne suis pas convaincu, débrouillez-vous.",
+        "destination": "9"
+      },
+      "low-anger": {
+        "text": "Je suis convaincu, je travaillerai avec vous.",
+        "destination": "9"
+      }
     }
   ],
   [
@@ -400,12 +755,12 @@
         {
           "character": "Morgana",
           "side": "left",
-          "text": "Tu es si insignifiant..."
+          "text": "Tu as tant de haine que ça ? Ha ha ha"
         },
         {
           "character": "Kairus",
           "side": "right",
-          "text": "Viens te battre !"
+          "text": "Tu vas voir, je vais te le faire payer !"
         }
       ],
       "left": "morgana",
@@ -419,7 +774,7 @@
       "location": "Forest",
       "win": {
         "text": "Vous avez battu Morgana Shadowcrest !",
-        "destination": "5"
+        "destination": "10"
       },
       "loose": {
         "text": "Morgana vous a battu...",
