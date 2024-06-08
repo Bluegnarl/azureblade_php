@@ -1,17 +1,17 @@
 <div class="modal modal-help">
     <div class="modal-header">
-        <p class="label">Mechanics</p>
+        <p class="label">Mécaniques</p>
         <div class="cursor-pointer" onclick="closeOverlay()"></div>
     </div>
     <div class="divider"></div>
     <div class="modal-nav">
         <div class="modal-nav-button cursor-pointer" onclick="subjectCase(0)">
             <div><div></div></div>
-            <p class="light">Dilemmas</p>
+            <p class="light">Dilemmes</p>
         </div>
         <div class="modal-nav-button cursor-pointer" onclick="subjectCase(1)">
             <div><div></div></div>
-            <p class="light">Choices</p>
+            <p class="light">Choix</p>
         </div>
         <div class="modal-nav-button cursor-pointer" onclick="subjectCase(2)">
             <div><div></div></div>
@@ -24,7 +24,7 @@
                 <img src="/assets/img/card-image.png" alt="">
             </div>
             <p class="lighter">
-            You will face time limited dilemmas to convince your interlocutor. If you fail to respond or make a wrong choice, the Anger Meter will increase and it will potentially lead you to death once it hits his maximum.
+            Vous serez confronté à des dilemmes pour convaincre votre interlocuteur. Si vous faites un mauvais choix, le compteur de colère augmentera et vous mènera potentiellement à une mauvaise fin une fois qu'il aura atteint son maximum.
             </p>
         </div>
         <div class="modal-subject">
@@ -32,7 +32,7 @@
                 <img src="/assets/img/card-image-2.png" alt="">
             </div>
             <p class="lighter">
-            During dialogues, you will have to make choices which are decisive to the story. Take care, bad choices can lead you to death.
+            Lors des dialogues, vous devrez faire des choix déterminants pour l'histoire. Attention, les mauvais choix peuvent vous conduire à une mauvaise fin.
             </p>
         </div>
         <div class="modal-subject">
@@ -40,7 +40,7 @@
                 <img src="/assets/img/card-image-3.png" alt="">
             </div>
             <p class="lighter">
-            At some point in the game, you will face Quick Time Event (QTE) which means that you will have to press a button in a short time, otherwise, you will be disadvantaged and it can lead you to death.
+            À un moment donné du jeu, vous ferez face à des Quick Time Events (QTE), ce qui signifie que vous devrez appuyer sur un bouton dans un court laps de temps, sinon vous serez désavantagé et cela peut vous conduire à une mauvaise fin.
             </p>
         </div>
     </div>

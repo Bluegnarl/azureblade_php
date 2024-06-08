@@ -71,89 +71,12 @@
         {
           "title": "Réparer le village",
           "text": "Reconstruire le village pour mieux vous préparer au combat.",
-          "destination": 2
+          "destination": 1
         },
         {
           "title": "Venger le village",
           "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 2
-        }
-      ],
-      "title": "Que veux-tu faire ?"
-    }
-  ],
-  [
-    {
-      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
-      "type": "dialogue",
-      "location": "Park",
-      "content": [
-        {
-          "side": "center",
-          "text": "Kairus décide d'aider le village à se reconstruire."
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Melina ! Que s'est-il passé ici ? Où sont père et mère ?"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Je n'ai rien pu faire... Père et mère... Je..."
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Qui ? Qui a pu faire ça ?"
-        },
-        {
-          "side": "center",
-          "text": "Melina ne semble pas apprécier ça."
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Des monstres de la forêt. Les jeunes du village ont essayés de les repousser mais en vain..."
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Par quelle direction sont-ils repartis ?!"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Ne penses pas à te venger ! Tu ne peux rien contre eux !"
-        },
-        {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Que veux-tu que je fasse d'autre ?!"
-        },
-        {
-          "character": "Melina",
-          "side": "left",
-          "text": "Il vaut mieux se préparer que d'y aller tête baissée. Reconstruisons le village ensemble !"
-        }
-      ],
-      "left": "melina",
-      "right": "kairus"
-    },
-    {
-      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
-      "type": "choice",
-      "location": "Park",
-      "content": [
-        {
-          "title": "Réparer le village",
-          "text": "Reconstruire le village pour mieux vous préparer au combat.",
-          "destination": 2
-        },
-        {
-          "title": "Venger le village",
-          "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 2
+          "destination": 1
         }
       ],
       "title": "Que veux-tu faire ?"
@@ -170,26 +93,21 @@
           "text": "Kairus décide d'aider le village à se reconstruire."
         },
         {
-          "character": "Kairus",
-          "side": "right",
-          "text": "Melina ! Que s'est-il passé ici ? Où sont père et mère ?"
-        },
-        {
           "character": "Melina",
           "side": "left",
-          "text": "Je n'ai rien pu faire... Père et mère... Je..."
+          "text": "Je vais t'apprendre comment convaincre une personne."
         },
         {
           "character": "Kairus",
           "side": "right",
-          "text": "Qui ? Qui a pu faire ça ?"
+          "text": "Ça me sera sûrement très utile."
         }
       ],
       "left": "melina",
       "right": "kairus"
     },
     {
-      "infos": "Vous devez convaincre Melina pour pouvoir récupérer des armes.",
+      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
       "type": "dilemmas",
       "location": "Forest",
       "content": [
@@ -211,21 +129,23 @@
               "side": "right",
               "text": "Oui",
               "longer-text": "Je suis d'accord.",
-              "no": "1"
+              "no": "1",
+              "response": "correct"
             },
             {
               "character": "Kairus",
               "side": "right",
               "text": "Non",
               "longer-text": "Je ne suis pas d'accord.",
-              "no": "2"
+              "no": "2",
+              "response": "incorrect"
             }
           ]
         },
         {
           "character": "Melina",
           "side": "dilemmas",
-          "text": "Oui ou non ?"
+          "text": "Droite ou gauche ?"
         },
         {
           "character": null,
@@ -234,23 +154,25 @@
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Oui",
-              "longer-text": "Je suis d'accord.",
-              "no": "1"
+              "text": "Droite",
+              "longer-text": "Je préfères la droite.",
+              "no": "1",
+              "response": "correct"
             },
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Non",
-              "longer-text": "Je ne suis pas d'accord.",
-              "no": "2"
+              "text": "Gauche",
+              "longer-text": "Je préfères la gauche.",
+              "no": "2",
+              "response": "incorrect"
             }
           ]
         },
         {
           "character": "Melina",
           "side": "dilemmas",
-          "text": "Oui ou non ?"
+          "text": "Haut ou bas ?"
         },
         {
           "character": null,
@@ -259,16 +181,18 @@
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Oui",
-              "longer-text": "Je suis d'accord.",
-              "no": "1"
+              "text": "Haut",
+              "longer-text": "Je préfères le haut.",
+              "no": "1",
+              "response": "incorrect"
             },
             {
               "character": "Kairus",
               "side": "right",
-              "text": "Non",
-              "longer-text": "Je ne suis pas d'accord.",
-              "no": "2"
+              "text": "Bas",
+              "longer-text": "Je préfères le bas.",
+              "no": "2",
+              "response": "correct"
             }
           ]
         },
@@ -280,29 +204,65 @@
         {
           "character": null,
           "side": "next",
-          "text": "Next"
+          "text": null
         }
       ],
       "left": "melina",
+      "right": "kairus",
+      "high-anger": {
+        "text": "Je ne suis pas convaincue.",
+        "destination": "1"
+      },
+      "low-anger": {
+        "text": "Je suis convaincue.",
+        "destination": "2"
+      }
+    }
+  ],
+  [
+    {
+      "infos": "Vous vous êtes rendu dans la forêt pour vous venger.",
+      "type": "dialogue",
+      "location": "Forest",
+      "content": [
+        {
+          "side": "center",
+          "text": "Kairus rencontre Morgana dans la forêt."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Morgana ! Je te retrouve enfin !"
+        },
+        {
+          "character": "Morgana",
+          "side": "left",
+          "text": "Tu es si insignifiant..."
+        },
+        {
+          "character": "Kairus",
+          "side": "right",
+          "text": "Viens te battre !"
+        }
+      ],
+      "left": "morgana",
       "right": "kairus"
     },
     {
-      "infos": "Vous avez rencontrer Melina, votre soeur. Votre village, détruit par des monstres, doit être réparer.",
-      "type": "choice",
-      "location": "Emberfall",
-      "content": [
-        {
-          "title": "Retourner au Village",
-          "text": "Retourner au village pour mieux vous préparer au combat.",
-          "destination": 1
-        },
-        {
-          "title": "Venger le village",
-          "text": "Se mettre en route pour chercher les monstres afin de venger vos parents.",
-          "destination": 2
-        }
-      ],
-      "title": "Que veux-tu faire ?"
+      "infos": "Vous vous êtes rendu dans la forêt pour vous venger.",
+      "type": "qte",
+      "text": "Vous affrontez Morgana en duel. Appuyez sur les icônes flottantes pour lui infliger des dégats.",
+      "location": "Forest",
+      "win": {
+        "text": "Vous avez battu Morgana Shadowcrest !",
+        "destination": "3"
+      },
+      "loose": {
+        "text": "Morgana vous a battu...",
+        "destination": "2"
+      },
+      "left": "morgana",
+      "right": "kairus"
     }
   ]
 ]

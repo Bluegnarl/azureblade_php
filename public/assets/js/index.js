@@ -179,7 +179,6 @@ function modal(modal) {
 }
 
 function closeOverlay() {
-  cancelAudio.play();
   if (modalInfos) {
     modalInfos.style.transform = "translateY(-50%)";
     modalInfos.style.opacity = "0";

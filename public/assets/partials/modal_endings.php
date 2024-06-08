@@ -3,7 +3,7 @@
                 <div class="labels-container" style="justify-content: normal;">
                     <div class="label-container label-container-title">
                             <div class="icon" style="background-image: url(/assets/img/endings.svg);"></div>
-                            <p class="label-higher" style="color: var(--on-surface-1);">Endings</p>
+                            <p class="label-higher" style="color: var(--on-surface-1);">Épilogues</p>
                     </div>
                     <div class="label-container label-container-title endings-counter">
                         <p class="label-higher" style="color: var(--on-surface-1);">1/10</p>

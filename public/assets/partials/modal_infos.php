@@ -1,6 +1,6 @@
 <div class="modal modal-infos">
     <div class="modal-header">
-        <p class="label">History</p>
+        <p class="label">Histoire</p>
         <div class="cursor-pointer" onclick="closeOverlay()"></div>
     </div>
     <div class="divider"></div>

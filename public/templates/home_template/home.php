@@ -2,6 +2,9 @@
 
 require_once __DIR__ . '/../../assets/datas/database.php';
 
+$ref_table = 'users';
+$fetchdata = $database->getReference($ref_table)->getSnapshot();
+
 $username = "Bluegnarl";
 $loggedin = false;
 $cookies_save = false;
@@ -46,15 +49,18 @@ $cookie_scene = $_COOKIE['scene'] ?? null;
         ?>
     </div>
     <nav>
-        <?php if($cookie_scene || $cookie_way || $account_save) : ?>
-            <a class="main-menu" href="/?page=game">Continue</a>
+        <?php if($cookie_scene) : ?>
+        <a class="main-menu" href="/?page=game">Continuer</a>
         <div></div>
+        <a class="main-menu" onclick="modal('newgame')">Recommencer</a>
         <?php endif ?>
-        <a class="main-menu" onclick="modal('newgame')">New Game</a>
+        <?php if(!$cookie_scene) : ?>
+            <a class="main-menu" onclick="modal('newgame')">Commencer</a>
+        <?php endif ?>
         <div></div>
-        <a class="main-menu" onclick="modal('endings')">Endings</a>
+        <a class="main-menu" onclick="modal('endings')">Épilogues</a>
         <div></div>
-        <a class="main-menu" onclick="modal('help')">Help</a>
+        <a class="main-menu" onclick="modal('help')">Aide</a>
     </nav>
     <?php if ($loggedin) : ?>
     <div class="buttons-container">
@@ -65,7 +71,7 @@ $cookie_scene = $_COOKIE['scene'] ?? null;
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding">
                 <div class="icon" style="background-image: url(/assets/img/account-crossed.svg);"></div>
-                <p class="label">Disconnect</p>
+                <p class="label">Se déconnecter</p>
             </div>
         </div>
     </div>
@@ -75,13 +81,13 @@ $cookie_scene = $_COOKIE['scene'] ?? null;
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('login')">
                 <div class="icon" style="background-image: url(/assets/img/login.svg);"></div>
-                <p class="label">Log in</p>
+                <p class="label">Se connecter</p>
             </div>
         </div>
         <div class="button-container main-menu-button">
             <div class="buttons buttons-clickable-exceptions button-clickable-padding" onclick="modal('signup')">
                 <div class="icon" style="background-image: url(/assets/img/signup.svg);"></div>
-                <p class="label">Sign up</p>
+                <p class="label">S'inscrire</p>
             </div>
         </div>
     </div>

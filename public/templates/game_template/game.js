@@ -12,6 +12,7 @@ const dialogueContent = document.querySelector(".dialogue-content"),
   dilemmasChoice2 = document.querySelectorAll(".dilemmas-choice-2"),
   messageChoice = document.querySelectorAll(".message-choice"),
   messageDilemmas = document.querySelectorAll(".message-dilemmas"),
+  angerNext = document.querySelectorAll(".anger-next"),
   nextMessage = document.querySelector(".next-message");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,6 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let iMessage = -1;
 let iChoice = 0;
+let anger = 0;
+
+let kairusHealth = 3;
+let enemyHealth = 10;
+
+function angerMeter() {
+  anger += 1;
+  console.log(anger);
+}
 
 function dilemmasChoiceAction(choice) {
   if (choice == 1) {
@@ -78,14 +88,25 @@ function dilemmasChoiceAction(choice) {
         messageDilemmas[iChoice + 1].style.transform = "translate(0)";
       }, 100);
       setTimeout(() => {
-        nextMessage.style.display = "flex";
-        setTimeout(() => {
-          nextMessage.style.opacity = "1";
-          nextMessage.style.transform = "translate(0)";
-        }, 100);
+        if (anger == 3) {
+          console.log("highanger");
+          nextMessage.style.display = "flex";
+          angerNext[0].style.display = "flex";
+          setTimeout(() => {
+            nextMessage.style.opacity = "1";
+            nextMessage.style.transform = "translate(0)";
+          }, 100);
+        } else if (anger < 3) {
+          console.log("lowanger");
+          nextMessage.style.display = "flex";
+          angerNext[1].style.display = "flex";
+          setTimeout(() => {
+            nextMessage.style.opacity = "1";
+            nextMessage.style.transform = "translate(0)";
+          }, 100);
+        }
       }, 1500);
     }, 1500);
-
   }
 }
 
@@ -142,14 +163,14 @@ function next(type) {
     );
     newLink.href = "/?page=game&next=true";
 
-    // function removeHref(event) {
-    //   setTimeout(() => {
-    //     event.preventDefault();
-    //     newLink.removeAttribute("href");
-    //   }, 10);
-    // }
+    function removeHref(event) {
+      setTimeout(() => {
+        event.preventDefault();
+        newLink.removeAttribute("href");
+      }, 10);
+    }
 
-    // newLink.addEventListener("click", removeHref);
+    newLink.addEventListener("click", removeHref);
 
     while (primaryControl.firstChild) {
       newLink.appendChild(primaryControl.firstChild);
@@ -158,4 +179,90 @@ function next(type) {
     primaryControl.parentNode.replaceChild(newLink, primaryControl);
   }
 }
-next();
+if (!document.querySelector(".qte-content")) next();
+
+function qte(action) {
+  if (action == "ready") {
+    document.querySelector(".qte-content").style.opacity = "0";
+    document.querySelector(".qte-content").style.scale = "0";
+    setTimeout(() => {
+      document.querySelector(".qte-content").style.display = "none";
+      qte("qte");
+    }, 1000);
+  } else if (action == "qte" && enemyHealth > 0 && kairusHealth > 0) {
+    const qteContainer = document.querySelector(".qte-container");
+    const qtebutton = document.createElement("div");
+    qtebutton.className = "qte-button";
+
+    const img = document.createElement("img");
+    img.src = "../../assets/img/target.svg";
+    qtebutton.appendChild(img);
+
+    const qteContainerRect = qteContainer.getBoundingClientRect();
+    const buttonWidth = 50;
+    const buttonHeight = 50;
+    const posX = Math.random() * (qteContainerRect.width - buttonWidth);
+    const posY = Math.random() * (qteContainerRect.height - buttonHeight);
+
+    qtebutton.style.left = `${posX}px`;
+    qtebutton.style.top = `${posY}px`;
+
+    qtebutton.addEventListener("click", () => {
+      qteContainer.removeChild(qtebutton);
+      enemyHealth -= 1;
+      characterLeft[0].classList.add("damage");
+      characterLeft[1].classList.add("damage");
+      setTimeout(() => {
+        characterLeft[0].classList.remove("damage");
+        characterLeft[1].classList.remove("damage");
+      }, 200);
+      console.log(enemyHealth);
+      qte("qte");
+    });
+
+    qteContainer.appendChild(qtebutton);
+
+    setTimeout(() => {
+      if (qteContainer.contains(qtebutton)) {
+        characterRight[0].classList.add("damage");
+        characterRight[1].classList.add("damage");
+        setTimeout(() => {
+          characterRight[0].classList.remove("damage");
+          characterRight[1].classList.remove("damage");
+        }, 200);
+        qteContainer.removeChild(qtebutton);
+        kairusHealth -= 1;
+        console.log(kairusHealth);
+        qte("qte");
+      }
+    }, 2000);
+  } else if (enemyHealth <= 0) {
+    console.log("You won !");
+    characterLeft[0].classList.add("dead");
+    characterLeft[1].classList.add("dead");
+    document.querySelector(".win-qte").style.display = "flex";
+    setTimeout(() => {
+      document.querySelector(".win-qte").style.opacity = "1";
+      document.querySelector(".win-qte").style.transform = "translate(0)";
+      document.querySelector(".next").style.display = "flex";
+      setTimeout(() => {
+        document.querySelector(".next").style.opacity = "1";
+        document.querySelector(".next").style.scale = "1";
+      }, 500);
+    }, 500);
+  } else if (kairusHealth <= 0) {
+    console.log("You loose !");
+    characterRight[0].classList.add("dead");
+    characterRight[1].classList.add("dead");
+    document.querySelector(".loose-qte").style.display = "flex";
+    setTimeout(() => {
+      document.querySelector(".loose-qte").style.opacity = "1";
+      document.querySelector(".loose-qte").style.transform = "translate(0)";
+      document.querySelectorAll(".next")[1].style.display = "flex";
+      setTimeout(() => {
+        document.querySelectorAll(".next")[1].style.opacity = "1";
+        document.querySelectorAll(".next")[1].style.scale = "1";
+      }, 500);
+    }, 500);
+  }
+}

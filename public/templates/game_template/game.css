@@ -102,7 +102,6 @@ main {
 
 .message-right .character-text {
   background: var(--linear-blue-transparent-inversed) !important;
-  padding: 24px !important;
   border-radius: 0 28px 28px 0 !important;
 }
 
@@ -131,6 +130,8 @@ main {
   background: var(--primary);
   padding: 8px 20px;
   border-radius: 28px;
+  display: flex;
+  justify-content: center;
 }
 
 .character-images-mobile {
@@ -176,6 +177,18 @@ main {
   width: 50%;
   flex-direction: column;
   gap: 12px;
+}
+
+.mute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 24px;
+  padding: 8px;
+  background: var(--primary);
+  border-radius: 100px;
+  z-index: 999;
+  display: flex;
 }
 
 .main-menu-button {
@@ -253,6 +266,52 @@ main {
   border: solid 2px var(--on-surface-2);
 }
 
+.qte-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.qte-content {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  transition: opacity .2s ease, scale .2s ease, transform .2s ease;
+}
+
+.qte-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  cursor: pointer;
+  background: var(--primary);
+  outline: 2px solid var(--on-surface);
+  outline-offset: 20px;
+  animation: outline-animation 2s linear forwards;
+}
+
+.damage {
+  filter: brightness(200%);
+}
+
+.dead {
+  filter: grayscale(90%) brightness(50%);
+}
+
+@keyframes outline-animation {
+  from {
+    outline-offset: 20px;
+  }
+  to {
+    outline-offset: 0;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .message-left {
     padding-right: 48px;
@@ -328,10 +387,18 @@ main {
     padding-right: 0;
   }
 
+  .dilemmas-choice .buttons-clickable {
+    padding: 4px 16px;
+  }
+
   .controls {
     display: flex;
     margin: 16px 0 16px 0;
     max-width: 475px;
+  }
+
+  .qte-container > div {
+    padding: 24px;
   }
 }
 @media screen and (max-width: 600px) {
