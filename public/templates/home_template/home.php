@@ -8,8 +8,8 @@
 $username = "Bluegnarl";
 $loggedin = false;
 
-require_once __DIR__ . '/../../assets/partials/cookies.php';
-require_once __DIR__ . '/../../assets/partials/navigation.php';
+require_once __DIR__ . '/../../assets/actions/cookies.php';
+require_once __DIR__ . '/../../assets/actions/navigation.php';
 
 ?>
 
@@ -47,12 +47,12 @@ require_once __DIR__ . '/../../assets/partials/navigation.php';
         ?>
     </div>
     <nav>
-        <?php if($cookie_scene || $cookie_way) : ?>
+        <?php if($i || $w) : ?>
         <a class="main-menu" href="/?page=game">Continuer</a>
         <div></div>
         <a class="main-menu" onclick="modal('newgame')">Recommencer</a>
         <?php endif ?>
-        <?php if(!$cookie_scene && !$cookie_way) : ?>
+        <?php if(!$i && !$w) : ?>
             <a class="main-menu" onclick="modal('newgame')">Commencer</a>
         <?php endif ?>
         <div></div>

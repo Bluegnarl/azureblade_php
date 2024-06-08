@@ -2,8 +2,8 @@
 
 $story = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/story.json'), true);
 
-require_once __DIR__ . '/../../assets/partials/cookies.php';
-require_once __DIR__ . '/../../assets/partials/navigation.php';
+require_once __DIR__ . '/../../assets/actions/cookies.php';
+require_once __DIR__ . '/../../assets/actions/navigation.php';
 
 ?>
 <!DOCTYPE html>

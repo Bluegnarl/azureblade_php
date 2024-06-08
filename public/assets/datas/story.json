@@ -774,14 +774,24 @@
       "location": "Forest",
       "win": {
         "text": "Vous avez battu Morgana Shadowcrest !",
-        "destination": "10"
+        "destination": "11"
       },
       "loose": {
         "text": "Morgana vous a battu...",
-        "destination": "0"
+        "destination": "10"
       },
       "left": "morgana",
       "right": "kairus"
+    }
+  ],
+  [
+    {
+      "background": "forest.png",
+      "infos": "Vous vous êtes rendu dans la forêt pour vous venger et y avez affronté Morgana Shadowcrest.",
+      "type": "ending",
+      "ending": "8",
+      "text": "Morgana vous a tué suite à un combat ardu.",
+      "location": "Forest"
     }
   ],
   [
