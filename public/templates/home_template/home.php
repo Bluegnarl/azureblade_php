@@ -38,7 +38,6 @@ require_once __DIR__ . '/../../assets/actions/navigation.php';
         <div class="modal-background" onclick="closeOverlay()"></div>
 
         <?php
-            require_once __DIR__ . '/../../assets/partials/modal_infos.php';
             require_once __DIR__ . '/../../assets/partials/modal_help.php';
             require_once __DIR__ . '/../../assets/partials/modal_endings.php';
             require_once __DIR__ . '/../../assets/partials/modal_newgame.php';

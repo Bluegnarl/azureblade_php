@@ -2,6 +2,8 @@
 
 $endings = json_decode(file_get_contents(__DIR__ . '/../../assets/datas/endings.json'), true);
 
+$oui = true;
+
 if(isset($_COOKIE['endings'])) {
     $endings_cookie = json_decode($_COOKIE['endings'], true);
     asort($endings_cookie);
@@ -31,14 +33,24 @@ if(isset($_COOKIE['endings'])) {
                         $ending = $endings[$ending_id - 1];
                     }
                     ?>
-                <div class="ending">
-                    <div class="ending-title">
-                        <p class="label" style="color: var(--on-surface-1)"><?= $ending['title'] ?></p>
+                    <div class="ending">
+                        <div class="ending-title">
+                            <p class="label" style="color: var(--on-surface-1)"><?= $ending['title'] ?></p>
+                        </div>
+                        <div class="ending-text">
+                            <p class="body-text"><?= $ending['text'] ?></p>
+                        </div>
                     </div>
-                    <div class="ending-text">
-                        <p class="body-text"><?= $ending['text'] ?></p>
-                    </div>
-                </div>
                 <?php }} ?>
+                <?php if (empty($endings_cookie)) {
+                    ?>
+                    <div class="ending">
+                        <div class="ending-text">
+                            <p class="body-text">
+                                Vous n'avez encore découvert aucune des fins possibles.
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
